@@ -41,6 +41,7 @@ Thumbs.db
 probe-*.mjs
 .phase3-audit.json
 scratch/
+*.bat
 
 # Runtime data & cloned repos
 data/
