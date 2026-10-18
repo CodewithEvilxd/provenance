@@ -1,0 +1,46 @@
+{
+  "name": "provenance",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.4.1",
+  "scripts": {
+    "db:up": "docker compose up -d",
+    "db:schema": "tsx scripts/schema.ts",
+    "ingest": "tsx scripts/ingest.ts",
+    "extract:decisions": "tsx scripts/extract-decisions.ts",
+    "review:live": "tsx scripts/review-live.ts",
+    "eval": "tsx scripts/eval.ts",
+    "mcp": "tsx packages/mcp/src/server.ts",
+    "llm:smoke": "tsx scripts/llm-smoke.ts",
+    "prepare:decisions": "tsx scripts/prepare-decisions.ts",
+    "ingest:vite-corpus": "tsx scripts/ingest-vite-corpus.ts",
+    "typecheck": "tsc --noEmit -p packages/graph/tsconfig.json && tsc --noEmit -p packages/ingest/tsconfig.json && tsc --noEmit -p packages/llm/tsconfig.json && tsc --noEmit -p packages/decisions/tsconfig.json && tsc --noEmit -p packages/agents/tsconfig.json && tsc --noEmit -p packages/mcp/tsconfig.json && pnpm --filter @provenance/web typecheck",
+    "lint": "eslint packages/graph packages/ingest packages/llm packages/decisions packages/agents packages/mcp apps/web scripts",
+    "format:check": "prettier --check package.json pnpm-workspace.yaml tsconfig.base.json docker-compose.yml eslint.config.js playwright.config.ts packages apps scripts vitest.config.ts",
+    "audit:code": "tsx scripts/audit-code.ts",
+    "test": "vitest run --config vitest.config.ts",
+    "test:e2e": "playwright test --config playwright.config.ts --pass-with-no-tests",
+    "test:all": "pnpm test && pnpm test:e2e",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm audit:code && pnpm test:all",
+    "probe:graph": "tsx scripts/probe/graph.ts",
+    "probe:indexes": "tsx scripts/probe/indexes.ts",
+    "probe:ingest": "tsx scripts/probe/ingest.ts",
+    "probe:review-density": "tsx scripts/probe/review-density.ts",
+    "probe:ingest-query": "tsx scripts/probe/ingest-query.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "falkordb": "^6.0.0",
+    "zod": "^4.6.7"
+  }
+}

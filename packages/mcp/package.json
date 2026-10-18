@@ -1,0 +1,21 @@
+{
+  "name": "@provenance/mcp",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./reasoning": "./src/reasoning.ts",
+    "./tools": "./src/tools.ts",
+    "./memory-tools": "./src/memory-tools.ts",
+    "./state-tools": "./src/state-tools.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@provenance/agents": "workspace:*",
+    "@provenance/decisions": "workspace:*",
+    "@provenance/graph": "workspace:*",
+    "zod": "^4.6.7"
+  }
+}

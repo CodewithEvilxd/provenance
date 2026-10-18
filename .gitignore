@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js and build outputs
+.next/
+out/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+# Test outputs
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Diagnostics, scratch, and local audit artifacts
+probe-*.mjs
+.phase3-audit.json
+scratch/
+
+# Runtime data & cloned repos
+data/

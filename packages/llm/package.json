@@ -1,0 +1,12 @@
+{
+  "name": "@provenance/llm",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./router": "./src/router.ts",
+    "./types": "./src/types.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0"
+  }
+}

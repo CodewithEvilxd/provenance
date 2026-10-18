@@ -1,0 +1,29 @@
+{
+  "name": "@provenance/agents",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./reviewer": "./src/reviewer.ts",
+    "./risk": "./src/risk.ts",
+    "./memory": "./src/memory.ts",
+    "./state": "./src/state.ts",
+    "./comment": "./src/comment.ts",
+    "./webhook": "./src/webhook.ts",
+    "./eval": "./src/eval-harness.ts",
+    "./eval-types": "./src/eval-types.ts",
+    "./eval-metrics": "./src/eval-metrics.ts",
+    "./eval-dataset": "./src/eval-dataset.ts",
+    "./ownership": "./src/ownership.ts",
+    "./timeline": "./src/timeline.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@provenance/graph": "workspace:*",
+    "@provenance/ingest": "workspace:*",
+    "@provenance/decisions": "workspace:*",
+    "@provenance/llm": "workspace:*",
+    "@octokit/rest": "^22.0.1"
+  }
+}

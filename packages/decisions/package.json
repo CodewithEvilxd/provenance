@@ -1,0 +1,10 @@
+{
+  "name": "@provenance/decisions",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./cache": "./src/cache.ts",
+    "./validation": "./src/validation.ts",
+    "./embedding": "./src/embedding.ts"
+  }
+}

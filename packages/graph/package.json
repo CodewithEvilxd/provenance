@@ -1,0 +1,12 @@
+{
+  "name": "@provenance/graph",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./client": "./src/client.ts",
+    "./queries": "./src/queries.ts"
+  },
+  "scripts": {
+    "test": "vitest run --config ../../vitest.config.ts --root ."
+  }
+}

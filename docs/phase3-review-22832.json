@@ -1,0 +1,2754 @@
+{
+  "pr": 22832,
+  "evidence_status": "complete",
+  "missing_evidence": [],
+  "risk": {
+    "score": 41.9232912275407,
+    "band": "medium",
+    "components": {
+      "blast": 0.9332620561947168,
+      "history": 0.3333333333333333,
+      "decisions": 0.2,
+      "familiarity": 0.33792398226727793,
+      "size": 0.02125
+    }
+  },
+  "reasons": [
+    "A recent incident affected a changed function.",
+    "31 callers are within three hops of changed functions."
+  ],
+  "changed_functions": [
+    "fn:packages/vite/src/node/config.ts#resolveConfig"
+  ],
+  "blast_radius": [
+    {
+      "id": "fn:packages/vite/src/node/ssr/runnerImport.ts#runnerImport",
+      "name": "runnerImport",
+      "path": "packages/vite/src/node/ssr/runnerImport.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/preview.ts#preview",
+      "name": "preview",
+      "path": "packages/vite/src/node/preview.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#resolveConfigWithPlugin",
+      "name": "resolveConfigWithPlugin",
+      "path": "packages/vite/src/node/__tests__/plugins/hooks.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createDefinePluginTransform",
+      "name": "createDefinePluginTransform",
+      "path": "packages/vite/src/node/__tests__/plugins/define.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/workerImportMetaUrl.spec.ts#createWorkerImportMetaUrlPluginTransform",
+      "name": "createWorkerImportMetaUrlPluginTransform",
+      "path": "packages/vite/src/node/__tests__/plugins/workerImportMetaUrl.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/css.spec.ts#getSassResolver",
+      "name": "getSassResolver",
+      "path": "packages/vite/src/node/__tests__/plugins/css.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/assetImportMetaUrl.spec.ts#createAssetImportMetaurlPluginTransform",
+      "name": "createAssetImportMetaurlPluginTransform",
+      "path": "packages/vite/src/node/__tests__/plugins/assetImportMetaUrl.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/css.spec.ts#createCssPluginTransform",
+      "name": "createCssPluginTransform",
+      "path": "packages/vite/src/node/__tests__/plugins/css.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+      "name": "_createServer",
+      "path": "packages/vite/src/node/server/index.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+      "name": "resolveConfigToBuild",
+      "path": "packages/vite/src/node/build.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/external.spec.ts#createIsExternal",
+      "name": "createIsExternal",
+      "path": "packages/vite/src/node/__tests__/external.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/config.spec.ts#testConfig",
+      "name": "testConfig",
+      "path": "packages/vite/src/node/__tests__/config.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/server/__tests__/pluginContainer.spec.ts#getDevEnvironment",
+      "name": "getDevEnvironment",
+      "path": "packages/vite/src/node/server/__tests__/pluginContainer.spec.ts",
+      "hops": 1,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/build.ts#createBuilder",
+      "name": "createBuilder",
+      "path": "packages/vite/src/node/build.ts",
+      "hops": 2,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createJsDefinePluginTransform",
+      "name": "createJsDefinePluginTransform",
+      "path": "packages/vite/src/node/__tests__/plugins/define.spec.ts",
+      "hops": 2,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/server/index.ts#restartServer",
+      "name": "restartServer",
+      "path": "packages/vite/src/node/server/index.ts",
+      "hops": 2,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+      "name": "createServer",
+      "path": "packages/vite/src/node/server/index.ts",
+      "hops": 2,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#createPreviewServerWithPlugin",
+      "name": "createPreviewServerWithPlugin",
+      "path": "packages/vite/src/node/__tests__/plugins/hooks.spec.ts",
+      "hops": 2,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:playground/css-dynamic-import/__tests__/css-dynamic-import.spec.ts#withBuild",
+      "name": "withBuild",
+      "path": "playground/css-dynamic-import/__tests__/css-dynamic-import.spec.ts",
+      "hops": 2,
+      "path_confidence": 0.54
+    },
+    {
+      "id": "fn:playground/vitestSetup.ts#startDefaultServe",
+      "name": "startDefaultServe",
+      "path": "playground/vitestSetup.ts",
+      "hops": 3,
+      "path_confidence": 0.54
+    },
+    {
+      "id": "fn:packages/vite/src/node/server/index.ts#_createServer.restart",
+      "name": "_createServer.restart",
+      "path": "packages/vite/src/node/server/index.ts",
+      "hops": 3,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/build.ts#build",
+      "name": "build",
+      "path": "packages/vite/src/node/build.ts",
+      "hops": 3,
+      "path_confidence": 0.9
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/resolve.spec.ts#run",
+      "name": "run",
+      "path": "packages/vite/src/node/__tests__/resolve.spec.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:packages/vite/src/node/server/middlewares/__tests__/indexHtml.spec.ts#createTestServer",
+      "name": "createTestServer",
+      "path": "packages/vite/src/node/server/middlewares/__tests__/indexHtml.spec.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#createServerWithPlugin",
+      "name": "createServerWithPlugin",
+      "path": "packages/vite/src/node/__tests__/plugins/hooks.spec.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:packages/vite/src/node/__tests__/resolve.spec.ts#createTestServer",
+      "name": "createTestServer",
+      "path": "packages/vite/src/node/__tests__/resolve.spec.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:packages/vite/src/node/server/__tests__/hmr.spec.ts#testRestartDuringHotUpdate",
+      "name": "testRestartDuringHotUpdate",
+      "path": "packages/vite/src/node/server/__tests__/hmr.spec.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:packages/vite/src/node/ssr/runtime/__tests__/utils.ts#createModuleRunnerTester",
+      "name": "createModuleRunnerTester",
+      "path": "packages/vite/src/node/ssr/runtime/__tests__/utils.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:packages/vite/src/node/ssr/__tests__/ssrStacktrace.spec.ts#createDevServer",
+      "name": "createDevServer",
+      "path": "packages/vite/src/node/ssr/__tests__/ssrStacktrace.spec.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:packages/vite/src/node/ssr/__tests__/ssrLoadModule.spec.ts#createDevServer",
+      "name": "createDevServer",
+      "path": "packages/vite/src/node/ssr/__tests__/ssrLoadModule.spec.ts",
+      "hops": 3,
+      "path_confidence": 0.81
+    },
+    {
+      "id": "fn:playground/tsconfig-json-load-error/__tests__/serve.ts#serve",
+      "name": "serve",
+      "path": "playground/tsconfig-json-load-error/__tests__/serve.ts",
+      "hops": 3,
+      "path_confidence": 0.324
+    }
+  ],
+  "incidents": [
+    {
+      "fn": "fn:packages/vite/src/node/config.ts#resolveConfig",
+      "incident": "incident:regression:issue:23197",
+      "title": "Regression in 8.2: Vitest `setupFiles` fails with \"Cannot find module\" across Windows drive symlinks",
+      "kind": "regression",
+      "at": "2026-08-07T19:43:06Z",
+      "pr": 22832
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision:af5fb5807bdfbe2a86e8ba6141ad4a6ab73227333ccb7840f339a6821d036cda",
+      "summary": "The devtools option is frozen at config hook time, so any changes to it later are no-ops.",
+      "reason": "The devtools value is frozen at the point of configuration, preventing runtime changes to enable/disable or other properties.",
+      "strength": "hard",
+      "confidence": 1,
+      "target": "file:packages/vite/src/node/config.ts",
+      "sources": [
+        "comment:review:3923113643"
+      ],
+      "available": true,
+      "model_id": "unknown (legacy cache)",
+      "violated": false,
+      "evidence": "Diff changes root resolution, not devtools option."
+    },
+    {
+      "id": "decision:7460168dd5bf828cabb509f08bbc655207a9f497a8770e9721ffbf957947efe5",
+      "summary": "Warn users if they attempt to change the devtools option after initial config resolution.",
+      "reason": "Since devtools config changes are no-ops due to freezing, a warning would clarify user expectations and prevent confusion.",
+      "strength": "soft",
+      "confidence": 0.8,
+      "target": "file:packages/vite/src/node/config.ts",
+      "sources": [
+        "comment:review:3923113643"
+      ],
+      "available": true,
+      "model_id": "poolside/laguna-s-2.1:free",
+      "violated": false,
+      "evidence": "The diff modifies root path resolution logic, not devtools option handling. No changes to devtools config or related warnings."
+    },
+    {
+      "id": "decision:3a9f7fca6e0098ee2c999a11e55ecec39d93169f5e810c77eedbc73bc9817ccd",
+      "summary": "Build analysis and dev-server inspection remain opt-in integrations requiring separate package installation.",
+      "reason": "Keeps integrations modular and avoids unnecessary dependencies for users not using these features.",
+      "strength": "soft",
+      "confidence": 1,
+      "target": "file:packages/vite/src/node/__tests__/config.spec.ts",
+      "sources": [
+        "comment:review:3840985092"
+      ],
+      "available": false,
+      "model_id": null,
+      "violated": null,
+      "evidence": "Skipped: no overlapping hunk on a changed constrained function."
+    },
+    {
+      "id": "decision:a1801cd0b4a4093e35d9e646cb2e0b3210d08a84e6149cebb09f2cb01764bea7",
+      "summary": "Update documentation to clarify package requirements and default DevTools behavior.",
+      "reason": "Ensures users understand that @vitejs/devtools-vite is required for dev-server inspection, @vitejs/devtools-rolldown for build analysis, and that DevTools runs during both serve and build by default.",
+      "strength": "soft",
+      "confidence": 0.8,
+      "target": "file:packages/vite/src/node/__tests__/config.spec.ts",
+      "sources": [
+        "comment:review:3840985092"
+      ],
+      "available": false,
+      "model_id": null,
+      "violated": null,
+      "evidence": "Skipped: no overlapping hunk on a changed constrained function."
+    },
+    {
+      "id": "decision:a1801cd0b4a4093e35d9e646cb2e0b3210d08a84e6149cebb09f2cb01764bea7",
+      "summary": "Update documentation to clarify package requirements and default DevTools behavior.",
+      "reason": "Ensures users understand that @vitejs/devtools-vite is required for dev-server inspection, @vitejs/devtools-rolldown for build analysis, and that DevTools runs during both serve and build by default.",
+      "strength": "soft",
+      "confidence": 0.8,
+      "target": "file:packages/vite/src/node/config.ts",
+      "sources": [
+        "comment:review:3840985092"
+      ],
+      "available": true,
+      "model_id": "poolside/laguna-s-2.1:free",
+      "violated": false,
+      "evidence": "The diff modifies root path resolution logic, not documentation about package requirements or DevTools behavior."
+    },
+    {
+      "id": "decision:3a9f7fca6e0098ee2c999a11e55ecec39d93169f5e810c77eedbc73bc9817ccd",
+      "summary": "Build analysis and dev-server inspection remain opt-in integrations requiring separate package installation.",
+      "reason": "Keeps integrations modular and avoids unnecessary dependencies for users not using these features.",
+      "strength": "soft",
+      "confidence": 1,
+      "target": "file:packages/vite/src/node/config.ts",
+      "sources": [
+        "comment:review:3840985092"
+      ],
+      "available": true,
+      "model_id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "violated": false,
+      "evidence": "Diff adds try-catch around safeRealpathSync; no new opt-in integration or dependency introduced."
+    },
+    {
+      "id": "decision:0d686aa91c99e91ac0e9daf6b3bdc45cc51e333d44f66c59b0868d28e5b9a7a7",
+      "summary": "No test is required for this fix due to difficulty in testing and the simplicity of the fix.",
+      "reason": "Testing would require mocking to force generate() to reject, which is complex and not justified for this small fix.",
+      "strength": "soft",
+      "confidence": 0.9,
+      "target": "file:packages/vite/src/node/config.ts",
+      "sources": [
+        "comment:review:3810575253"
+      ],
+      "available": true,
+      "model_id": "gemini-3.8-flash",
+      "violated": false,
+      "evidence": "The decision specifies no test is required; the diff only modifies resolveConfig without adding unnecessary tests."
+    },
+    {
+      "id": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+      "summary": "Do not reuse the same regex variable name for different purposes; keep regex variable names semantically specific to their usage.",
+      "reason": "The transform hook filters the same JS files regex but is not filtering for optimizable entries or performing optimization, so the regex variable name should reflect its specific semantic meaning to avoid confusion.",
+      "strength": "hard",
+      "confidence": 0.95,
+      "target": "file:packages/vite/src/node/config.ts",
+      "sources": [
+        "comment:review:3642715214",
+        "comment:review:3642703933",
+        "comment:review:3642669089"
+      ],
+      "available": true,
+      "model_id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "violated": false,
+      "evidence": "No regex variable names are modified in the diff."
+    }
+  ],
+  "reviewers": [
+    {
+      "login": "webfansplz",
+      "score": 9.26850504774908
+    },
+    {
+      "login": "bluwy",
+      "score": 4.77525203122742
+    },
+    {
+      "login": "lazerg",
+      "score": 4.66173870201876
+    },
+    {
+      "login": "btea",
+      "score": 4.59824842069974
+    }
+  ],
+  "paths": [
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:600c2da8f69b75ddbb95768c29564794359203ac47c3efe6fad631b1410d8e4a",
+          "label": "Decision",
+          "text": "Do not reuse OPTIMIZABLE_ENTRY_RE in this transform hook; leave the regex as before or hoist it under a different variable name."
+        },
+        {
+          "id": "comment:review:3642669089",
+          "label": "Comment",
+          "text": "I don't think this is quite right. This transform hook happens to filter the same js files regex, but it's not filtering for optimizable entries and isn't doing optimization here.\n\nWe should leave the regex as before or hoist as a variable with a different name."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:600c2da8f69b75ddbb95768c29564794359203ac47c3efe6fad631b1410d8e4a",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:600c2da8f69b75ddbb95768c29564794359203ac47c3efe6fad631b1410d8e4a",
+          "to": "comment:review:3642669089",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:30c2333c38523be6a09ef4d0a7904c84a1f1a545a25beec690b84a44567b07ed",
+          "label": "Decision",
+          "text": "Retain the specific name OPTIMIZABLE_ENTRY_RE rather than renaming it to a generic name."
+        },
+        {
+          "id": "comment:review:3642715214",
+          "label": "Comment",
+          "text": "I think we should keep the specific name here so we keep its semantic meaning of the files we support to optimize."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:30c2333c38523be6a09ef4d0a7904c84a1f1a545a25beec690b84a44567b07ed",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:30c2333c38523be6a09ef4d0a7904c84a1f1a545a25beec690b84a44567b07ed",
+          "to": "comment:review:3642715214",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:0d686aa91c99e91ac0e9daf6b3bdc45cc51e333d44f66c59b0868d28e5b9a7a7",
+          "label": "Decision",
+          "text": "No test is required for this fix due to difficulty in testing and the simplicity of the fix."
+        },
+        {
+          "id": "comment:review:3810575253",
+          "label": "Comment",
+          "text": "I don't think we need a test for this for now. I'd prefer to avoid mocking and since this is hard to test from the public API, and a simple fix, we can get away fixing this without a test."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:0d686aa91c99e91ac0e9daf6b3bdc45cc51e333d44f66c59b0868d28e5b9a7a7",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:0d686aa91c99e91ac0e9daf6b3bdc45cc51e333d44f66c59b0868d28e5b9a7a7",
+          "to": "comment:review:3810575253",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:3a9f7fca6e0098ee2c999a11e55ecec39d93169f5e810c77eedbc73bc9817ccd",
+          "label": "Decision",
+          "text": "Build analysis and dev-server inspection remain opt-in integrations requiring separate package installation."
+        },
+        {
+          "id": "comment:review:3840985092",
+          "label": "Comment",
+          "text": "`@vitejs/devtools` currently exposes the `DevTools()` plugin for manual registration. Once dev-mode support is officially available, we can update the docs to recommend the built-in integration for users on Vite 8.3.0+ instead of adding the plugin manually."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:3a9f7fca6e0098ee2c999a11e55ecec39d93169f5e810c77eedbc73bc9817ccd",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:3a9f7fca6e0098ee2c999a11e55ecec39d93169f5e810c77eedbc73bc9817ccd",
+          "to": "comment:review:3840985092",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:a1801cd0b4a4093e35d9e646cb2e0b3210d08a84e6149cebb09f2cb01764bea7",
+          "label": "Decision",
+          "text": "Update documentation to clarify package requirements and default DevTools behavior."
+        },
+        {
+          "id": "comment:review:3840985092",
+          "label": "Comment",
+          "text": "`@vitejs/devtools` currently exposes the `DevTools()` plugin for manual registration. Once dev-mode support is officially available, we can update the docs to recommend the built-in integration for users on Vite 8.3.0+ instead of adding the plugin manually."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:a1801cd0b4a4093e35d9e646cb2e0b3210d08a84e6149cebb09f2cb01764bea7",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:a1801cd0b4a4093e35d9e646cb2e0b3210d08a84e6149cebb09f2cb01764bea7",
+          "to": "comment:review:3840985092",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:af5fb5807bdfbe2a86e8ba6141ad4a6ab73227333ccb7840f339a6821d036cda",
+          "label": "Decision",
+          "text": "The devtools option is frozen at config hook time, so any changes to it later are no-ops."
+        },
+        {
+          "id": "comment:review:3923113643",
+          "label": "Comment",
+          "text": "Sorry I didn't notice that the `devtools` value is frozen at this point. This means any changes to `devtools` option in the config hook will be no-op, not only the enable/disable change.\n\nThis description isn't clear about this. I think we should make it clear.\nhttps://github.com/webfansplz/vite/blob/18fa5344891cae946cdf4f9c03be3db510b0989b/docs/config/shared-options.md?plain=1#L630\nWe probably should emit a warning if it's tried to be changed. Although that requires the knowledge of the `DevToolsConfig` type, which Vite cannot rely on (as devtools may add properties).\n"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:af5fb5807bdfbe2a86e8ba6141ad4a6ab73227333ccb7840f339a6821d036cda",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:af5fb5807bdfbe2a86e8ba6141ad4a6ab73227333ccb7840f339a6821d036cda",
+          "to": "comment:review:3923113643",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:7460168dd5bf828cabb509f08bbc655207a9f497a8770e9721ffbf957947efe5",
+          "label": "Decision",
+          "text": "Warn users if they attempt to change the devtools option after initial config resolution."
+        },
+        {
+          "id": "comment:review:3923113643",
+          "label": "Comment",
+          "text": "Sorry I didn't notice that the `devtools` value is frozen at this point. This means any changes to `devtools` option in the config hook will be no-op, not only the enable/disable change.\n\nThis description isn't clear about this. I think we should make it clear.\nhttps://github.com/webfansplz/vite/blob/18fa5344891cae946cdf4f9c03be3db510b0989b/docs/config/shared-options.md?plain=1#L630\nWe probably should emit a warning if it's tried to be changed. Although that requires the knowledge of the `DevToolsConfig` type, which Vite cannot rely on (as devtools may add properties).\n"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:7460168dd5bf828cabb509f08bbc655207a9f497a8770e9721ffbf957947efe5",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:7460168dd5bf828cabb509f08bbc655207a9f497a8770e9721ffbf957947efe5",
+          "to": "comment:review:3923113643",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "label": "Decision",
+          "text": "Do not reuse the same regex variable name for different purposes; keep regex variable names semantically specific to their usage."
+        },
+        {
+          "id": "comment:review:3642715214",
+          "label": "Comment",
+          "text": "I think we should keep the specific name here so we keep its semantic meaning of the files we support to optimize."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "to": "comment:review:3642715214",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "label": "Decision",
+          "text": "Do not reuse the same regex variable name for different purposes; keep regex variable names semantically specific to their usage."
+        },
+        {
+          "id": "comment:review:3642703933",
+          "label": "Comment",
+          "text": "Should we change the variable `OPTIMIZABLE_ENTRY_RE` to a more generic name? Providing the same value for two variables doesn't seem necessary."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "to": "comment:review:3642703933",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "decision",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "file:packages/vite/src/node/config.ts",
+          "label": "File",
+          "text": "packages/vite/src/node/config.ts"
+        },
+        {
+          "id": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "label": "Decision",
+          "text": "Do not reuse the same regex variable name for different purposes; keep regex variable names semantically specific to their usage."
+        },
+        {
+          "id": "comment:review:3642669089",
+          "label": "Comment",
+          "text": "I don't think this is quite right. This transform hook happens to filter the same js files regex, but it's not filtering for optimizable entries and isn't doing optimization here.\n\nWe should leave the regex as before or hoist as a variable with a different name."
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "IN"
+        },
+        {
+          "from": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "to": "file:packages/vite/src/node/config.ts",
+          "type": "CONSTRAINS"
+        },
+        {
+          "from": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+          "to": "comment:review:3642669089",
+          "type": "DERIVED_FROM"
+        }
+      ]
+    },
+    {
+      "kind": "incident",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "commit:9d61aa96f32308df7db663a40bd8bfe7d327acf7",
+          "label": "Commit",
+          "text": "Merge branch 'main' into fix/resolve-root-to-real-path"
+        },
+        {
+          "id": "pr:22832",
+          "label": "PR",
+          "text": "fix: resolve root to real path"
+        },
+        {
+          "id": "incident:regression:issue:23197",
+          "label": "Incident",
+          "text": "Regression in 8.2: Vitest `setupFiles` fails with \"Cannot find module\" across Windows drive symlinks"
+        }
+      ],
+      "edges": [
+        {
+          "from": "commit:9d61aa96f32308df7db663a40bd8bfe7d327acf7",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "MODIFIED"
+        },
+        {
+          "from": "pr:22832",
+          "to": "commit:9d61aa96f32308df7db663a40bd8bfe7d327acf7",
+          "type": "CONTAINS"
+        },
+        {
+          "from": "incident:regression:issue:23197",
+          "to": "pr:22832",
+          "type": "CAUSED_BY"
+        }
+      ]
+    },
+    {
+      "kind": "incident",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "commit:4c9520c48391e2ec4888acee3d432373fb9195a1",
+          "label": "Commit",
+          "text": "fix: resolve root to real path"
+        },
+        {
+          "id": "pr:22832",
+          "label": "PR",
+          "text": "fix: resolve root to real path"
+        },
+        {
+          "id": "incident:regression:issue:23197",
+          "label": "Incident",
+          "text": "Regression in 8.2: Vitest `setupFiles` fails with \"Cannot find module\" across Windows drive symlinks"
+        }
+      ],
+      "edges": [
+        {
+          "from": "commit:4c9520c48391e2ec4888acee3d432373fb9195a1",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "MODIFIED"
+        },
+        {
+          "from": "pr:22832",
+          "to": "commit:4c9520c48391e2ec4888acee3d432373fb9195a1",
+          "type": "CONTAINS"
+        },
+        {
+          "from": "incident:regression:issue:23197",
+          "to": "pr:22832",
+          "type": "CAUSED_BY"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/ssr/runnerImport.ts#runnerImport",
+          "label": "Function",
+          "text": "runnerImport"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/ssr/runnerImport.ts#runnerImport",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/preview.ts#preview",
+          "label": "Function",
+          "text": "preview"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/preview.ts#preview",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/preview.ts#preview",
+          "label": "Function",
+          "text": "preview"
+        },
+        {
+          "id": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "label": "Function",
+          "text": "startDefaultServe"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/preview.ts#preview",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "to": "fn:packages/vite/src/node/preview.ts#preview",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/preview.ts#preview",
+          "label": "Function",
+          "text": "preview"
+        },
+        {
+          "id": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "label": "Function",
+          "text": "startDefaultServe"
+        },
+        {
+          "id": "fn:playground/tsconfig-json-load-error/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/preview.ts#preview",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "to": "fn:packages/vite/src/node/preview.ts#preview",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/tsconfig-json-load-error/__tests__/serve.ts#serve",
+          "to": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/preview.ts#preview",
+          "label": "Function",
+          "text": "preview"
+        },
+        {
+          "id": "fn:playground/css-dynamic-import/__tests__/css-dynamic-import.spec.ts#withBuild",
+          "label": "Function",
+          "text": "withBuild"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/preview.ts#preview",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/css-dynamic-import/__tests__/css-dynamic-import.spec.ts#withBuild",
+          "to": "fn:packages/vite/src/node/preview.ts#preview",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/preview.ts#preview",
+          "label": "Function",
+          "text": "preview"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#createPreviewServerWithPlugin",
+          "label": "Function",
+          "text": "createPreviewServerWithPlugin"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/preview.ts#preview",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#createPreviewServerWithPlugin",
+          "to": "fn:packages/vite/src/node/preview.ts#preview",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/__tests__/pluginContainer.spec.ts#getDevEnvironment",
+          "label": "Function",
+          "text": "getDevEnvironment"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/__tests__/pluginContainer.spec.ts#getDevEnvironment",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/optimize-missing-deps/__test__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/optimize-missing-deps/__test__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-conditions/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-conditions/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-deps/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-deps/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-html/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-html/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-html/test-network-imports.js#runTest",
+          "label": "Function",
+          "text": "runTest"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-html/test-network-imports.js#runTest",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-noexternal/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-noexternal/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-pug/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-pug/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-wasm/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-wasm/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr-webworker/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr-webworker/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/ssr/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/ssr/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "label": "Function",
+          "text": "startDefaultServe"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/client-reload/__tests__/client-reload.spec.ts#testClientReload",
+          "label": "Function",
+          "text": "testClientReload"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/client-reload/__tests__/client-reload.spec.ts#testClientReload",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/css-dynamic-import/__tests__/css-dynamic-import.spec.ts#withServe",
+          "label": "Function",
+          "text": "withServe"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/css-dynamic-import/__tests__/css-dynamic-import.spec.ts#withServe",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/css-lightningcss-proxy/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/css-lightningcss-proxy/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/css/postcss-caching/css.spec.ts#startServer",
+          "label": "Function",
+          "text": "startServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/css/postcss-caching/css.spec.ts#startServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/hmr-ssr/__tests__/hmr-ssr.spec.ts#setupModuleRunner",
+          "label": "Function",
+          "text": "setupModuleRunner"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/hmr-ssr/__tests__/hmr-ssr.spec.ts#setupModuleRunner",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/js-sourcemap/test-ssr-dev.js#runTest",
+          "label": "Function",
+          "text": "runTest"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/js-sourcemap/test-ssr-dev.js#runTest",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:playground/lib/__tests__/serve.ts#serve",
+          "label": "Function",
+          "text": "serve"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/lib/__tests__/serve.ts#serve",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/ssr/__tests__/ssrLoadModule.spec.ts#createDevServer",
+          "label": "Function",
+          "text": "createDevServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/ssr/__tests__/ssrLoadModule.spec.ts#createDevServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/ssr/__tests__/ssrStacktrace.spec.ts#createDevServer",
+          "label": "Function",
+          "text": "createDevServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/ssr/__tests__/ssrStacktrace.spec.ts#createDevServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/ssr/runtime/__tests__/utils.ts#createModuleRunnerTester",
+          "label": "Function",
+          "text": "createModuleRunnerTester"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/ssr/runtime/__tests__/utils.ts#createModuleRunnerTester",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/__tests__/hmr.spec.ts#testRestartDuringHotUpdate",
+          "label": "Function",
+          "text": "testRestartDuringHotUpdate"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/__tests__/hmr.spec.ts#testRestartDuringHotUpdate",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/middlewares/__tests__/indexHtml.spec.ts#createTestServer",
+          "label": "Function",
+          "text": "createTestServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/middlewares/__tests__/indexHtml.spec.ts#createTestServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/http.ts#resolveHttpServer",
+          "label": "Function",
+          "text": "resolveHttpServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/http.ts#resolveHttpServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/scripts/benchCircularImport.ts#runBenchmark",
+          "label": "Function",
+          "text": "runBenchmark"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/scripts/benchCircularImport.ts#runBenchmark",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#createServerWithPlugin",
+          "label": "Function",
+          "text": "createServerWithPlugin"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#createServerWithPlugin",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/resolve.spec.ts#createTestServer",
+          "label": "Function",
+          "text": "createTestServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/__tests__/resolve.spec.ts#createTestServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "label": "Function",
+          "text": "createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/resolve.spec.ts#run",
+          "label": "Function",
+          "text": "run"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/__tests__/resolve.spec.ts#run",
+          "to": "fn:packages/vite/src/node/server/index.ts#createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#restartServer",
+          "label": "Function",
+          "text": "restartServer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#restartServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "label": "Function",
+          "text": "_createServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#restartServer",
+          "label": "Function",
+          "text": "restartServer"
+        },
+        {
+          "id": "fn:packages/vite/src/node/server/index.ts#_createServer.restart",
+          "label": "Function",
+          "text": "_createServer.restart"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#restartServer",
+          "to": "fn:packages/vite/src/node/server/index.ts#_createServer",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/server/index.ts#_createServer.restart",
+          "to": "fn:packages/vite/src/node/server/index.ts#restartServer",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/config.spec.ts#testConfig",
+          "label": "Function",
+          "text": "testConfig"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/config.spec.ts#testConfig",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/external.spec.ts#createIsExternal",
+          "label": "Function",
+          "text": "createIsExternal"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/external.spec.ts#createIsExternal",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/assetImportMetaUrl.spec.ts#createAssetImportMetaurlPluginTransform",
+          "label": "Function",
+          "text": "createAssetImportMetaurlPluginTransform"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/assetImportMetaUrl.spec.ts#createAssetImportMetaurlPluginTransform",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/css.spec.ts#createCssPluginTransform",
+          "label": "Function",
+          "text": "createCssPluginTransform"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/css.spec.ts#createCssPluginTransform",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/css.spec.ts#getSassResolver",
+          "label": "Function",
+          "text": "getSassResolver"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/css.spec.ts#getSassResolver",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createDefinePluginTransform",
+          "label": "Function",
+          "text": "createDefinePluginTransform"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createDefinePluginTransform",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createDefinePluginTransform",
+          "label": "Function",
+          "text": "createDefinePluginTransform"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createJsDefinePluginTransform",
+          "label": "Function",
+          "text": "createJsDefinePluginTransform"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createDefinePluginTransform",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createJsDefinePluginTransform",
+          "to": "fn:packages/vite/src/node/__tests__/plugins/define.spec.ts#createDefinePluginTransform",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#resolveConfigWithPlugin",
+          "label": "Function",
+          "text": "resolveConfigWithPlugin"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/hooks.spec.ts#resolveConfigWithPlugin",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/__tests__/plugins/workerImportMetaUrl.spec.ts#createWorkerImportMetaUrlPluginTransform",
+          "label": "Function",
+          "text": "createWorkerImportMetaUrlPluginTransform"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/__tests__/plugins/workerImportMetaUrl.spec.ts#createWorkerImportMetaUrlPluginTransform",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "label": "Function",
+          "text": "resolveConfigToBuild"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "label": "Function",
+          "text": "resolveConfigToBuild"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "label": "Function",
+          "text": "createBuilder"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "to": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "label": "Function",
+          "text": "resolveConfigToBuild"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "label": "Function",
+          "text": "createBuilder"
+        },
+        {
+          "id": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "label": "Function",
+          "text": "startDefaultServe"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "to": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:playground/vitestSetup.ts#startDefaultServe",
+          "to": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "type": "CALLS"
+        }
+      ]
+    },
+    {
+      "kind": "blast",
+      "nodes": [
+        {
+          "id": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "label": "Function",
+          "text": "resolveConfig"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "label": "Function",
+          "text": "resolveConfigToBuild"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "label": "Function",
+          "text": "createBuilder"
+        },
+        {
+          "id": "fn:packages/vite/src/node/build.ts#build",
+          "label": "Function",
+          "text": "build"
+        }
+      ],
+      "edges": [
+        {
+          "from": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "to": "fn:packages/vite/src/node/config.ts#resolveConfig",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "to": "fn:packages/vite/src/node/build.ts#resolveConfigToBuild",
+          "type": "CALLS"
+        },
+        {
+          "from": "fn:packages/vite/src/node/build.ts#build",
+          "to": "fn:packages/vite/src/node/build.ts#createBuilder",
+          "type": "CALLS"
+        }
+      ]
+    }
+  ]
+}
