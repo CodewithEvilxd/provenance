@@ -34,7 +34,8 @@ yarn-debug.log*
 # System & IDE files
 .DS_Store
 Thumbs.db
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 
 # Diagnostics, scratch, and local audit artifacts
