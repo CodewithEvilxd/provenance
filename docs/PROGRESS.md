@@ -583,24 +583,117 @@
      - `/api/timeline`: Handles POST and GET requests with cutoff timestamps (ISO string or epoch milliseconds).
   4. **Frontend Workspaces & Design System (`apps/web/`)**:
      - `bus-factor-heatmap.tsx` & `bus-factor-card.tsx`: Module grid with risk badges, commit bars, contributor breakdowns, search filter, and methodology disclosures.
-     - `time-slider.tsx` & `time-slider-tables.tsx`: Interactive date scrubber, quick milestone jump pills, as-of node/edge count stats, decision and node inspect tables, loading skeletons, and error retries.
+     - `time-slider.tsx`, `time-slider-chips.tsx`, `time-slider-tables.tsx`, and `time-slider-graph.tsx`: Interactive date scrubber, quick milestone jump pills, as-of node/edge count stats, interactive `@xyflow/react` graph visualization, decision and node inspect tables, loading skeletons, and error retries.
      - `repo-workspace.tsx`: Unified repository shell with side-rail navigation, breadcrumbs, and tab switcher between Bus Factor and Time Slider.
      - `apps/web/app/repos/[owner]/[name]/page.tsx`: Direct route for repository ownership overview.
      - `apps/web/app/repos/[owner]/[name]/time/page.tsx`: Direct route for repository historical time slider.
      - `apps/web/app/repos/page.tsx`: Connected repositories index page.
      - `apps/web/app/page.tsx`: Enhanced landing page linking to review, bus factor, time slider, and repositories.
-- **Tests & Verification**:
-  - `packages/agents/test/ownership.test.ts`: 8 unit and integration tests covering bot filtering, module path extraction, bus factor calculations, risk levels, and live FalkorDB queries.
-  - `packages/agents/test/timeline.test.ts`: 5 unit and integration tests covering bounds, zero future leakage (August vs October), before-genesis cutoff, and non-existent repositories.
-  - Full Vitest suite: 32 test files, 155 tests passed (100% pass rate).
-  - TypeScript: Zero errors across all workspace packages and Next.js app.
-  - ESLint: Zero errors, zero warnings.
-  - Prettier: 100% compliant.
-  - Code audit (`scripts/audit-code.ts`): Zero failures, zero banned words, all functions $\le 60$ lines, all Phase 8 files $\le 300$ lines.
-  - Phase 7 Benchmark: 21 PRs evaluated; Precision 87.5%, Recall 70%, Accuracy 81%, confusion matrix TP=7, FP=1, TN=10, FN=3 100% preserved.
-  - Production Build: Next.js production build succeeded with static page generation.
-- **Safety**:
-  - `ENABLE_PR_COMMENTS=false` maintained.
-  - No external GitHub mutations performed.
-  - Phase 9 has not been started.
 
+### Acceptance Criteria Evaluation
+
+#### Feature A — Historical Time Slider
+
+| Criterion                                                          |  Status  | Evidence                                                                                                                                          |
+| :----------------------------------------------------------------- | :------: | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Allow user to choose timestamp or historical cutoff                | **PASS** | Interactive range slider and milestone quick-jump chips in `apps/web/components/time-slider.tsx`.                                                 |
+| Display selected timestamp clearly                                 | **PASS** | `CutoffHeader` displays both ISO 8601 string and localized full date format with `suppressHydrationWarning`.                                      |
+| Refresh relevant graph & provenance as cutoff changes              | **PASS** | `useTransition` updates `nodes`, `edges`, `activeDecisionsCount`, and interactive `@xyflow/react` subgraph on scrubber input without page reload. |
+| Zero future leakage (no future incidents, decisions, nodes, edges) | **PASS** | Verified by `packages/agents/test/timeline.test.ts` (August 2026 cutoff strictly excludes October 2026 records).                                  |
+| Respect existing temporal semantics & source timestamps            | **PASS** | Strict comparison against `committed_at_ms`, `decided_at`, `detected_at`, `merged_at`, and bi-temporal edge `valid_from`/`valid_to`.              |
+| Enforce historical filtering in backend graph queries              | **PASS** | Cypher queries `as-of-nodes.cypher` and `as-of-edges.cypher` executed in FalkorDB filter at query time.                                           |
+| Support loading, empty, and error states                           | **PASS** | `SkeletonView`, `time-empty` empty state, and `time-error` with retry triggers in UI components.                                                  |
+| Handle missing or invalid timestamps honestly                      | **PASS** | Zod input validation rejects invalid formats with HTTP 400; empty graphs return `isEmpty: true` with zero counts; no timestamps fabricated.       |
+| Avoid fabricating data or reloading entire application             | **PASS** | Graph slices derived directly from real FalkorDB graphs; SPA updates via client fetch without browser reload.                                     |
+
+#### Feature B — Contributor Ownership & Bus Factor
+
+| Criterion                                                          |  Status  | Evidence                                                                                                                                             |
+| :----------------------------------------------------------------- | :------: | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Identify contributors and files/modules changed                    | **PASS** | `packages/agents/src/ownership.ts` parses normalized module paths and groups commits per author.                                                     |
+| Calculate ownership percentages with reproducible method           | **PASS** | Mathematical standard: $S_i = (C_i / C_{total}) \times 100\%$ documented in `docs/historical-slider-ownership.md`.                                   |
+| Estimate minimum contributors for 50% ownership (Bus Factor)       | **PASS** | `calculateBusFactor` iteratively sums sorted contributor shares to reach $0.5 \times C_{total}$.                                                     |
+| Show ownership concentration & single-maintainer risk              | **PASS** | High risk assigned if $B_{50}=1$ or $S_1 \ge 80\%$; Medium risk if $B_{50}=2$ or $S_1 \ge 50\%$ or $S_2 < 10\%$.                                     |
+| Document commit window, data coverage, and formula                 | **PASS** | Documented in `MethodologyDisclosure` in UI and `docs/historical-slider-ownership.md`.                                                               |
+| Handle bots, renamed/deleted files, merge commits, missing authors | **PASS** | `isBotLogin` filters Dependabot, Actions, Renovate; file paths normalized; commit-author relationships verified in FalkorDB.                         |
+| Avoid duplicate attribution and uncertain identity merges          | **PASS** | Attributed by exact GitHub author login without unverified heuristics or duplicate splitting.                                                        |
+| Never invent contributor metrics                                   | **PASS** | All metrics computed from real commits in `repo:vitejs/vite` (1,915 commits, 98 modules).                                                            |
+| Explicit disclosure of bus factor as concentration estimate        | **PASS** | Rendered banner states: "Bus factor is an empirical estimate of historical commit concentration, not proof of maintainer availability or knowledge." |
+
+#### Feature C — UI/UX Polish
+
+| Criterion                                         |  Status  | Evidence                                                                                                                                  |
+| :------------------------------------------------ | :------: | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| Loading states and skeletons                      | **PASS** | Subtle animated CSS skeleton placeholders during async loading.                                                                           |
+| Empty and error states                            | **PASS** | Dedicated empty state cards and error boundaries with retry buttons.                                                                      |
+| Retry behavior where appropriate                  | **PASS** | Interactive retry button triggers `reload()` without full page refresh.                                                                   |
+| Time-slider feedback & historical-context labels  | **PASS** | Live ISO badge, tick interval labels, and node/edge count counters.                                                                       |
+| Ownership & bus factor visualizations             | **PASS** | Color-coded risk badges (`badge-risk-high`, `badge-risk-medium`, `badge-risk-low`), proportional contribution bars, and maintainer lists. |
+| Graph filtering and navigation                    | **PASS** | Real-time path search filter, risk level pills (ALL/HIGH/MEDIUM/LOW), and sorting (Most commits, Lowest BF, Highest Risk).                |
+| Responsive layouts                                | **PASS** | Responsive grid system (`modules-grid`, `timeline-layout`), adaptive side-rail and topbar breadcrumbs.                                    |
+| Keyboard accessibility, semantic labels, contrast | **PASS** | Native semantic elements (`<main>`, `<aside>`, `<nav>`, `<header>`), ARIA labels on inputs/sliders, high contrast tokens.                 |
+| Restrained visual identity                        | **PASS** | Uses existing project styling tokens; zero generic AI-looking gradients or decorative fluff.                                              |
+
+### Verification Script Results
+
+- **Unit and Integration Tests (`vitest run --config vitest.config.ts`)**:
+  - `32 passed (32 test files)`
+  - `155 passed (155 tests)` (100% pass rate)
+  - Execution time: ~65.2s
+- **TypeScript (`tsc --noEmit`)**:
+  - Verified across all 7 workspace packages (`graph`, `ingest`, `llm`, `decisions`, `agents`, `mcp`) + `apps/web`.
+  - Exited code 0 with 0 errors.
+- **ESLint (`eslint packages/graph packages/ingest packages/llm packages/decisions packages/agents packages/mcp apps/web scripts`)**:
+  - Exited code 0 with 0 errors and 0 warnings.
+- **Prettier (`prettier --check ...`)**:
+  - Exited code 0: "All matched files use Prettier code style!".
+- **Code Audit (`tsx scripts/audit-code.ts`)**:
+  - Exited code 0: zero banned words, functions $\le 60$ lines and files $\le 300$ lines in all Phase 8 components.
+- **Production Build (`next build apps/web --webpack`)**:
+  - Exited code 0: all 14 routes compiled successfully (4 static, 10 dynamic).
+- **Evaluation Harness (`tsx scripts/eval.ts`)**:
+  - Exited code 0: 21 historical PRs evaluated.
+  - TP = 7, FP = 1, TN = 10, FN = 3.
+  - Precision: 87.5%, Recall: 70.0%, Accuracy: 81.0%, F1: 0.778.
+- **Playwright Smoke Tests (`playwright test --config playwright.config.ts`)**:
+  - `apps/web/e2e/review.e2e.ts:3:1 › review page follows a real decision path to its source comment`: PASS (14.1s)
+  - `apps/web/e2e/timeline-ownership.e2e.ts:3:1 › repository ownership page renders bus factor metrics and methodology`: PASS (4.7s)
+  - `apps/web/e2e/timeline-ownership.e2e.ts:21:1 › history time slider page scrubs cutoff and refreshes as-of subgraph`: PASS (4.7s)
+  - Result: 3 passed (35.9s).
+
+### Safety & Commitments
+
+- `ENABLE_PR_COMMENTS=false` maintained in `.env.local`.
+- Zero external mutations, pushes, deployments, or GitHub comments performed.
+- Phase 8 approved by user.
+
+## Phase 9 — Hackathon Submission Readiness
+
+- **Status**: COMPLETE
+- **Objective**: Prepare all materials required for the Graph Hacks Hackathon submission form.
+- **Hackathon Submission Deliverables**:
+  1. **Public Source-Code Repository**:
+     - Verified git status is clean, no sensitive credentials or tokens in tracked files.
+     - `.gitignore` strictly protects `.env`, `*.local`, and test artifacts.
+  2. **Comprehensive README ([README.md](../README.md))**:
+     - Complete documentation of architecture, graph data model, bi-temporal properties, Cypher queries, local setup, test commands, and evaluation metrics.
+  3. **Formal Hackathon Submission Form ([docs/HACKATHON_SUBMISSION.md](HACKATHON_SUBMISSION.md))**:
+     - Exact responses for all 9 fields on the submission form:
+       - Field 1: Public repository link.
+       - Field 2: README & Graph data model.
+       - Field 3: Cypher queries & graph algorithms (as-of temporal filtering, ownership & bus factor, active decision constraints, vector similarity search, blast radius traversal, atomic webhook task claiming).
+       - Field 4: Demo video link & structure.
+       - Field 5: Live deployment & local setup instructions.
+       - Field 6: Hackathon track selection (Developer Tools / Graph Agents).
+       - Field 7: Project title and descriptions (tagline, 100-word pitch, capabilities).
+       - Field 8: How FalkorDB was used (GraphBLAS performance, Redis protocol integration, native vector indexing, bi-temporal edge queries, single-threaded Redis concurrency).
+       - Field 9: Feedback about FalkorDB (strengths, learnings, compiler messages, wishlist).
+  4. **Demo Video Walkthrough Script ([docs/DEMO_SCRIPT.md](DEMO_SCRIPT.md))**:
+     - Comprehensive scene-by-scene script with timing, visual cues, and voiceover text (target 3:30 - 4:30 minutes).
+  5. **Feature Documentation ([docs/historical-slider-ownership.md](historical-slider-ownership.md))**:
+     - Detailed technical specification for historical time-travel and contributor concentration metrics.
+- **Verification**:
+  - All workspace packages and applications typecheck cleanly.
+  - All 155 unit/integration tests pass.
+  - All 3 Playwright smoke tests pass.
+  - Prettier, ESLint, and code audit pass with zero violations.
