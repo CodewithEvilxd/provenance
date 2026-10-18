@@ -5,6 +5,7 @@ import type {
   AsOfEdge,
   TimelineReport,
 } from "@provenance/agents/timeline";
+import { HistoricalGraphView } from "./time-slider-graph";
 
 export function StatCard({ label, value }: { label: string; value: number }) {
   return (
@@ -150,14 +151,62 @@ export function EdgesTable({ edges }: { edges: AsOfEdge[] }) {
   );
 }
 
+function SubtabButtons({
+  activeTab,
+  data,
+  onTabChange,
+}: {
+  activeTab: "decisions" | "graph" | "nodes" | "edges";
+  data: TimelineReport;
+  onTabChange: (t: "decisions" | "graph" | "nodes" | "edges") => void;
+}) {
+  const tabs = ["decisions", "graph", "nodes", "edges"] as const;
+  return (
+    <div style={{ display: "flex", borderBottom: "1px solid var(--line)" }}>
+      {tabs.map((tab) => {
+        const count =
+          tab === "decisions"
+            ? data.activeDecisionsCount
+            : tab === "graph"
+              ? data.nodes.length
+              : tab === "nodes"
+                ? data.nodes.length
+                : data.edges.length;
+        const isActive = activeTab === tab;
+        return (
+          <button
+            key={tab}
+            type="button"
+            className={`subtab-btn ${isActive ? "subtab-active" : ""}`}
+            onClick={() => onTabChange(tab)}
+            style={{
+              padding: "12px 20px",
+              border: "none",
+              borderBottom: isActive
+                ? "2px solid var(--rust)"
+                : "2px solid transparent",
+              background: "none",
+              font: "600 12px var(--sans)",
+              cursor: "pointer",
+              color: isActive ? "var(--ink)" : "var(--muted)",
+            }}
+          >
+            {tab.toUpperCase()} ({count})
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export function TimelineResults({
   data,
   activeTab,
   onTabChange,
 }: {
   data: TimelineReport;
-  activeTab: "decisions" | "nodes" | "edges";
-  onTabChange: (t: "decisions" | "nodes" | "edges") => void;
+  activeTab: "decisions" | "graph" | "nodes" | "edges";
+  onTabChange: (t: "decisions" | "graph" | "nodes" | "edges") => void;
 }) {
   return (
     <div style={{ marginTop: 24 }}>
@@ -169,7 +218,7 @@ export function TimelineResults({
       </div>
 
       <div className="card" style={{ marginTop: 20, padding: 0 }}>
-        <TimelineSubtabButtons
+        <SubtabButtons
           activeTab={activeTab}
           data={data}
           onTabChange={onTabChange}
@@ -180,55 +229,13 @@ export function TimelineResults({
               nodes={data.nodes.filter((n: AsOfNode) => n.label === "Decision")}
             />
           )}
+          {activeTab === "graph" && (
+            <HistoricalGraphView nodes={data.nodes} edges={data.edges} />
+          )}
           {activeTab === "nodes" && <NodesTable nodes={data.nodes} />}
           {activeTab === "edges" && <EdgesTable edges={data.edges} />}
         </div>
       </div>
-    </div>
-  );
-}
-
-function TimelineSubtabButtons({
-  activeTab,
-  data,
-  onTabChange,
-}: {
-  activeTab: "decisions" | "nodes" | "edges";
-  data: TimelineReport;
-  onTabChange: (t: "decisions" | "nodes" | "edges") => void;
-}) {
-  return (
-    <div style={{ display: "flex", borderBottom: "1px solid var(--line)" }}>
-      {(["decisions", "nodes", "edges"] as const).map((tab) => {
-        const count =
-          tab === "decisions"
-            ? data.activeDecisionsCount
-            : tab === "nodes"
-              ? data.nodes.length
-              : data.edges.length;
-        return (
-          <button
-            key={tab}
-            type="button"
-            className={`subtab-btn ${activeTab === tab ? "subtab-active" : ""}`}
-            onClick={() => onTabChange(tab)}
-            style={{
-              padding: "12px 20px",
-              border: "none",
-              borderBottom:
-                activeTab === tab
-                  ? "2px solid var(--rust)"
-                  : "2px solid transparent",
-              background: "none",
-              font: "600 12px var(--sans)",
-              cursor: "pointer",
-              color: activeTab === tab ? "var(--ink)" : "var(--muted)",
-            }}
-          >
-            {tab.toUpperCase()} ({count})
-          </button>
-        );
-      })}
     </div>
   );
 }

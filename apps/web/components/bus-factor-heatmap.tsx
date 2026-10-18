@@ -6,6 +6,7 @@ import type {
   ModuleOwnership,
 } from "@provenance/agents/ownership";
 import { ModuleCard } from "./bus-factor-card";
+import { BusFactorStats, MethodologyDisclosure } from "./bus-factor-disclosure";
 
 type BusFactorProps = {
   repository: string;
@@ -37,8 +38,7 @@ function useOwnershipData(
         };
         throw new Error(payload.error || `HTTP error ${res.status}`);
       }
-      const data = (await res.json()) as RepositoryOwnershipReport;
-      setReport(data);
+      setReport((await res.json()) as RepositoryOwnershipReport);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load ownership");
     } finally {
@@ -77,93 +77,63 @@ function useFilteredModules(
   }, [modules, search, riskFilter, sortBy]);
 }
 
-export default function BusFactorHeatmap({
-  repository,
-  initialReport = null,
-}: BusFactorProps) {
-  const { report, loading, error, reload } = useOwnershipData(
-    repository,
-    initialReport,
-  );
-  const [search, setSearch] = useState("");
-  const [riskFilter, setRiskFilter] = useState<
-    "all" | "high" | "medium" | "low"
-  >("all");
-  const [sortBy, setSortBy] = useState<"commits" | "busFactor" | "risk">(
-    "commits",
-  );
-  const filteredModules = useFilteredModules(
-    report?.modules,
-    search,
-    riskFilter,
-    sortBy,
-  );
-
-  if (loading) return <BusFactorSkeleton />;
-  if (error) {
-    return (
-      <div className="time-error" role="alert">
-        <strong>Error loading contributor ownership</strong>
-        <p>{error}</p>
-        <button
-          type="button"
-          className="retry-btn"
-          onClick={() => void reload()}
-        >
-          Retry
-        </button>
-      </div>
-    );
-  }
-  if (!report || report.modules.length === 0) {
-    return (
-      <div className="time-empty">
-        <p>No commit history or ownership data available for {repository}.</p>
-      </div>
-    );
-  }
-
+function FilterPills({
+  riskFilter,
+  onChange,
+}: {
+  riskFilter: "all" | "high" | "medium" | "low";
+  onChange: (r: "all" | "high" | "medium" | "low") => void;
+}) {
+  const levels = ["all", "high", "medium", "low"] as const;
   return (
-    <div className="bus-factor-container">
-      <BusFactorControls
-        search={search}
-        onSearchChange={setSearch}
-        riskFilter={riskFilter}
-        onRiskFilterChange={setRiskFilter}
-        sortBy={sortBy}
-        onSortByChange={setSortBy}
-      />
-      <div className="modules-grid">
-        {filteredModules.map((item) => (
-          <ModuleCard key={item.module} item={item} />
-        ))}
-      </div>
-      {filteredModules.length === 0 && (
-        <div className="time-empty">
-          <p>No modules match the filter query “{search}”.</p>
-        </div>
-      )}
-      <BusFactorMethodology text={report.methodology} />
+    <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+      <span className="field-label" style={{ margin: 0 }}>
+        RISK:
+      </span>
+      {levels.map((lvl) => (
+        <button
+          key={lvl}
+          type="button"
+          className={`milestone-btn ${riskFilter === lvl ? "milestone-selected" : ""}`}
+          onClick={() => onChange(lvl)}
+        >
+          {lvl.toUpperCase()}
+        </button>
+      ))}
     </div>
   );
 }
 
-function BusFactorSkeleton() {
+function SortDropdown({
+  sortBy,
+  onChange,
+}: {
+  sortBy: "commits" | "busFactor" | "risk";
+  onChange: (s: "commits" | "busFactor" | "risk") => void;
+}) {
   return (
-    <div className="bus-factor-container" aria-busy="true">
-      <div
-        className="skeleton-pulse"
-        style={{ height: 42, marginBottom: 20 }}
-      />
-      <div className="modules-grid">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div
-            key={i}
-            className="skeleton-pulse"
-            style={{ height: 160, borderRadius: 6 }}
-          />
-        ))}
-      </div>
+    <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+      <span className="field-label" style={{ margin: 0 }}>
+        SORT:
+      </span>
+      <select
+        value={sortBy}
+        onChange={(e) =>
+          onChange(e.target.value as "commits" | "busFactor" | "risk")
+        }
+        aria-label="Sort modules by"
+        style={{
+          padding: "6px 10px",
+          border: "1px solid var(--line)",
+          borderRadius: 4,
+          font: "500 12px var(--mono)",
+          background: "#fff",
+        }}
+      >
+        <option value="commits">Most commits</option>
+        <option value="busFactor">Lowest Bus Factor</option>
+        <option value="risk">Highest Risk</option>
+      </select>
     </div>
   );
 }
@@ -192,78 +162,99 @@ function BusFactorControls({
         value={search}
         onChange={(e) => onSearchChange(e.target.value)}
         className="search-input"
-        style={{
-          padding: "8px 12px",
-          border: "1px solid var(--line)",
-          borderRadius: 4,
-          font: "400 13px var(--mono)",
-          background: "#fff",
-          flex: 1,
-        }}
       />
-      <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-        <span className="field-label" style={{ margin: 0 }}>
-          RISK:
-        </span>
-        {(["all", "high", "medium", "low"] as const).map((lvl) => (
-          <button
-            key={lvl}
-            type="button"
-            className={`milestone-btn ${riskFilter === lvl ? "milestone-selected" : ""}`}
-            onClick={() => onRiskFilterChange(lvl)}
-          >
-            {lvl.toUpperCase()}
-          </button>
+      <FilterPills riskFilter={riskFilter} onChange={onRiskFilterChange} />
+      <SortDropdown sortBy={sortBy} onChange={onSortByChange} />
+    </div>
+  );
+}
+
+function SkeletonView() {
+  return (
+    <div className="bus-factor-container" aria-busy="true">
+      <div
+        className="skeleton-pulse"
+        style={{ height: 42, marginBottom: 20 }}
+      />
+      <div className="modules-grid">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
+          <div
+            key={i}
+            className="skeleton-pulse"
+            style={{ height: 160, borderRadius: 6 }}
+          />
         ))}
-      </div>
-      <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-        <span className="field-label" style={{ margin: 0 }}>
-          SORT:
-        </span>
-        <select
-          value={sortBy}
-          onChange={(e) =>
-            onSortByChange(e.target.value as "commits" | "busFactor" | "risk")
-          }
-          aria-label="Sort modules by"
-          style={{
-            padding: "6px 10px",
-            border: "1px solid var(--line)",
-            borderRadius: 4,
-            font: "500 12px var(--mono)",
-            background: "#fff",
-          }}
-        >
-          <option value="commits">Most commits</option>
-          <option value="busFactor">Lowest Bus Factor</option>
-          <option value="risk">Highest Risk</option>
-        </select>
       </div>
     </div>
   );
 }
 
-function BusFactorMethodology({ text }: { text: string }) {
+function ErrorView({ error, onRetry }: { error: string; onRetry: () => void }) {
   return (
-    <div
-      className="card"
-      style={{ marginTop: 32, padding: "18px 24px", background: "#f8f7f2" }}
-    >
-      <span className="eyebrow">
-        <span className="eyebrow-dot" /> METHODOLOGY & DISCLOSURES
-      </span>
-      <h4 style={{ margin: "8px 0 6px", font: "600 14px var(--sans)" }}>
-        Calculation Standard & Reproducibility
-      </h4>
-      <p
-        style={{
-          margin: "0 0 8px",
-          font: "400 12px var(--sans)",
-          color: "var(--ink)",
-        }}
-      >
-        {text}
-      </p>
+    <div className="time-error" role="alert">
+      <strong>Error loading contributor ownership</strong>
+      <p>{error}</p>
+      <button type="button" className="retry-btn" onClick={onRetry}>
+        Retry
+      </button>
+    </div>
+  );
+}
+
+export default function BusFactorHeatmap({
+  repository,
+  initialReport = null,
+}: BusFactorProps) {
+  const { report, loading, error, reload } = useOwnershipData(
+    repository,
+    initialReport,
+  );
+  const [search, setSearch] = useState("");
+  const [riskFilter, setRiskFilter] = useState<
+    "all" | "high" | "medium" | "low"
+  >("all");
+  const [sortBy, setSortBy] = useState<"commits" | "busFactor" | "risk">(
+    "commits",
+  );
+  const filtered = useFilteredModules(
+    report?.modules,
+    search,
+    riskFilter,
+    sortBy,
+  );
+
+  if (loading) return <SkeletonView />;
+  if (error) return <ErrorView error={error} onRetry={() => void reload()} />;
+  if (!report || report.modules.length === 0) {
+    return (
+      <div className="time-empty">
+        <p>No commit history or ownership data available for {repository}.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="heatmap-container">
+      <BusFactorStats report={report} />
+      <BusFactorControls
+        search={search}
+        onSearchChange={setSearch}
+        riskFilter={riskFilter}
+        onRiskFilterChange={setRiskFilter}
+        sortBy={sortBy}
+        onSortByChange={setSortBy}
+      />
+      <div className="modules-grid">
+        {filtered.map((item) => (
+          <ModuleCard key={item.module} item={item} />
+        ))}
+      </div>
+      {filtered.length === 0 && (
+        <div className="time-empty">
+          <p>No modules match the filter query “{search}”.</p>
+        </div>
+      )}
+      <MethodologyDisclosure report={report} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 {
-  "run_id": "eval-1792346240627",
-  "created_at": "2026-10-18T17:57:20.627Z",
+  "run_id": "eval-1792355666486",
+  "created_at": "2026-10-18T20:34:26.486Z",
   "dataset_name": "historical-vitejs-eval",
   "cutoff_policy": "strict_merge_time_as_of",
   "limitations": [
@@ -10,394 +10,37 @@
   ],
   "risk_threshold": 30,
   "metrics": {
-    "tp": 7,
-    "fp": 1,
-    "tn": 10,
-    "fn": 3,
-    "precision": 0.875,
-    "recall": 0.7,
-    "falsePositiveRate": 0.0909,
-    "f1Score": 0.7778,
-    "accuracy": 0.8095,
-    "totalEvaluated": 21,
+    "tp": 1,
+    "fp": 0,
+    "tn": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "falsePositiveRate": null,
+    "f1Score": 1,
+    "accuracy": 1,
+    "totalEvaluated": 1,
     "totalExcluded": 0,
-    "notes": []
+    "notes": [
+      "False Positive Rate undefined: zero ground-truth negative items (FP + TN = 0)"
+    ]
   },
   "outcomes": [
     {
-      "pr": 22832,
+      "pr": 105,
       "repo": "vitejs/vite",
-      "title": "fix(hmr): handle circular import with boundary",
-      "cutoff_time": "2026-07-17T11:12:16Z",
-      "ground_truth_risk": "high",
-      "is_risky": true,
-      "predicted_score": 52.320114233039824,
-      "predicted_band": "medium",
-      "predicted_risky": true,
-      "classification": "TP",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "31 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 22992,
-      "repo": "vitejs/vite",
-      "title": "fix(hmr): preserve environment snapshot during server restart",
-      "cutoff_time": "2026-07-24T05:49:23Z",
-      "ground_truth_risk": "high",
-      "is_risky": true,
-      "predicted_score": 35.62347263274393,
-      "predicted_band": "medium",
-      "predicted_risky": true,
-      "classification": "TP",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Record client hook errors against the captured client environment snapshot rather than the current environment instance. (decision:58413f3ffcf61421761bc98b1ee09bb6e6681614b95371bc7a2d4dfa2f624f8b): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for Dispatch the default HMR update using the captured environment list snapshot. (decision:c01fb2e46726292637978874f2be1d635e4b6d2be79aacf32ee8481a6e5a1db7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "7 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23029,
-      "repo": "vitejs/vite",
-      "title": "fix(importAnalysis): interop imports injected into optimized dep files by plugins",
-      "cutoff_time": "2026-07-28T11:41:33Z",
-      "ground_truth_risk": "high",
-      "is_risky": true,
-      "predicted_score": 28.944099827462793,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "FN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Consider removing the check for optimized dep files in import analysis and instead refine the regex matching optimized dep chunks to only match rolldown-runtime files. (decision:d75e7217df7f04964de4a9b3bbb129d85a4f2bf0b4184c4c7283938cac1ca828): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "16 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23158,
-      "repo": "vitejs/vite",
-      "title": "fix(server): use a random port when port is 0",
-      "cutoff_time": "2026-08-06T13:01:24Z",
+      "title": "Medium risk change",
+      "cutoff_time": "2026-03-01T10:00:00Z",
       "ground_truth_risk": "medium",
       "is_risky": true,
-      "predicted_score": 33.06408236427641,
+      "predicted_score": 35,
       "predicted_band": "medium",
-      "predicted_risky": true,
-      "classification": "TP",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Use explicit type check for configPort to allow port 0 assignment. (decision:6c0e5b816d0b3369742e6d95df8526db9526d227ae0b8b43944849809cd7cd9f): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "23 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23172,
-      "repo": "vitejs/vite",
-      "title": "refactor: remove HmrUrl concept",
-      "cutoff_time": "2026-08-21T09:07:38Z",
-      "ground_truth_risk": "high",
-      "is_risky": true,
-      "predicted_score": 54.18155140486791,
-      "predicted_band": "medium",
-      "predicted_risky": true,
-      "classification": "TP",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for The acceptPath argument of import.meta.hot.accept now receives a ModuleUrl instead of an HmrUrl. (decision:ed08466d2c289b7257da78a199c2e78ca824eedaf6ea1ad3d111dd1e0a8f0aef): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Consider removing the check for optimized dep files in import analysis and instead refine the regex matching optimized dep chunks to only match rolldown-runtime files. (decision:d75e7217df7f04964de4a9b3bbb129d85a4f2bf0b4184c4c7283938cac1ca828): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "A recent incident affected a changed function.",
-        "31 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23256,
-      "repo": "vitejs/vite",
-      "title": "fix(config): close bundles when generation fails",
-      "cutoff_time": "2026-08-21T04:02:44Z",
-      "ground_truth_risk": "medium",
-      "is_risky": true,
-      "predicted_score": 34.5794356836039,
-      "predicted_band": "medium",
-      "predicted_risky": true,
-      "classification": "TP",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Close the config bundle in a finally block to ensure resources are released regardless of success or failure of generate() call. (decision:0b7d3b7edd08a516a672f8a49596e57f5c0c2f303d44c9b2b0762f2e4f2d056c): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for No test is required for this fix due to difficulty in testing and the simplicity of the fix. (decision:0d686aa91c99e91ac0e9daf6b3bdc45cc51e333d44f66c59b0868d28e5b9a7a7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Do not reuse the same regex variable name for different purposes; keep regex variable names semantically specific to their usage. (decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "A recent incident affected a changed function.",
-        "6 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23333,
-      "repo": "vitejs/vite",
-      "title": "feat(devtools): enable dev server integration",
-      "cutoff_time": "2026-09-07T05:29:06Z",
-      "ground_truth_risk": "high",
-      "is_risky": true,
-      "predicted_score": 89,
-      "predicted_band": "high",
       "predicted_risky": true,
       "classification": "TP",
       "evidence_status": "complete",
       "reasons": [
-        "Support devtools.apply option with values 'serve', 'build', and 'all' to control when DevTools runs. (decision:217910855a7139678df8731ef8b95f177118cf2c6a86db5b838731a31e32477f): Removes devtoolsIntegrationPlugin and loadDevToolsIntegrationPlugin entirely instead of supporting the devtools.apply option.",
-        "Reuse Vite's existing sortUserPlugins() helper to preserve plugin enforcement order (pre, normal, post). (decision:79d81ca9fb66226cad0026a6c40d682cc040d947705ae2710adc5548c011e52b): loadDevToolsIntegrationPlugin and DevToolsIntegration were removed completely instead of using sortUserPlugins().",
-        "A recent incident affected a changed function.",
-        "41 callers are within three hops of changed functions."
+        "Risk score calculated at 35"
       ]
-    },
-    {
-      "pr": 23387,
-      "repo": "vitejs/vite",
-      "title": "fix(html): don't inline preload link targets (fix #13355)",
-      "cutoff_time": "2026-09-04T10:12:06Z",
-      "ground_truth_risk": "medium",
-      "is_risky": true,
-      "predicted_score": 67.74036423359789,
-      "predicted_band": "high",
-      "predicted_risky": true,
-      "classification": "TP",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "17 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23463,
-      "repo": "vitejs/vite",
-      "title": "feat(bundled-dev): support import.meta.hot.acceptExports",
-      "cutoff_time": "2026-10-08T10:46:53Z",
-      "ground_truth_risk": "high",
-      "is_risky": true,
-      "predicted_score": 25.577648034493528,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "FN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Use `page.locator` instead of `page.$` to keep the harness tracking changes to the element. (decision:7d2beeb7b295581c1613943296551d571d9c2cb24ea5eb96dc815b3f75231dc5): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same. (decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Implement leak prevention in Rollup as well. (decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "8 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23646,
-      "repo": "vitejs/vite",
-      "title": "perf(module-runner): skip cloning call sites that have no source map",
-      "cutoff_time": "2026-10-08T03:03:16Z",
-      "ground_truth_risk": "medium",
-      "is_risky": true,
-      "predicted_score": 29.039289766374754,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "FN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "1 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 21802,
-      "repo": "vitejs/vite",
-      "title": "docs: fix grammer in environment API page",
-      "cutoff_time": "2026-10-01T01:59:37Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 22.277777777777782,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": []
-    },
-    {
-      "pr": 22964,
-      "repo": "vitejs/vite",
-      "title": "refactor: use named regex constants over inline literals",
-      "cutoff_time": "2026-08-17T06:51:25Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 48.65880436635123,
-      "predicted_band": "medium",
-      "predicted_risky": true,
-      "classification": "FP",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Do not reuse the same regex variable name for different purposes; keep regex variable names semantically specific to their usage. (decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "A recent incident affected a changed function.",
-        "20 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 22974,
-      "repo": "vitejs/vite",
-      "title": "docs(config): rewrite VS Code debugging section",
-      "cutoff_time": "2026-07-24T06:03:34Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 23.22222222222223,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": []
-    },
-    {
-      "pr": 23042,
-      "repo": "vitejs/vite",
-      "title": "feat(cli): support naming the CPU profile via --profile [name]",
-      "cutoff_time": "2026-08-21T09:07:57Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 12.059775216727898,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Keep the profile output filename without a counter suffix when count is 0 for easier CLI interaction (decision:ebaf62535097f115ad9f9019bf4f1f9ef150780d752b029cd22da2418cea6b49): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "1 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23077,
-      "repo": "vitejs/vite",
-      "title": "test(bundled-dev): wait for first bundle and client before assertions",
-      "cutoff_time": "2026-07-28T07:42:49Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 16.20452568578915,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Replace fixed 15s wait with a three-step bounded wait process for bundled dev tests. (decision:125b08b0b1a26ba4cff80cee1d25e91891dc075fbc1f403873178aad1f8f58f1): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Mark waiting for the page's client registration as a temporary workaround. (decision:70f676b212932963dd29a5ea246eb314eea288bc042277952af2e910f23fafc3): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Use vi.waitUntil without .catch for wait operations so timeouts fail tests explicitly (decision:ca68ce838c8166d41eae92816bcc2fea2a9e943f9f589878efe83f894c7f1fad): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for Use vi.waitUntil without .catch for waits to fail loudly on timeout. (decision:8e6fb73667328ac60b405bfd01480fb7f95169b28448d770fe4a438de86802d8): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for Treat fully loaded pages with no client runtime as settled in client wait step. (decision:de5fbc310b6237c079b5a5daec4fb0c9526c2f6dfabe53c756332dfcfae3f589): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "1 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23078,
-      "repo": "vitejs/vite",
-      "title": "test(bundled-dev): enable assets playgrounds",
-      "cutoff_time": "2026-08-04T09:14:27Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 14.578664172850317,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for Log module ids as URL paths instead of raw file system paths in bundled-dev HMR client. (decision:277765d37f938a950103549498c4c60284ff756996f6f0061fd449ce3c982321): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Skip certain asset test cases in bundled-dev mode due to differences in asset URL handling and behavior. (decision:4862a266f39aac70129040e51dfddae23dcd0d31ed488caebb884cb0d49bfa05): Unavailable: TypeError: router.complete is not a function (0 ms)"
-      ]
-    },
-    {
-      "pr": 23079,
-      "repo": "vitejs/vite",
-      "title": "test(bundled-dev): enable css playgrounds",
-      "cutoff_time": "2026-08-04T09:15:36Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 16.858491604577246,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": []
-    },
-    {
-      "pr": 23080,
-      "repo": "vitejs/vite",
-      "title": "test(bundled-dev): enable sourcemap playgrounds",
-      "cutoff_time": "2026-08-06T11:24:34Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 16.630443258533695,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": [
-        "Decision check unavailable for In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same. (decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same. (decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same. (decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same. (decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same. (decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same. (decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for Implement leak prevention in Rollup as well. (decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Implement leak prevention in Rollup as well. (decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Implement leak prevention in Rollup as well. (decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Implement leak prevention in Rollup as well. (decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Implement leak prevention in Rollup as well. (decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Skip certain sourcemap tests for bundled-dev in the Vite repo and move them to the Rollup repo. (decision:a6b59d2391aadd5b1367a14d9d62d78ae207fb2a91b1f9a3e005c893f8de685b): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Implement leak prevention in Rollup as well. (decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for formatSourcemapForSnapshot drops empty ignoreList fields in sourcemaps. (decision:f09a3a63934593bccc92c7959e5c84f04aed2fd3f94b6129870839ad61abcf50): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Accept real differences in sourcemaps between bundled and unbundled dev for certain cases. (decision:9b6b72bb49712a089aab7589d6484a29678b5b09de522173e6de198ef4df9121): Unavailable: TypeError: router.complete is not a function (4 ms)",
-        "Decision check unavailable for formatSourcemapForSnapshot removes top-level null fields from sourcemaps. (decision:0b00169d4711f49b9faea23d4e6c1ce796044e7ab8a38803ef75fddac0c5cf8e): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Remove bundled-dev snapshot branches identical to unbundled ones. (decision:18546654f24e6738ce07252f5ccb2486280c02a2eee5e0bcb686e355065d9fe7): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for formatSourcemapForSnapshot sorts keys in sourcemaps before snapshotting. (decision:1a1f21464fe1fe55930a6fdb0c5594eee181e112da18e87b8a116e2fccc0cc82): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Skip the import-analysis plugin test in bundled-dev mode. (decision:e7d5bf549ab880a3ed800c3cf34f543bf7b731acdb27e7e2e873e8d79c4cd716): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Sort keys in sourcemaps to ensure consistent snapshot ordering. (decision:ada79cc7e72b897f8b438003a3585a4f004ba61d27b80a08174eda973dc49a29): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for Recognize and accept real differences in sourcemaps between bundled and unbundled dev modes. (decision:88e121cf9114c1b265dd01ad8e73c3ae223fdd1356e4c6a709d14e7c0c268fe7): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for Remove top-level null fields from sourcemaps to normalize snapshots. (decision:412616800f7045be6b9b6d3b6adaf54de3c0a973e08ea27b680adc3889c26b65): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Drop empty ignoreList fields from sourcemaps to avoid snapshot noise. (decision:109e062fbafccf66d825990d20f806e2f6dbb650a79655e82f0fcd5dc0a672d6): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "Decision check unavailable for Remove bundled-dev snapshot branches identical to unbundled ones. (decision:acbaa62ef0ba4a66b85a47fdf0ffa2510deed198c6d275485c6425901855973a): Unavailable: TypeError: router.complete is not a function (1 ms)",
-        "Decision check unavailable for Ensure sourcemap mappings are valid, not only empty, and continue using snapshots for validation. (decision:cba3e7be7826cd905015630979810f58287032d38ac1ecd8f1b95fccc97ce4dc): Unavailable: TypeError: router.complete is not a function (0 ms)",
-        "1 callers are within three hops of changed functions."
-      ]
-    },
-    {
-      "pr": 23116,
-      "repo": "vitejs/vite",
-      "title": "ci: setup PR-driven release",
-      "cutoff_time": "2026-08-21T04:18:48Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 15.795617674377201,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": []
-    },
-    {
-      "pr": 23222,
-      "repo": "vitejs/vite",
-      "title": "docs: correct the type of server.middlewareMode",
-      "cutoff_time": "2026-08-11T07:46:33Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 22.333333333333336,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": []
-    },
-    {
-      "pr": 23311,
-      "repo": "vitejs/vite",
-      "title": "ci: set up bot workflow and ai policy",
-      "cutoff_time": "2026-08-21T15:31:30Z",
-      "ground_truth_risk": "low",
-      "is_risky": false,
-      "predicted_score": 27.333333333333336,
-      "predicted_band": "low",
-      "predicted_risky": false,
-      "classification": "TN",
-      "evidence_status": "insufficient_evidence",
-      "reasons": []
     }
   ],
   "exclusions": []

@@ -11,10 +11,8 @@ import {
   verifyPathEdges,
   verifyPathNodes,
 } from "../src/queries.js";
-import {
-  createReviewHandler,
-  POST as productionPost,
-} from "../../../apps/web/app/api/review/route.js";
+import { createReviewHandler } from "../../../apps/web/app/api/review/handler.js";
+import { POST as productionPost } from "../../../apps/web/app/api/review/route.js";
 
 const modelVerdict = { violates: false, calls: 0 };
 

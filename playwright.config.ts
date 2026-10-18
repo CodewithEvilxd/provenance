@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: "./apps/web/e2e",
   testMatch: "**/*.e2e.ts",
   timeout: 60_000,
+  workers: 1,
   use: { baseURL: "http://127.0.0.1:3100", channel: "msedge" },
   webServer: {
     command:

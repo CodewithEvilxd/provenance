@@ -99,7 +99,7 @@ if (options) {
           `Check ${index + 1} route: provider=${route.provider}; model=${route.model}; max_tokens=${maxTokens}\n`,
         );
       const { createReviewHandler } =
-        await import("../apps/web/app/api/review/route.js");
+        await import("../apps/web/app/api/review/handler.js");
       const POST = createReviewHandler(() => router);
       const requestStartedAt = Date.now();
       const response = await POST(
