@@ -1,12 +1,8 @@
 import Link from "next/link";
 import {
-  IconArrowRight,
   IconClock,
-  IconDatabase,
   IconGitPr,
-  IconGraph,
   IconSearch,
-  IconShield,
   IconUsers,
 } from "../../components/icons";
 
