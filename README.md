@@ -85,10 +85,6 @@ Evaluates changes across five weighted, mathematically normalized risk channels:
 
 Every flagged decision links directly to its source GitHub comment URL for instant verification.
 
-<p align="center">
-  <img src="docs/images/pr-review-dashboard.png" alt="PR Change Risk Review Dashboard" width="900" style="border-radius: 8px; border: 1px solid #334155;" />
-</p>
-
 ### 2. Historical Time Slider & Bi-Temporal Scrubbing
 
 An interactive visual timeline scrubber (`/repos/[owner]/[name]/time`) allowing developers and auditors to explore the repository's exact state at any historical cutoff:
