@@ -1,37 +1,98 @@
+import Image from "next/image";
 import Link from "next/link";
+import { GraphStatsBar } from "../components/graph-stats-bar";
+import { ArchitectureFlow } from "../components/architecture-flow";
+import { FeatureBreakdown } from "../components/feature-breakdown";
+import { ComparisonMatrix } from "../components/comparison-matrix";
+import { CaseStudyWalkthrough } from "../components/case-study-walkthrough";
+import { NotchNavbar } from "../components/notch-navbar";
+import { MascotStoryCard } from "../components/mascot-story-card";
 
 const demo = "/repos/vitejs/vite/pr/23333";
 const overview = "/repos/vitejs/vite";
 const timeSlider = "/repos/vitejs/vite/time";
+const askDemo = "/repos/vitejs/vite/ask?functionId=fn%3Apackages%2Fvite%2Fsrc%2Fnode%2Fconfig.ts%23resolveConfig";
 
-export default function Home() {
+function LandingMarquee() {
   return (
-    <main className="landing-shell">
-      <LandingHeader />
-      <HeroGrid />
-      <CapabilitiesSection />
-    </main>
+    <div className="police-tape-container" aria-hidden="true">
+      <div className="police-tape-barrier">
+        <div className="police-tape-track">
+          <span>/// CAUTION: CODEBASE MEMORY CRIME SCENE</span>
+          <span>///</span>
+          <span>DO NOT MERGE WITHOUT GRAPH EVIDENCE</span>
+          <span>///</span>
+          <span>[3-HOP BLAST RADIUS &lt;38ms]</span>
+          <span>///</span>
+          <span>ZERO FUTURE DATA LEAKAGE</span>
+          <span>///</span>
+          <span>100% DETERMINISTIC FALKORDB</span>
+          <span>///</span>
+          <span>LORENZ BUS FACTOR VERIFIED</span>
+          <span>///</span>
+          <span>ARCHITECTURAL RECOVERY BARRIER</span>
+          <span>///</span>
+          <span>/// CAUTION: CODEBASE MEMORY CRIME SCENE</span>
+          <span>///</span>
+          <span>DO NOT MERGE WITHOUT GRAPH EVIDENCE</span>
+          <span>///</span>
+          <span>[3-HOP BLAST RADIUS &lt;38ms]</span>
+          <span>///</span>
+          <span>ZERO FUTURE DATA LEAKAGE</span>
+          <span>///</span>
+          <span>100% DETERMINISTIC FALKORDB</span>
+          <span>///</span>
+          <span>LORENZ BUS FACTOR VERIFIED</span>
+          <span>///</span>
+          <span>ARCHITECTURAL RECOVERY BARRIER</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
-function LandingHeader() {
+
+
+function HeroActions() {
   return (
-    <header className="topbar">
-      <Link className="brand" href="/" aria-label="Provenance home">
-        <span className="brand-mark" aria-hidden="true">
-          <i />
-          <i />
-        </span>
-        <span>provenance</span>
+    <div className="hero-actions-group">
+      <div className="hero-actions-primary">
+        <Link className="button button-lime hero-main-cta" href={demo}>
+          Open Vite Review <span aria-hidden="true">-&gt;</span>
+        </Link>
+      </div>
+      <div className="hero-actions-secondary">
+        <Link className="button button-paper button-sm" href={overview}>
+          Bus Factor &amp; Ownership
+        </Link>
+        <Link className="button button-dark button-sm" href={timeSlider}>
+          Time Slider
+        </Link>
+        <Link className="button button-paper button-sm" href="/repos">
+          All Repositories
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function HeroMeta() {
+  return (
+    <div className="hero-meta">
+      <span className="tactile-chip chip-lime">
+        <span className="pulse-dot" /> Real Graph Evidence
+      </span>
+      <span className="meta-divider" />
+      <span>Vite · PR #23333</span>
+      <span className="meta-divider" />
+      <Link className="text-link" href={askDemo}>
+        Ask the Graph Why
       </Link>
-      <nav className="topnav" aria-label="Main navigation">
-        <Link href={demo}>Review</Link>
-        <Link href={overview}>Bus Factor</Link>
-        <Link href={timeSlider}>Time Slider</Link>
-        <Link href="/repos">Repositories</Link>
-      </nav>
-      <span className="topbar-note">A memory for codebases</span>
-    </header>
+      <span className="meta-divider" />
+      <Link className="text-link" href="/eval">
+        View Eval Report
+      </Link>
+    </div>
   );
 }
 
@@ -39,152 +100,127 @@ function HeroGrid() {
   return (
     <section className="hero-grid">
       <div className="hero-copy">
-        <p className="eyebrow">
-          <span className="eyebrow-dot" /> CODE, WITH CONTEXT
-        </p>
+        <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 14, flexWrap: "wrap" }}>
+          <p className="eyebrow" style={{ margin: 0 }}>
+            <span className="eyebrow-dot" /> CODEBASE MEMORY GRAPH
+          </p>
+          <span className="tactile-chip chip-lime tilt-right" style={{ fontSize: 10, padding: "2px 8px" }}>
+            100% AUDIT READY
+          </span>
+          <span className="hand-tag" style={{ color: "var(--violet)" }}>
+            [3-hop blast radius &lt;38ms]
+          </span>
+        </div>
         <h1>
-          Every change has a history. <em>See the thread.</em>
+          Every change has a history.{" "}
+          <span className="hero-editorial-thread doodle-underline-lime">
+            <em>See the thread.</em>
+          </span>
         </h1>
-        <p className="hero-lede">
-          Trace the decisions, people and past incidents behind a pull request.
-          Keep the evidence close to the code.
+        <p className="hero-lede font-comic" style={{ fontSize: "clamp(18px, 2vw, 21px)", color: "#222126", lineHeight: 1.55 }}>
+          Gives coding agents like Claude, Cursor, ChatGPT, etc. a codebase memory supervisor that traces architectural decisions and incidents behind every pull request.
         </p>
-        <div className="hero-actions">
-          <Link className="button button-dark" href={demo}>
-            Open the Vite review <span aria-hidden="true">→</span>
-          </Link>
-          <Link
-            className="button"
-            style={{ background: "#eae6dc", color: "var(--ink)" }}
-            href={overview}
-          >
-            Bus Factor & Ownership
-          </Link>
-          <Link
-            className="text-link"
-            href="/repos/vitejs/vite/ask?functionId=fn%3Apackages%2Fvite%2Fsrc%2Fnode%2Fconfig.ts%23resolveConfig"
-          >
-            Ask about a function
-          </Link>
-        </div>
-        <div className="hero-meta">
-          <span className="status-mark" /> Real graph evidence
-          <span className="meta-divider" />
-          <span>Vite · pull request #23333</span>
-        </div>
+        <HeroActions />
+        <HeroMeta />
       </div>
       <HeroVisual />
     </section>
   );
 }
 
+function HeroVisualChrome() {
+  return (
+    <div className="window-chrome">
+      <div className="window-dots" aria-hidden="true">
+        <span className="window-dot dot-red" />
+        <span className="window-dot dot-yellow" />
+        <span className="window-dot dot-green" />
+      </div>
+      <span className="window-title">provenance · graph explorer</span>
+      <span
+        className="tactile-chip chip-lime"
+        style={{ marginLeft: "auto", fontSize: 11, padding: "3px 10px" }}
+      >
+        <span className="pulse-dot" /> LIVE EVIDENCE
+      </span>
+    </div>
+  );
+}
+
 function HeroVisual() {
   return (
-    <div className="hero-visual" aria-label="A decision path preview">
-      <div className="visual-caption">
-        <span>PROVENANCE PATH</span>
-        <span>01 / 03</span>
-      </div>
-      <div className="path-preview">
-        <div className="preview-node preview-pr">
-          <span className="node-glyph">PR</span>
-          <span>
-            <b>Dev server integration</b>
-            <small>vitejs / vite · #23333</small>
-          </span>
-          <span className="node-state">reviewed</span>
-        </div>
-        <div className="preview-link">
-          <span />
-        </div>
-        <div className="preview-node preview-function">
-          <span className="node-glyph glyph-function">ƒ</span>
-          <span>
-            <b>resolveConfig</b>
-            <small>packages/vite/src/node/config.ts</small>
-          </span>
-        </div>
-        <div className="preview-link">
-          <span />
-        </div>
-        <div className="preview-node preview-decision">
-          <span className="node-glyph glyph-decision">D</span>
-          <span>
-            <b>Preserve plugin ordering</b>
-            <small>Hard decision · source-backed</small>
-          </span>
-        </div>
-        <div className="preview-link">
-          <span />
-        </div>
-        <div className="preview-node preview-comment">
-          <span className="node-glyph glyph-comment">“</span>
-          <span>
-            <b>Review comment</b>
-            <small>Original discussion attached</small>
-          </span>
-        </div>
-      </div>
-      <div className="visual-foot">
-        <span className="visual-pippo" aria-hidden="true">
-          <i />
-          <i />
-        </span>
-        <span>Evidence first. Opinions second.</span>
-        <span className="visual-foot-line" />
+    <div className="hero-visual" aria-label="Codebase memory architecture graph">
+      <HeroVisualChrome />
+      <div className="hero-visual-image-wrapper">
+        <Image
+          src="/mascots/hero-architecture-graph.jpg"
+          alt="Provenance Codebase Memory Graph showing PR #23333, resolveConfig, and Incident #1821"
+          width={1024}
+          height={768}
+          className="hero-full-image"
+          priority
+        />
       </div>
     </div>
   );
 }
 
-function CapabilitiesSection() {
+function LandingFooter() {
   return (
-    <section className="home-lower" aria-label="Product capabilities">
-      <div className="lower-intro">
-        <span>01 — WHAT YOU CAN TRACE</span>
-        <p>Knowledge that stays connected to the code it explains.</p>
+    <footer className="landing-rich-footer">
+      <div className="footer-top">
+        <div className="footer-brand-col">
+          <Link className="brand" href="/" aria-label="Provenance home">
+            <span className="brand-mark" aria-hidden="true">
+              <i />
+              <i />
+            </span>
+            <span>provenance</span>
+          </Link>
+          <p className="footer-tagline">
+            Codebase memory graph powered by FalkorDB. Multi-hop blast radius,
+            Lorenz bus factor, and zero future data leakage time travel.
+          </p>
+        </div>
+        <div className="footer-links-col">
+          <b>SURFACES</b>
+          <Link href={demo}>PR #23333 Review</Link>
+          <Link href={overview}>Bus Factor Analysis</Link>
+          <Link href={timeSlider}>Historical Time Slider</Link>
+          <Link href={askDemo}>Ask Graph Engine</Link>
+        </div>
+        <div className="footer-links-col">
+          <b>VERIFICATION</b>
+          <Link href="/eval">Evaluation Benchmark</Link>
+          <Link href="/repos">Connected Repositories</Link>
+          <a href="https://github.com/vitejs/vite" target="_blank" rel="noreferrer">
+            Vite Upstream
+          </a>
+        </div>
       </div>
-      <Link className="feature-link" href={demo}>
-        <span className="feature-number">01</span>
-        <span>
-          <b>Review a change</b>
-          <small>Risk, blast radius and active decisions</small>
-        </span>
-        <span className="feature-arrow">Open</span>
-      </Link>
-      <Link
-        className="feature-link"
-        href="/repos/vitejs/vite/ask?functionId=fn%3Apackages%2Fvite%2Fsrc%2Fnode%2Fconfig.ts%23resolveConfig"
-      >
-        <span className="feature-number">02</span>
-        <span>
-          <b>Ask why</b>
-          <small>Get an answer with a path to its sources</small>
-        </span>
-        <span className="feature-arrow">Open</span>
-      </Link>
-      <Link className="feature-link" href={overview}>
-        <span className="feature-number">03</span>
-        <span>
-          <b>Ownership & Bus Factor</b>
-          <small>
-            Module ownership concentration and maintainer redundancy
-          </small>
-        </span>
-        <span className="feature-arrow">Open</span>
-      </Link>
-      <Link className="feature-link" href={timeSlider}>
-        <span className="feature-number">04</span>
-        <span>
-          <b>History Time Slider</b>
-          <small>Explore temporal graph state with zero future leakage</small>
-        </span>
-        <span className="feature-arrow">Open</span>
-      </Link>
-      <div className="home-footer">
-        <span>BUILT FROM SOURCE, REVIEWS AND HISTORY</span>
-        <span>Vite graph · 2026</span>
+      <div className="footer-bottom">
+        <span>PROVENANCE · FALKORDB CODEBASE MEMORY</span>
+        <span>Deterministic Graph BLAS · Vite Repository Benchmark 2026</span>
       </div>
-    </section>
+    </footer>
+  );
+}
+
+export default function Home() {
+  return (
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", overflowX: "hidden" }}>
+      <NotchNavbar />
+      <main className="landing-shell">
+        <HeroGrid />
+        <LandingMarquee />
+        <MascotStoryCard />
+        <GraphStatsBar />
+        <ArchitectureFlow />
+        <FeatureBreakdown />
+        <ComparisonMatrix />
+        <CaseStudyWalkthrough />
+        <LandingFooter />
+      </main>
+    </div>
   );
 }

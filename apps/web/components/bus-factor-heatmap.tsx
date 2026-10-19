@@ -123,11 +123,13 @@ function SortDropdown({
         }
         aria-label="Sort modules by"
         style={{
-          padding: "6px 10px",
-          border: "1px solid var(--line)",
-          borderRadius: 4,
-          font: "500 12px var(--mono)",
-          background: "#fff",
+          padding: "8px 12px",
+          border: "var(--bw) solid var(--ink)",
+          borderRadius: "var(--radius-sm)",
+          font: "700 12px var(--mono)",
+          background: "var(--panel)",
+          color: "var(--ink)",
+          boxShadow: "1.5px 1.5px 0 var(--ink)",
         }}
       >
         <option value="commits">Most commits</option>

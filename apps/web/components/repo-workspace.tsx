@@ -14,6 +14,36 @@ type RepoWorkspaceProps = {
   initialTimeline?: TimelineReport | null;
 };
 
+function RepoMarquee() {
+  return (
+    <div className="marquee-strip" aria-hidden="true">
+      <div className="marquee-track">
+        <span>[FALKORDB CYPHER ACCELERATED]</span>
+        <span>///</span>
+        <span>100% DETERMINISTIC MEMORY GRAPH</span>
+        <span>///</span>
+        <span>ZERO FUTURE LEAKAGE</span>
+        <span>///</span>
+        <span>LORENZ BUS FACTOR ANALYSIS</span>
+        <span>///</span>
+        <span>HISTORICAL TIME-TRAVEL ENGINE</span>
+        <span>///</span>
+        <span>REAL-TIME BLAST RADIUS</span>
+        <span>///</span>
+        <span>[FALKORDB CYPHER ACCELERATED]</span>
+        <span>///</span>
+        <span>100% DETERMINISTIC MEMORY GRAPH</span>
+        <span>///</span>
+        <span>ZERO FUTURE LEAKAGE</span>
+        <span>///</span>
+        <span>LORENZ BUS FACTOR ANALYSIS</span>
+        <span>///</span>
+        <span>HISTORICAL TIME-TRAVEL ENGINE</span>
+      </div>
+    </div>
+  );
+}
+
 export default function RepoWorkspace({
   repository,
   defaultTab = "ownership",
@@ -27,6 +57,7 @@ export default function RepoWorkspace({
       <RepoRail repository={repository} tab={tab} onTabSelect={setTab} />
       <div className="product-main">
         <RepoTopbar repository={repository} tab={tab} />
+        <RepoMarquee />
         <div className="page-content" style={{ maxWidth: 1200 }}>
           <RepoHeading repository={repository} />
           <nav
@@ -121,7 +152,7 @@ function RepoRail({
         <span className="rail-glyph">T</span> Time slider
       </button>
       <div className="rail-bottom">
-        <span className="connection-dot" /> FalkorDB connected
+        <span className="pulse-dot" /> FalkorDB connected
       </div>
     </aside>
   );
@@ -137,6 +168,11 @@ function RepoTopbar({
   return (
     <header className="product-topbar">
       <div className="breadcrumbs">
+        <div className="window-dots" aria-hidden="true" style={{ marginRight: 6 }}>
+          <span className="window-dot dot-red" />
+          <span className="window-dot dot-yellow" />
+          <span className="window-dot dot-green" />
+        </div>
         <Link href="/repos">Repositories</Link>
         <span>/</span>
         <span>{repository}</span>
@@ -147,14 +183,22 @@ function RepoTopbar({
             : "History Time Slider"}
         </b>
       </div>
-      <a
-        className="topbar-source"
-        href={`https://github.com/${repository}`}
-        target="_blank"
-        rel="noreferrer"
-      >
-        View repository
-      </a>
+      <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+        <span
+          className="tactile-chip chip-lime"
+          style={{ fontSize: 11, padding: "3px 10px" }}
+        >
+          <span className="pulse-dot" /> LIVE FALKORDB
+        </span>
+        <a
+          className="topbar-source"
+          href={`https://github.com/${repository}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          View repository
+        </a>
+      </div>
     </header>
   );
 }
@@ -163,13 +207,20 @@ function RepoHeading({ repository }: { repository: string }) {
   return (
     <div className="page-heading">
       <div>
-        <p className="eyebrow">
-          <span className="eyebrow-dot" /> REPOSITORY INTELLIGENCE
-        </p>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 12 }}>
+          <p className="eyebrow" style={{ margin: 0 }}>
+            <span className="eyebrow-dot" /> REPOSITORY INTELLIGENCE
+          </p>
+          <span className="tactile-chip chip-lime" style={{ fontSize: 11, padding: "3px 10px" }}>
+            branch: main
+          </span>
+          <span className="tactile-chip chip-violet" style={{ fontSize: 11, padding: "3px 10px" }}>
+            FalkorDB Graph Active
+          </span>
+        </div>
         <h1>{repository}</h1>
         <p className="page-subtitle">
-          Explore architectural ownership concentration and temporal graph state
-          over time.
+          Explore architectural ownership concentration and temporal graph state over time with zero future leakage.
         </p>
       </div>
     </div>

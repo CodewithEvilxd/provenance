@@ -81,28 +81,47 @@ export default function ReviewWorkspace({
         >
           <span className="rail-glyph">?</span> Ask the graph
         </Link>
+        <Link className="rail-link" href={`/repos/${repo}`}>
+          <span className="rail-glyph">BF</span> Bus factor
+        </Link>
+        <Link className="rail-link" href={`/repos/${repo}/time`}>
+          <span className="rail-glyph">T</span> Time slider
+        </Link>
         <div className="rail-bottom">
-          <span className="connection-dot" /> FalkorDB connected
+          <span className="pulse-dot" /> FalkorDB connected
         </div>
       </aside>
 
       <div className="product-main">
         <header className="product-topbar">
           <div className="breadcrumbs">
+            <div className="window-dots" aria-hidden="true" style={{ marginRight: 6 }}>
+              <span className="window-dot dot-red" />
+              <span className="window-dot dot-yellow" />
+              <span className="window-dot dot-green" />
+            </div>
             <Link href="/">Repositories</Link>
             <span>/</span>
             <span>{repo}</span>
             <span>/</span>
             <b>PR #{pr}</b>
           </div>
-          <a
-            className="topbar-source"
-            href={`https://github.com/${repo}/pull/${pr}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            View on GitHub
-          </a>
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+            <span
+              className="tactile-chip chip-lime"
+              style={{ fontSize: 10, padding: "2px 8px" }}
+            >
+              <span className="pulse-dot" /> LIVE FALKORDB
+            </span>
+            <a
+              className="topbar-source"
+              href={`https://github.com/${repo}/pull/${pr}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View on GitHub
+            </a>
+          </div>
         </header>
 
         <div className="page-content">

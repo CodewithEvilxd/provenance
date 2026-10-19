@@ -2,7 +2,9 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import type { NextConfig } from "next";
 
-const workspaceRoot = resolve(process.cwd(), "../..");
+const workspaceRoot = existsSync(resolve(process.cwd(), "pnpm-workspace.yaml"))
+  ? process.cwd()
+  : resolve(process.cwd(), "../..");
 const localEnvironment = resolve(workspaceRoot, ".env.local");
 if (!process.env.GITHUB_TOKEN && existsSync(localEnvironment))
   process.loadEnvFile(localEnvironment);

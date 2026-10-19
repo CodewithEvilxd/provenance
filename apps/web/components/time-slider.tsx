@@ -60,25 +60,26 @@ function CutoffHeader({ selectedMs }: { selectedMs: number }) {
   });
   return (
     <div>
-      <span className="eyebrow">
-        <span className="eyebrow-dot" /> HISTORICAL CUTOFF
-      </span>
-      <div
-        className="cutoff-display"
-        style={{ marginTop: 6 }}
-        suppressHydrationWarning
-      >
-        {new Date(selectedMs).toISOString()}
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+        <span className="eyebrow">
+          <span className="eyebrow-dot" /> HISTORICAL CUTOFF
+        </span>
+        <span className="cutoff-indicator-tag">DETERMINISTIC AS-OF</span>
+      </div>
+      <div className="cutoff-display-terminal" suppressHydrationWarning>
+        <span className="pulse-dot" style={{ width: 8, height: 8 }} />
+        <span>{new Date(selectedMs).toISOString()}</span>
       </div>
       <div
         suppressHydrationWarning
         style={{
-          font: "400 12px var(--sans)",
+          font: "700 13px var(--mono)",
           color: "var(--muted)",
-          marginTop: 4,
+          marginTop: 6,
+          letterSpacing: "0.02em",
         }}
       >
-        {humanDate}
+        // {humanDate.toUpperCase()}
       </div>
     </div>
   );
@@ -125,6 +126,25 @@ function RangeSlider({
   );
 }
 
+function TimelinePanelChrome() {
+  return (
+    <div className="window-chrome" style={{ margin: "-26px -26px 16px -26px" }}>
+      <div className="window-dots" aria-hidden="true">
+        <span className="window-dot dot-red" />
+        <span className="window-dot dot-yellow" />
+        <span className="window-dot dot-green" />
+      </div>
+      <span className="window-title">TEMPORAL SCRUBBER // CYPHER AS-OF ENGINE</span>
+      <span
+        className="tactile-chip chip-lime"
+        style={{ marginLeft: "auto", fontSize: 10, padding: "2px 8px" }}
+      >
+        <span className="pulse-dot" style={{ width: 6, height: 6 }} /> ZERO FUTURE LEAKAGE
+      </span>
+    </div>
+  );
+}
+
 function TimelineControls({
   data,
   selectedMs,
@@ -144,6 +164,7 @@ function TimelineControls({
 
   return (
     <div className="timeline-panel">
+      <TimelinePanelChrome />
       <div className="slider-header">
         <CutoffHeader selectedMs={selectedMs} />
         <TimelineQuickJumps

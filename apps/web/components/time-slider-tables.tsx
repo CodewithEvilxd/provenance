@@ -7,15 +7,23 @@ import type {
 } from "@provenance/agents/timeline";
 import { HistoricalGraphView } from "./time-slider-graph";
 
-export function StatCard({ label, value }: { label: string; value: number }) {
+export function StatCard({
+  label,
+  value,
+  accent = "lime",
+}: {
+  label: string;
+  value: number;
+  accent?: "lime" | "violet" | "pink" | "amber";
+}) {
   return (
-    <div className="as-of-stat">
+    <div className={`as-of-stat accent-${accent}`}>
       <span className="field-label" style={{ margin: 0 }}>
         {label}
       </span>
-      <span style={{ font: "700 20px var(--mono)", color: "var(--ink)" }}>
-        {value}
-      </span>
+      <strong style={{ font: "900 28px var(--display)", color: "var(--ink)" }}>
+        {value.toLocaleString()}
+      </strong>
     </div>
   );
 }
@@ -29,31 +37,39 @@ export function DecisionsList({ nodes }: { nodes: AsOfNode[] }) {
     );
   }
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
       {nodes.map((node) => (
         <div
           key={node.id}
           style={{
-            padding: "10px 14px",
-            background: "#f8f7f2",
-            border: "1px solid var(--line)",
-            borderRadius: 4,
+            padding: "14px 18px",
+            background: "var(--panel)",
+            border: "var(--bw) solid var(--ink)",
+            borderRadius: "var(--radius-sm)",
+            boxShadow: "var(--ex-xs)",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 12,
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              font: "600 12px var(--sans)",
-            }}
-          >
-            <span>{node.text || node.id}</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <span
-              style={{ font: "400 11px var(--mono)", color: "var(--muted)" }}
+              className="tactile-chip chip-violet"
+              style={{ fontSize: 11, padding: "3px 10px" }}
             >
-              {node.timestamp || "Historical"}
+              DECISION
+            </span>
+            <span style={{ font: "600 14px var(--sans)", color: "var(--ink)" }}>
+              {node.text || node.id}
             </span>
           </div>
+          <span
+            className="tactile-chip chip-lime"
+            style={{ fontSize: 11, padding: "3px 10px", whiteSpace: "nowrap" }}
+          >
+            {node.timestamp || "Historical"}
+          </span>
         </div>
       ))}
     </div>
@@ -74,28 +90,45 @@ export function NodesTable({ nodes }: { nodes: AsOfNode[] }) {
         style={{
           width: "100%",
           borderCollapse: "collapse",
-          font: "400 12px var(--mono)",
+          font: "500 13px var(--mono)",
         }}
       >
         <thead>
-          <tr style={{ background: "#eae6dc", textAlign: "left" }}>
-            <th style={{ padding: 8 }}>ID</th>
-            <th style={{ padding: 8 }}>Label</th>
-            <th style={{ padding: 8 }}>Text / Name</th>
-            <th style={{ padding: 8 }}>Timestamp</th>
+          <tr style={{ background: "#ede6d6", textAlign: "left" }}>
+            <th style={{ padding: "12px 14px", borderBottom: "var(--bw) solid var(--ink)", font: "700 12px var(--mono)", letterSpacing: "0.06em" }}>ID</th>
+            <th style={{ padding: "12px 14px", borderBottom: "var(--bw) solid var(--ink)", font: "700 12px var(--mono)", letterSpacing: "0.06em" }}>TYPE</th>
+            <th style={{ padding: "12px 14px", borderBottom: "var(--bw) solid var(--ink)", font: "700 12px var(--mono)", letterSpacing: "0.06em" }}>TEXT / NAME</th>
+            <th style={{ padding: "12px 14px", borderBottom: "var(--bw) solid var(--ink)", font: "700 12px var(--mono)", letterSpacing: "0.06em" }}>TIMESTAMP</th>
           </tr>
         </thead>
         <tbody>
-          {nodes.slice(0, 100).map((n) => (
-            <tr key={n.id} style={{ borderBottom: "1px solid var(--line)" }}>
-              <td style={{ padding: 8 }}>{n.id}</td>
-              <td style={{ padding: 8 }}>{n.label}</td>
-              <td style={{ padding: 8 }}>{n.text}</td>
-              <td style={{ padding: 8, color: "var(--muted)" }}>
-                {n.timestamp || "n/a"}
-              </td>
-            </tr>
-          ))}
+          {nodes.slice(0, 100).map((n) => {
+            const chipClass =
+              n.label === "Decision"
+                ? "chip-violet"
+                : n.label === "Incident"
+                  ? "chip-pink"
+                  : n.label === "Commit"
+                    ? "chip-lime"
+                    : "chip-paper";
+            return (
+              <tr key={n.id} style={{ borderBottom: "1px solid #ebe6da" }}>
+                <td style={{ padding: "12px 14px", fontWeight: 700 }}>{n.id}</td>
+                <td style={{ padding: "12px 14px" }}>
+                  <span
+                    className={`tactile-chip ${chipClass}`}
+                    style={{ fontSize: 11, padding: "2px 8px" }}
+                  >
+                    {n.label}
+                  </span>
+                </td>
+                <td style={{ padding: "12px 14px" }}>{n.text}</td>
+                <td style={{ padding: "12px 14px", color: "var(--muted)", fontSize: 12 }}>
+                  {n.timestamp || "n/a"}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
@@ -116,33 +149,32 @@ export function EdgesTable({ edges }: { edges: AsOfEdge[] }) {
         style={{
           width: "100%",
           borderCollapse: "collapse",
-          font: "400 12px var(--mono)",
+          font: "500 13px var(--mono)",
         }}
       >
         <thead>
-          <tr style={{ background: "#eae6dc", textAlign: "left" }}>
-            <th style={{ padding: 8 }}>Source</th>
-            <th style={{ padding: 8 }}>Relationship</th>
-            <th style={{ padding: 8 }}>Target</th>
+          <tr style={{ background: "#ede6d6", textAlign: "left" }}>
+            <th style={{ padding: "12px 14px", borderBottom: "var(--bw) solid var(--ink)", font: "700 12px var(--mono)", letterSpacing: "0.06em" }}>SOURCE</th>
+            <th style={{ padding: "12px 14px", borderBottom: "var(--bw) solid var(--ink)", font: "700 12px var(--mono)", letterSpacing: "0.06em" }}>RELATIONSHIP</th>
+            <th style={{ padding: "12px 14px", borderBottom: "var(--bw) solid var(--ink)", font: "700 12px var(--mono)", letterSpacing: "0.06em" }}>TARGET</th>
           </tr>
         </thead>
         <tbody>
           {edges.slice(0, 100).map((e, idx) => (
             <tr
               key={`${e.from}-${e.type}-${e.to}-${idx}`}
-              style={{ borderBottom: "1px solid var(--line)" }}
+              style={{ borderBottom: "1px solid #ebe6da" }}
             >
-              <td style={{ padding: 8 }}>{e.from}</td>
-              <td
-                style={{
-                  padding: 8,
-                  color: "var(--rust)",
-                  fontWeight: 600,
-                }}
-              >
-                {e.type}
+              <td style={{ padding: "12px 14px", fontWeight: 700 }}>{e.from}</td>
+              <td style={{ padding: "12px 14px" }}>
+                <span
+                  className="tactile-chip chip-pink"
+                  style={{ fontSize: 11, padding: "2px 8px" }}
+                >
+                  {e.type}
+                </span>
               </td>
-              <td style={{ padding: 8 }}>{e.to}</td>
+              <td style={{ padding: "12px 14px" }}>{e.to}</td>
             </tr>
           ))}
         </tbody>
@@ -162,7 +194,7 @@ function SubtabButtons({
 }) {
   const tabs = ["decisions", "graph", "nodes", "edges"] as const;
   return (
-    <div style={{ display: "flex", borderBottom: "1px solid var(--line)" }}>
+    <div className="subtabs-bar">
       {tabs.map((tab) => {
         const count =
           tab === "decisions"
@@ -179,17 +211,6 @@ function SubtabButtons({
             type="button"
             className={`subtab-btn ${isActive ? "subtab-active" : ""}`}
             onClick={() => onTabChange(tab)}
-            style={{
-              padding: "12px 20px",
-              border: "none",
-              borderBottom: isActive
-                ? "2px solid var(--rust)"
-                : "2px solid transparent",
-              background: "none",
-              font: "600 12px var(--sans)",
-              cursor: "pointer",
-              color: isActive ? "var(--ink)" : "var(--muted)",
-            }}
           >
             {tab.toUpperCase()} ({count})
           </button>
@@ -211,13 +232,22 @@ export function TimelineResults({
   return (
     <div style={{ marginTop: 24 }}>
       <div className="as-of-stats">
-        <StatCard label="AS-OF NODES" value={data.totalNodes} />
-        <StatCard label="AS-OF EDGES" value={data.totalEdges} />
-        <StatCard label="KNOWN DECISIONS" value={data.activeDecisionsCount} />
-        <StatCard label="KNOWN INCIDENTS" value={data.detectedIncidentsCount} />
+        <StatCard label="AS-OF NODES" value={data.totalNodes} accent="lime" />
+        <StatCard label="AS-OF EDGES" value={data.totalEdges} accent="violet" />
+        <StatCard label="KNOWN DECISIONS" value={data.activeDecisionsCount} accent="amber" />
+        <StatCard label="KNOWN INCIDENTS" value={data.detectedIncidentsCount} accent="pink" />
       </div>
 
-      <div className="card" style={{ marginTop: 20, padding: 0 }}>
+      <div
+        style={{
+          marginTop: 20,
+          background: "var(--panel)",
+          border: "var(--bw) solid var(--ink)",
+          borderRadius: "var(--radius-md)",
+          boxShadow: "var(--ex-md)",
+          overflow: "hidden",
+        }}
+      >
         <SubtabButtons
           activeTab={activeTab}
           data={data}

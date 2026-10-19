@@ -43,7 +43,7 @@ function MaintainerBar({
           @{top.login}
           {top.isBot && <span className="bot-badge">BOT</span>}
         </span>
-        <span style={{ font: "600 11px var(--mono)" }}>{top.percentage}%</span>
+        <span style={{ font: "600 12px var(--mono)" }}>{top.percentage}%</span>
       </div>
       <div className="share-bar-container">
         <div
@@ -64,7 +64,7 @@ function ContributorRoster({ list }: { list: ContributorShare[] }) {
             @{c.login}
             {c.isBot && <span className="bot-badge">BOT</span>}
           </span>
-          <span style={{ font: "500 11px var(--mono)" }}>
+          <span style={{ font: "600 12px var(--mono)" }}>
             {c.commits} ({c.percentage}%)
           </span>
         </div>
@@ -85,7 +85,7 @@ export function ModuleCard({ item }: { item: ModuleOwnership }) {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          font: "400 11px var(--mono)",
+          font: "500 12px var(--mono)",
           color: "var(--muted)",
         }}
       >

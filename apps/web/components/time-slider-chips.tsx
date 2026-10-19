@@ -57,7 +57,7 @@ export function MilestoneChips({
 }) {
   return (
     <div className="milestones-strip">
-      <span className="field-label" style={{ margin: 0 }}>
+      <span className="field-label" style={{ margin: 0, font: "700 12px var(--mono)", letterSpacing: "0.08em" }}>
         KEY MILESTONES ({milestones.length}):
       </span>
       <div className="milestones-chips">

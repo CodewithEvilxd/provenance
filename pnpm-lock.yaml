@@ -237,6 +237,9 @@ importers:
 
   packages/agents:
     dependencies:
+      '@octokit/rest':
+        specifier: ^22.0.1
+        version: 22.0.1
       '@provenance/decisions':
         specifier: workspace:*
         version: link:../decisions
