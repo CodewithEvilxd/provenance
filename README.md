@@ -16,6 +16,15 @@
 
 ---
 
+> [!IMPORTANT]
+> ### 🏆 Graph Hacks Hackathon — Submission Verification
+> - 🔓 **Public Repository**: [github.com/CodewithEvilxd/provenance](https://github.com/CodewithEvilxd/provenance) — *Open, cloneable without authentication, and verified in incognito.*
+> - 🎥 **Live Working Demo**: [Demo Script & Video Blueprint](docs/DEMO_SCRIPT.md) | [Formal Submission Form](docs/HACKATHON_SUBMISSION.md) | Run locally on `http://localhost:3000`.
+> - 🗺️ **Graph Data Model Mapped**: [Interactive Mermaid Flowchart & Schema](#schema-architecture) | [10 Node Labels](#node-labels) | [11 Relationships](#relationships--bi-temporal-semantics).
+> - 🛡️ **Graph Doing the Work**: [How FalkorDB Powers Every Agent Decision](#how-falkordb-powers-every-agent-decision) — *Every score, blast radius, constraint, and cutoff is computed in FalkorDB.*
+
+---
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -30,6 +39,7 @@
   - [Schema Architecture](#schema-architecture)
   - [Node Labels](#node-labels)
   - [Relationships & Bi-Temporal Semantics](#relationships--bi-temporal-semantics)
+- [Showing the Graph Doing the Work: FalkorDB Centrality](#how-falkordb-powers-every-agent-decision)
 - [GraphBLAS & Cypher Query Engine](#graphblas--cypher-query-engine)
 - [Monorepo Architecture](#monorepo-architecture)
 - [Historical Evaluation Benchmark](#historical-evaluation-benchmark)
@@ -45,6 +55,10 @@
 **Provenance** is an architectural intelligence platform powered by **FalkorDB**. It indexes the entire engineering lifecycle of a repository—source code ASTs, git commit trees, pull request review threads, and historical incident postmortems—into a unified, bi-temporal property graph.
 
 When a pull request is submitted, Provenance traverses the knowledge graph to detect violated design constraints, computes caller blast radii, flags single-maintainer operational fragility, and traces cryptographic evidence back to the original review comments where decisions were born.
+
+<p align="center">
+  <img src="docs/images/architecture-graph.jpg" alt="Provenance GraphBLAS Engine" width="900" style="border-radius: 8px; border: 1px solid #334155;" />
+</p>
 
 ---
 
@@ -71,6 +85,10 @@ Evaluates changes across five weighted, mathematically normalized risk channels:
 
 Every flagged decision links directly to its source GitHub comment URL for instant verification.
 
+<p align="center">
+  <img src="docs/images/pr-review-dashboard.png" alt="PR Change Risk Review Dashboard" width="900" style="border-radius: 8px; border: 1px solid #334155;" />
+</p>
+
 ### 2. Historical Time Slider & Bi-Temporal Scrubbing
 
 An interactive visual timeline scrubber (`/repos/[owner]/[name]/time`) allowing developers and auditors to explore the repository's exact state at any historical cutoff:
@@ -78,6 +96,10 @@ An interactive visual timeline scrubber (`/repos/[owner]/[name]/time`) allowing 
 - **Zero Future Leakage**: Backend Cypher queries strictly enforce $t \le t_{cutoff}$ across commits, review decisions, and incidents. Future events never appear in historical views.
 - **Interactive Visual Subgraph**: Renders an interactive `@xyflow/react` directed node graph showing relationships (commits, files, decisions, incidents) active as of the chosen cutoff.
 - **Bi-Temporal Edges**: Edges enforce validity windows (`valid_from <= $asOf` AND `valid_to > $asOf`).
+
+<p align="center">
+  <img src="docs/images/historical-time-slider.png" alt="Historical Time Slider & Subgraph" width="900" style="border-radius: 8px; border: 1px solid #334155;" />
+</p>
 
 ### 3. Contributor Ownership & Bus Factor Heatmap
 
@@ -88,6 +110,10 @@ Analyzes default-branch git history across normalized directory modules (`/repos
   $$B_{50} = \min \left\{ k \;\middle|\; \sum_{i=1}^k S_i \ge 50\% \right\}$$
 - **Single-Maintainer Risk**: Categorizes modules into High Risk ($B_{50} = 1$ or top share $\ge 80\%$), Medium Risk ($B_{50} = 2$ or fragile secondary share $< 10\%$), and Low Risk ($B_{50} \ge 3$).
 - **Automated Bot Filtering**: Separates automated bots (`dependabot[bot]`, `github-actions[bot]`, `renovate[bot]`) from human contributor pools.
+
+<p align="center">
+  <img src="docs/images/bus-factor-heatmap.png" alt="Contributor Ownership & Bus Factor Heatmap" width="900" style="border-radius: 8px; border: 1px solid #334155;" />
+</p>
 
 ### 4. Model Context Protocol (MCP) Server for AI Coding Agents
 
@@ -113,6 +139,37 @@ Receives real GitHub pull request webhooks (`/api/webhook/github`):
 ## Graph Data Model
 
 ### Schema Architecture
+
+```mermaid
+graph TD
+    subgraph Identity_and_Reviews [Identity & Review Governance]
+        Person([Person: Contributor])
+        PullRequest([PullRequest: Change Unit])
+        Comment([Comment: Review Discussion])
+        Decision([Decision: Code Constraint])
+        Incident([Incident: Regression / Hotfix])
+    end
+
+    subgraph Codebase_AST_and_VCS [Codebase AST & Git History]
+        Commit([Commit: Git Tree])
+        File([File: Source Path])
+        Function([Function: AST Node])
+    end
+
+    Person -->|AUTHORED / REVIEWED| PullRequest
+    Person -->|AUTHORED| Commit
+    Comment -->|ON| PullRequest
+    Decision -->|DERIVED_FROM| Comment
+    Decision -->|CONSTRAINS| File
+    Decision -->|CONSTRAINS| Function
+    Decision -->|SUPERSEDES| Decision
+    Commit -->|MODIFIED| File
+    Commit -->|MODIFIED_FUNCTIONS| Function
+    Function -->|CALLS 1..3 hops| Function
+    PullRequest -->|CONTAINS| File
+    PullRequest -->|INTRODUCED_BY| Incident
+    Incident -->|RESOLVED_BY| Commit
+```
 
 ```
                   ┌──────────────┐
@@ -165,6 +222,21 @@ Receives real GitHub pull request webhooks (`/api/webhook/github`):
 | `SUPERSEDES`         | `Decision` $\to$ `Decision`             | Architectural rule override/evolution                    |
 | `INTRODUCED_BY`      | `Incident` $\to$ `PullRequest`          | Regression root cause attribution                        |
 | `RESOLVED_BY`        | `Incident` $\to$ `Commit`               | Fix or revert commit link                                |
+
+---
+
+## How FalkorDB Powers Every Agent Decision
+
+FalkorDB is not merely a passive storage backend in Provenance; **every judgment, risk score, and contextual recommendation made by our agents is mathematically computed from FalkorDB graph traversals and matrix operations**:
+
+| Agent Capability | FalkorDB Query Mechanism | Why a Graph is Required |
+| :--- | :--- | :--- |
+| **AST Blast Radius** | GraphBLAS matrix multiplication on `(caller:Function)-[:CALLS*1..3]->(target:Function)` | Static call chains span 2–3 hops across files; relational databases require expensive recursive joins, while FalkorDB executes in $<38$ms. |
+| **Constraint Validation** | `MATCH (d:Decision)-[:CONSTRAINS]->(target)` with `NOT (d)<-[:SUPERSEDES]-(:Decision)` | Automatically ignores obsolete architectural rules when newer PR decisions supersede older ones. |
+| **Incident Affinity** | `MATCH (target)<-[:MODIFIED]-(:Commit)<-[:RESOLVED_BY]-(i:Incident)` | Traces whether the touched function was involved in historical reverts or post-mortem hotfixes. |
+| **Maintainer Fragility ($B_{50}$)** | `MATCH (p:Person)-[:AUTHORED]->(:Commit)-[:MODIFIED]->(f:File)` | Computes Lorenz cumulative ownership concentration per directory module to flag high-risk single maintainers. |
+| **Bi-Temporal Cutoff Isolation** | Point-in-time filtering `WHERE n.committed_at_ms <= $asOfMs` and edge intervals | Guarantees zero future data leakage when evaluating past PRs or running regression benchmarks. |
+| **Natural Language Codebase Memory** | `CALL db.idx.vector.queryNodes('Decision', 'embedding', ...)` + graph traversal | Combines dense vector similarity with 1-hop path traversal to return verified GitHub review comment citations. |
 
 ---
 

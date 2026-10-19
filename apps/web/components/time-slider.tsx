@@ -54,10 +54,17 @@ function useTimelineData(repository: string, initial: TimelineReport | null) {
 }
 
 function CutoffHeader({ selectedMs }: { selectedMs: number }) {
-  const humanDate = new Date(selectedMs).toLocaleString(undefined, {
-    dateStyle: "full",
-    timeStyle: "medium",
-  });
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const d = new Date(selectedMs);
+  const iso = d.toISOString();
+  const humanDate = mounted
+    ? d.toLocaleString(undefined, { dateStyle: "full", timeStyle: "medium" })
+    : d.toUTCString();
+
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
@@ -66,12 +73,11 @@ function CutoffHeader({ selectedMs }: { selectedMs: number }) {
         </span>
         <span className="cutoff-indicator-tag">DETERMINISTIC AS-OF</span>
       </div>
-      <div className="cutoff-display-terminal" suppressHydrationWarning>
+      <div className="cutoff-display-terminal">
         <span className="pulse-dot" style={{ width: 8, height: 8 }} />
-        <span>{new Date(selectedMs).toISOString()}</span>
+        <span>{iso}</span>
       </div>
       <div
-        suppressHydrationWarning
         style={{
           font: "700 13px var(--mono)",
           color: "var(--muted)",

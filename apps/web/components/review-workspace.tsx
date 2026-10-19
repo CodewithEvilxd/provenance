@@ -130,8 +130,13 @@ export default function ReviewWorkspace({
               <p className="eyebrow">
                 <span className="eyebrow-dot" /> PULL REQUEST REVIEW
               </p>
-              <h1>Dev server integration</h1>
-              <p className="page-subtitle">
+              <h1 className="font-marker" style={{ fontSize: "clamp(28px, 4vw, 40px)", letterSpacing: "0.02em" }}>
+                Dev server integration{" "}
+                <span className="doodle-underline-blue" style={{ fontSize: "0.55em", verticalAlign: "middle", marginLeft: 8 }}>
+                  VERIFIED
+                </span>
+              </h1>
+              <p className="page-subtitle font-comic" style={{ fontSize: 16, color: "#1a1a1f" }}>
                 <span className="repo-badge">{repo}</span>
                 <span className="pill">#{pr}</span>
                 <span>

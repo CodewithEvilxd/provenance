@@ -218,9 +218,14 @@ function RepoHeading({ repository }: { repository: string }) {
             FalkorDB Graph Active
           </span>
         </div>
-        <h1>{repository}</h1>
-        <p className="page-subtitle">
-          Explore architectural ownership concentration and temporal graph state over time with zero future leakage.
+        <h1 className="font-marker" style={{ fontSize: "clamp(30px, 4vw, 44px)", letterSpacing: "0.02em", margin: "6px 0 10px" }}>
+          {repository}{" "}
+          <span className="doodle-underline-lime" style={{ fontSize: "0.6em", verticalAlign: "middle", marginLeft: 8 }}>
+            INTELLIGENCE
+          </span>
+        </h1>
+        <p className="page-subtitle font-comic" style={{ fontSize: 18, color: "#1a1a1f", lineHeight: 1.5 }}>
+          Explore architectural ownership concentration and temporal graph state over time with zero future data leakage.
         </p>
       </div>
     </div>

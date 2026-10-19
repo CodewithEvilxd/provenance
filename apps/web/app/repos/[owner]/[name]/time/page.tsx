@@ -1,3 +1,4 @@
+import { queryTimeline } from "@provenance/agents/timeline";
 import RepoWorkspace from "../../../../../components/repo-workspace";
 
 type PageProps = {
@@ -7,5 +8,14 @@ type PageProps = {
 export default async function RepositoryTimeSliderPage({ params }: PageProps) {
   const { owner, name } = await params;
   const repository = `${owner}/${name}`;
-  return <RepoWorkspace repository={repository} defaultTab="time" />;
+  const graph = process.env.PROVENANCE_GRAPH ?? `repo:${repository}`;
+  const initialTimeline = await queryTimeline(graph, repository).catch(() => null);
+
+  return (
+    <RepoWorkspace
+      repository={repository}
+      defaultTab="time"
+      initialTimeline={initialTimeline}
+    />
+  );
 }

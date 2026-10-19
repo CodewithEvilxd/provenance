@@ -174,16 +174,18 @@ function BusFactorControls({
 function SkeletonView() {
   return (
     <div className="bus-factor-container" aria-busy="true">
-      <div
-        className="skeleton-pulse"
-        style={{ height: 42, marginBottom: 20 }}
-      />
+      <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "14px 18px", background: "var(--panel)", border: "var(--bw) solid var(--ink)", borderRadius: "var(--radius-md)", boxShadow: "var(--ex-xs)", marginBottom: 20 }}>
+        <span className="pulse-dot" />
+        <span style={{ font: "800 12px var(--mono)", letterSpacing: "0.06em", color: "var(--ink)" }}>
+          COMPUTING LORENZ GINI CONCENTRATION FROM FALKORDB AST GRAPH...
+        </span>
+      </div>
       <div className="modules-grid">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <div
             key={i}
             className="skeleton-pulse"
-            style={{ height: 160, borderRadius: 6 }}
+            style={{ height: 160, borderRadius: "var(--radius-md)", border: "1.5px solid var(--line-soft)" }}
           />
         ))}
       </div>

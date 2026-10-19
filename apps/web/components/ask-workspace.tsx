@@ -131,10 +131,14 @@ export default function AskWorkspace({
               <p className="eyebrow">
                 <span className="eyebrow-dot" /> GRAPH QUESTION
               </p>
-              <h1>Ask the codebase.</h1>
-              <p className="page-subtitle">
-                Answers stay attached to decisions, source comments, and code
-                paths.
+              <h1 className="font-marker" style={{ fontSize: "clamp(28px, 4vw, 40px)", letterSpacing: "0.02em" }}>
+                Ask the codebase{" "}
+                <span className="doodle-underline-lime" style={{ fontSize: "0.55em", verticalAlign: "middle", marginLeft: 8 }}>
+                  WHY
+                </span>
+              </h1>
+              <p className="page-subtitle font-comic" style={{ fontSize: 16, color: "#1a1a1f" }}>
+                Answers stay attached to decisions, source comments, and code paths with zero speculation.
               </p>
             </div>
           </div>

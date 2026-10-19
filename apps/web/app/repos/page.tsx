@@ -64,10 +64,14 @@ export default function RepositoriesIndexPage() {
               <p className="eyebrow">
                 <span className="eyebrow-dot" /> WORKSPACE REPOSITORIES
               </p>
-              <h1>Select a repository</h1>
-              <p className="page-subtitle">
-                Inspect graph provenance, contributor concentration, and
-                temporal history with zero future data leakage.
+              <h1 className="font-marker" style={{ fontSize: "clamp(28px, 4vw, 42px)", letterSpacing: "0.02em" }}>
+                Select a repository{" "}
+                <span className="doodle-underline-lime" style={{ fontSize: "0.55em", verticalAlign: "middle", marginLeft: 8 }}>
+                  CONNECTED
+                </span>
+              </h1>
+              <p className="page-subtitle font-comic" style={{ fontSize: 17, color: "#1a1a1f" }}>
+                Inspect graph provenance, contributor concentration, and temporal history with zero future data leakage.
               </p>
             </div>
           </div>

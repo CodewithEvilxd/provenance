@@ -249,12 +249,15 @@ export default async function EvalPage() {
           <p className="eyebrow">
             <span className="eyebrow-dot" /> PHASE 7 HARNESS
           </p>
-          <h1>Historical PR Risk Evaluation</h1>
-          <p className="hero-lede">
+          <h1 className="font-marker" style={{ fontSize: "clamp(28px, 4vw, 42px)", letterSpacing: "0.02em" }}>
+            Historical PR Risk Evaluation{" "}
+            <span className="doodle-underline-lime" style={{ fontSize: "0.55em", verticalAlign: "middle", marginLeft: 8 }}>
+              BENCHMARK
+            </span>
+          </h1>
+          <p className="hero-lede font-comic" style={{ fontSize: 18, color: "#1a1a1f", lineHeight: 1.55 }}>
             Reproducible offline evaluation pipeline testing PR risk prediction
-            against historical merge-time cutoffs. Strictly isolates temporal
-            records to guarantee zero data leakage from future commits or
-            post-merge incidents.
+            against historical merge-time cutoffs with zero future data leakage.
           </p>
         </div>
 
