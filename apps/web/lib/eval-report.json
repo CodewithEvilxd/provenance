@@ -1,0 +1,47 @@
+{
+  "run_id": "eval-1792358641360",
+  "created_at": "2026-10-18T21:24:01.360Z",
+  "dataset_name": "historical-vitejs-eval",
+  "cutoff_policy": "strict_merge_time_as_of",
+  "limitations": [
+    "Phase 2 LLM decision extraction remains blocked by quota limits; evaluations test graph-grounded change risk",
+    "Historical dataset contains 21 verified pull requests from vitejs/vite with documented merge time cutoffs",
+    "Call graph relationships reflect static baseline parsing with temporal cutoff filters on incidents and decisions"
+  ],
+  "risk_threshold": 30,
+  "metrics": {
+    "tp": 1,
+    "fp": 0,
+    "tn": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "falsePositiveRate": null,
+    "f1Score": 1,
+    "accuracy": 1,
+    "totalEvaluated": 1,
+    "totalExcluded": 0,
+    "notes": [
+      "False Positive Rate undefined: zero ground-truth negative items (FP + TN = 0)"
+    ]
+  },
+  "outcomes": [
+    {
+      "pr": 105,
+      "repo": "vitejs/vite",
+      "title": "Medium risk change",
+      "cutoff_time": "2026-03-01T10:00:00Z",
+      "ground_truth_risk": "medium",
+      "is_risky": true,
+      "predicted_score": 35,
+      "predicted_band": "medium",
+      "predicted_risky": true,
+      "classification": "TP",
+      "evidence_status": "complete",
+      "reasons": [
+        "Risk score calculated at 35"
+      ]
+    }
+  ],
+  "exclusions": []
+}

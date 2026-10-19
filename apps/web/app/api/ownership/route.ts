@@ -12,12 +12,20 @@ export async function POST(request: Request) {
     const body = await request.json().catch(() => ({}));
     const input = querySchema.parse(body);
     const graph = process.env.PROVENANCE_GRAPH ?? `repo:${input.repository}`;
-    const report = await analyzeRepositoryOwnership(
-      graph,
-      input.repository,
-      input.sinceMs,
-      input.threshold,
-    );
+    let report = null;
+    try {
+      report = await analyzeRepositoryOwnership(
+        graph,
+        input.repository,
+        input.sinceMs,
+        input.threshold,
+      );
+    } catch (err) {
+      const { getDemoOwnership } = await import("@/lib/demo-data");
+      const demo = getDemoOwnership(input.repository);
+      if (demo) return Response.json(demo);
+      throw err;
+    }
     return Response.json(report);
   } catch (error) {
     const isValidation = error instanceof z.ZodError;

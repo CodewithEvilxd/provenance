@@ -39,17 +39,31 @@ export async function selectGraph(graphName: string) {
   return (await connection).selectGraph(graphName);
 }
 
+function withTimeout<T>(
+  promise: Promise<T>,
+  ms = 3500,
+  label = "Operation timed out",
+): Promise<T> {
+  let timer: NodeJS.Timeout;
+  const timeoutPromise = new Promise<T>((_, reject) => {
+    timer = setTimeout(() => reject(new Error(`${label} after ${ms}ms`)), ms);
+  });
+  return Promise.race([promise, timeoutPromise]).finally(() => clearTimeout(timer));
+}
+
 export async function query<Row extends Record<string, unknown>>(
   graphName: string,
   cypher: string,
   params: GraphParameters = {},
 ): Promise<Row[]> {
-  const response = await (
-    await selectGraph(graphName)
-  ).query<Row>(cypher, {
-    params,
-  });
-  return response.data ?? [];
+  const execute = async () => {
+    const graph = await selectGraph(graphName);
+    const response = await graph.query<Row>(cypher, {
+      params,
+    });
+    return response.data ?? [];
+  };
+  return withTimeout(execute(), 3500, `FalkorDB query on ${graphName}`);
 }
 
 export async function closeGraphClient() {

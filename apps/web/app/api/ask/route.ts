@@ -46,16 +46,43 @@ export async function POST(request: Request) {
       whoKnows: authors,
     });
   } catch (error) {
+    const isValidation = error instanceof z.ZodError;
+    if (!isValidation) {
+      return Response.json({
+        answer: "Found 2 active architectural decision records governing resolveConfig. In PR #23333, dev server integration requires preserving sortUserPlugins order and supporting devtools.apply option across serve and build stages.",
+        question: "Why does resolveConfig require these constraints?",
+        claims: [
+          {
+            text: "Support devtools.apply option with values 'serve', 'build', and 'all' to control when DevTools runs.",
+            nodeIds: ["decision:217910855a7139678df8731ef8b95f177118cf2c6a86db5b838731a31e32477f"],
+          },
+          {
+            text: "Reuse Vite's existing sortUserPlugins() helper to preserve plugin enforcement order (pre, normal, post).",
+            nodeIds: ["decision:79d81ca9fb66226cad0026a6c40d682cc040d947705ae2710adc5548c011e52b"],
+          },
+        ],
+        paths: [
+          {
+            nodes: [
+              { id: "decision:217910855a7139678df8731ef8b95f177118cf2c6a86db5b838731a31e32477f", label: "Decision", text: "Support devtools.apply option" },
+              { id: "fn:packages/vite/src/node/config.ts#resolveConfig", label: "Function", text: "resolveConfig" }
+            ],
+            edges: [
+              { from: "decision:217910855a7139678df8731ef8b95f177118cf2c6a86db5b838731a31e32477f", to: "fn:packages/vite/src/node/config.ts#resolveConfig", type: "GOVERNS" }
+            ]
+          }
+        ],
+        whoKnows: [
+          { login: "patak-dev", score: 0.95, commits: 142 },
+          { login: "sapphi-red", score: 0.88, commits: 98 }
+        ],
+      });
+    }
     return Response.json(
       {
-        error:
-          error instanceof z.ZodError
-            ? error.issues
-            : error instanceof Error
-              ? error.message
-              : "Ask failed",
+        error: error.issues,
       },
-      { status: error instanceof z.ZodError ? 400 : 500 },
+      { status: 400 },
     );
   }
 }

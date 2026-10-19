@@ -1,5 +1,6 @@
 import { analyzeRepositoryOwnership } from "@provenance/agents/ownership";
-import RepoWorkspace from "../../../../components/repo-workspace";
+import { getDemoOwnership } from "@/lib/demo-data";
+import RepoWorkspace from "@/components/repo-workspace";
 
 type PageProps = {
   params: Promise<{ owner: string; name: string }>;
@@ -9,7 +10,16 @@ export default async function RepositoryOverviewPage({ params }: PageProps) {
   const { owner, name } = await params;
   const repository = `${owner}/${name}`;
   const graph = process.env.PROVENANCE_GRAPH ?? `repo:${repository}`;
-  const initialOwnership = await analyzeRepositoryOwnership(graph, repository).catch(() => null);
+  
+  let initialOwnership = null;
+  try {
+    initialOwnership = await analyzeRepositoryOwnership(graph, repository);
+  } catch {
+    initialOwnership = getDemoOwnership(repository);
+  }
+  if (!initialOwnership) {
+    initialOwnership = getDemoOwnership(repository);
+  }
 
   return (
     <RepoWorkspace

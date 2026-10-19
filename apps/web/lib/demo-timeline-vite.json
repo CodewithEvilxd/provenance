@@ -1,0 +1,2244 @@
+{
+  "repository": "vitejs/vite",
+  "isEmpty": false,
+  "earliest": "2026-03-10T03:33:31.000Z",
+  "latest": "2026-10-15T10:22:09.000Z",
+  "cutoff": "2026-10-15T10:22:09.000Z",
+  "cutoffMs": 1792059729000,
+  "totalNodes": 150,
+  "totalEdges": 132,
+  "activeDecisionsCount": 75,
+  "detectedIncidentsCount": 1,
+  "milestones": [
+    {
+      "kind": "decision",
+      "id": "decision:76fd536bef68dd149b64c611d988d501676eb6d482783fc125159977e9500379",
+      "text": "Avoid using the pronoun \"us\" in the environment API guide documentation section.",
+      "timestamp": "2026-03-10T05:50:53Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:600c2da8f69b75ddbb95768c29564794359203ac47c3efe6fad631b1410d8e4a",
+      "text": "Do not reuse OPTIMIZABLE_ENTRY_RE in this transform hook; leave the regex as before or hoist it under a different variable name.",
+      "timestamp": "2026-07-24T03:01:48Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:30c2333c38523be6a09ef4d0a7904c84a1f1a545a25beec690b84a44567b07ed",
+      "text": "Retain the specific name OPTIMIZABLE_ENTRY_RE rather than renaming it to a generic name.",
+      "timestamp": "2026-07-24T03:18:51Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:e9991bdb59bff3241ff4f4d63ca11863a525fcf59dab1a8212ef3eeb1776dee7",
+      "text": "Keep the configuration file name (.vscode/settings.json) and shorten the description in the VS Code debugging documentation",
+      "timestamp": "2026-07-23T03:48:21Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:289df136a6287186862f9a9f531e058ef479c2b36c4fba0aff84ff326454313f",
+      "text": "Use `npm` as the `runtimeExecutable` in the VS Code debug configuration documentation.",
+      "timestamp": "2026-07-23T03:57:15Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:ee7d12834fa220ca0a6c7c7f1f9c4990df0fbb6b1b4dc6f710beceb7fb31af7e",
+      "text": "Remove `!depsOptimizer?.isOptimizedDepFile(importer)` and update `optimizedDepChunkRE` to match `\\/rolldown-runtime-[A-Z\\d]{8}\\.js`",
+      "timestamp": "2026-07-24T07:56:43Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:ebaf62535097f115ad9f9019bf4f1f9ef150780d752b029cd22da2418cea6b49",
+      "text": "Keep the profile output filename without a counter suffix when count is 0 for easier CLI interaction",
+      "timestamp": "2026-08-18T05:53:09Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:ca68ce838c8166d41eae92816bcc2fea2a9e943f9f589878efe83f894c7f1fad",
+      "text": "Use vi.waitUntil without .catch for wait operations so timeouts fail tests explicitly",
+      "timestamp": "2026-07-28T06:20:41Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:3c3843f1d63f65038eb560bba89837374f442762074313d896051ae7edd02e4f",
+      "text": "Treat fully loaded pages that do not load the client runtime as settled during the client wait step",
+      "timestamp": "2026-07-28T06:20:41Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:4862a266f39aac70129040e51dfddae23dcd0d31ed488caebb884cb0d49bfa05",
+      "text": "Skip certain asset test cases in bundled-dev mode due to differences in asset URL handling and behavior.",
+      "timestamp": "2026-07-31T10:55:36Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:277765d37f938a950103549498c4c60284ff756996f6f0061fd449ce3c982321",
+      "text": "Log module ids as URL paths instead of raw file system paths in bundled-dev HMR client.",
+      "timestamp": "2026-07-31T10:55:36Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:412616800f7045be6b9b6d3b6adaf54de3c0a973e08ea27b680adc3889c26b65",
+      "text": "Remove top-level null fields from sourcemaps to normalize snapshots.",
+      "timestamp": "2026-08-06T04:27:26Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:109e062fbafccf66d825990d20f806e2f6dbb650a79655e82f0fcd5dc0a672d6",
+      "text": "Drop empty ignoreList fields from sourcemaps to avoid snapshot noise.",
+      "timestamp": "2026-08-06T04:27:26Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:ada79cc7e72b897f8b438003a3585a4f004ba61d27b80a08174eda973dc49a29",
+      "text": "Sort keys in sourcemaps to ensure consistent snapshot ordering.",
+      "timestamp": "2026-08-06T04:27:26Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:acbaa62ef0ba4a66b85a47fdf0ffa2510deed198c6d275485c6425901855973a",
+      "text": "Remove bundled-dev snapshot branches identical to unbundled ones.",
+      "timestamp": "2026-08-06T04:27:26Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:88e121cf9114c1b265dd01ad8e73c3ae223fdd1356e4c6a709d14e7c0c268fe7",
+      "text": "Recognize and accept real differences in sourcemaps between bundled and unbundled dev modes.",
+      "timestamp": "2026-08-06T04:27:26Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:cba3e7be7826cd905015630979810f58287032d38ac1ecd8f1b95fccc97ce4dc",
+      "text": "Ensure sourcemap mappings are valid, not only empty, and continue using snapshots for validation.",
+      "timestamp": "2026-08-06T04:20:48Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:e7d5bf549ab880a3ed800c3cf34f543bf7b731acdb27e7e2e873e8d79c4cd716",
+      "text": "Skip the import-analysis plugin test in bundled-dev mode.",
+      "timestamp": "2026-08-06T04:37:48Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:a6b59d2391aadd5b1367a14d9d62d78ae207fb2a91b1f9a3e005c893f8de685b",
+      "text": "Skip certain sourcemap tests for bundled-dev in the Vite repo and move them to the Rollup repo.",
+      "timestamp": "2026-08-06T08:59:19Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:8e21db0cec1377392155186ec003ece1e252df4810d24058fac74aa5182bbac7",
+      "text": "Implement leak prevention in Rollup as well.",
+      "timestamp": "2026-08-06T08:59:19Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:0b00169d4711f49b9faea23d4e6c1ce796044e7ab8a38803ef75fddac0c5cf8e",
+      "text": "formatSourcemapForSnapshot removes top-level null fields from sourcemaps.",
+      "timestamp": "2026-08-06T08:51:02Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:f09a3a63934593bccc92c7959e5c84f04aed2fd3f94b6129870839ad61abcf50",
+      "text": "formatSourcemapForSnapshot drops empty ignoreList fields in sourcemaps.",
+      "timestamp": "2026-08-06T08:51:02Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:1a1f21464fe1fe55930a6fdb0c5594eee181e112da18e87b8a116e2fccc0cc82",
+      "text": "formatSourcemapForSnapshot sorts keys in sourcemaps before snapshotting.",
+      "timestamp": "2026-08-06T08:51:02Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:18546654f24e6738ce07252f5ccb2486280c02a2eee5e0bcb686e355065d9fe7",
+      "text": "Remove bundled-dev snapshot branches identical to unbundled ones.",
+      "timestamp": "2026-08-06T08:51:02Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:9b6b72bb49712a089aab7589d6484a29678b5b09de522173e6de198ef4df9121",
+      "text": "Accept real differences in sourcemaps between bundled and unbundled dev for certain cases.",
+      "timestamp": "2026-08-06T08:51:02Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:c178b7da0324494cebf447b481b021404a17606b337e791a1a62d33502959abe",
+      "text": "In unbundled-dev mode, transformRequest drops the generated sourcemap if the original code and the generated code are the same.",
+      "timestamp": "2026-08-06T11:16:03Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:e2a8aa9decd503d2ce1736a96334ca443a009707ea7c812098ad6fe04b93551b",
+      "text": "Keep the current CI setup because CIs do not run on PRs created by GitHub Actions.",
+      "timestamp": "2026-08-18T05:41:11Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:6c0e5b816d0b3369742e6d95df8526db9526d227ae0b8b43944849809cd7cd9f",
+      "text": "Use explicit type check for configPort to allow port 0 assignment.",
+      "timestamp": "2026-08-06T09:14:56Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:737c5e551fd3d158bb26621074ca4bea8441fbc71cf5e895e841f2b3899ebeeb",
+      "text": "Remove the HmrUrl concept to reduce confusion caused by having three different URL representations.",
+      "timestamp": "2026-08-05T09:47:30Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:ed08466d2c289b7257da78a199c2e78ca824eedaf6ea1ad3d111dd1e0a8f0aef",
+      "text": "The acceptPath argument of import.meta.hot.accept now receives a ModuleUrl instead of an HmrUrl.",
+      "timestamp": "2026-08-05T09:47:30Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:8409ca660c9ec8d54c8dffe339f54154187817869edb968603253abf072a9c1d",
+      "text": "Use the same function with the `resolve` option passed to `nativeDynamicImportVarsPlugin` for resolving subpath imports in dynamic import statements.",
+      "timestamp": "2026-08-07T07:18:20Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:f4919cf867eaa6b52f36c358d02e8ba7f4902aca09e8910c5f166260adb6d6d7",
+      "text": "Middleware for certain file serving behaviors should be enabled only in unbundled-dev mode.",
+      "timestamp": "2026-08-18T07:31:00Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:4a047ed7f9f8aa4839ecc348637e1d575e9d4b921d74a6aad82d9215c869c63d",
+      "text": "Add a middleware using the `configureServer` hook in bundled-dev mode to replicate dynamic import behavior.",
+      "timestamp": "2026-08-18T07:34:20Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:c6d7ebfb6b2d86578071551fb5652b89454bbef5c4a1d8f0d0e80900b44faed9",
+      "text": "In bundled dev mode with an app having index.html at project root (normal SPA), bundle output files like /assets/index.js should respond with status 200 served from memory.",
+      "timestamp": "2026-08-18T07:41:27Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:28225ff737b077900b061421ad46a2afe801c2d8d5cff57367fc45b6285404bd",
+      "text": "In bundled dev mode with no index.html at project root (e.g., fs-serve), source files like /src/main.js should respond with 404.",
+      "timestamp": "2026-08-18T07:41:27Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:9660b6dde19f69cce59e74c69322b21fbb27d3fc145cc58d406c36169e40d7ac",
+      "text": "Denied files such as /.env or /src/dummy.crt should respond with 403 in plain dev mode but respond with 200 and SPA fallback index.html in bundled dev mode with index.html at root.",
+      "timestamp": "2026-08-18T07:41:27Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:410d535e1a9772354b833dccb1182bb11a3452bcb6bdcc8e84f16ff86ab856c8",
+      "text": "Files outside root or accessed via /@fs/ with denied extensions should respond with 403 in plain dev, 200 with SPA fallback in bundled dev with index.html, and 404 in bundled dev without index.html.",
+      "timestamp": "2026-08-18T07:41:27Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:2f742f982323d671b46d014288baf8ec42aa820bc2665b467d1c4df5142c4391",
+      "text": "In bundled-dev mode, when the app has an index.html at the project root (normal SPA), bundle output files like /assets/index.js should be served with HTTP 200 from memory.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:736312b7b9d87821c029214ce4717cad2d74999633e213a25b5929e61c097676",
+      "text": "In bundled-dev mode with no index.html at project root (e.g., fs-serve), source files like /src/main.js should return 404 instead of SPA fallback.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:f231399a4174215f2af7a385d17df55a5c1ebde2aa8b2420ae47132ea7c493c5",
+      "text": "Denied files such as /.env or /src/dummy.crt should return 403 in plain dev mode but return 200 with SPA fallback in bundled-dev mode with index.html at project root.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:ea6b6dff4b2eb741cc6303141220d09e1f560437894d1106316ad7ef492b1f6f",
+      "text": "Requests for files outside the root directory should return 403 in plain dev mode but return 200 with SPA fallback in bundled-dev mode with index.html at project root.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:186cdb8ad9b864c859850d36fdf1ef78889c1d1b58daf6f78f0134fe69250232",
+      "text": "Requests to /@fs/<abs path>/src/safe.txt should return 200 in plain dev and bundled-dev modes with index.html at project root, but 404 in bundled-dev mode without index.html.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:29017291db8532420fd48d4585fb8ee09626847894b61d5fc0a4f3d3764e000b",
+      "text": "Requests to /@fs/<abs path>/.env should return 403 in plain dev mode but 200 with SPA fallback in bundled-dev mode with index.html at project root, and 404 in bundled-dev mode without index.html.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:442ff3494313a1fb8386357942ef4afa0c637436236508c10e1714dc1aff0602",
+      "text": "Requests for files that do not exist should return HTML fallback in plain dev mode, 200 with SPA fallback in bundled-dev mode with index.html at project root, and 404 in bundled-dev mode without index.html.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:fe0f2d8b2902ae6cdd9655ea8346867459a4e6e2dc7cca1e4d62b5575a36df46",
+      "text": "Skip certain tests in bundled-dev mode when there is no equivalent usage, e.g., in the test file playground/json/__tests__/csr/json-csr.spec.ts at line 40.",
+      "timestamp": "2026-08-18T07:43:39Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:7d2beeb7b295581c1613943296551d571d9c2cb24ea5eb96dc815b3f75231dc5",
+      "text": "Use `page.locator` instead of `page.$` to keep the harness tracking changes to the element.",
+      "timestamp": "2026-08-17T05:16:29Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:0b7d3b7edd08a516a672f8a49596e57f5c0c2f303d44c9b2b0762f2e4f2d056c",
+      "text": "Close the config bundle in a finally block to ensure resources are released regardless of success or failure of generate() call.",
+      "timestamp": "2026-08-19T06:25:47Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:0d686aa91c99e91ac0e9daf6b3bdc45cc51e333d44f66c59b0868d28e5b9a7a7",
+      "text": "No test is required for this fix due to difficulty in testing and the simplicity of the fix.",
+      "timestamp": "2026-08-19T06:25:47Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:8ecefb955b7e69ccbaa47c2f073628196a59a826006b7db344d6a157d887db76",
+      "text": "Remove the line that deletes a real newline in srcset parsing to preserve newline-separated srcset candidates as space-separated.",
+      "timestamp": "2026-08-21T02:40:22Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:60aaaf372c8d7cabe2292f046e0f395efc5bc9e4f10453e05adf0ed0840bc23b",
+      "text": "Update outdated upstream file links in license comments to current URLs.",
+      "timestamp": "2026-08-18T05:25:30Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:626617d31cf745da8f9e6cf0a67ec5e001c017ec28d88e76d7f1c9cd024f5fc2",
+      "text": "Enable the devtools integration for both serve and build modes by default.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:7fcc1857e673128040c46190b9f74452dd6aae69fcc241c6feaef964f9fd0e4a",
+      "text": "Require @vitejs/devtools version 0.6.0 or higher.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:59593389e2b70862124bcd44ad75532fa2439936c03c70ebe6561b5633368dec",
+      "text": "Avoid automatically registering the dev-server integration if the user has manually registered DevTools() plugin.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:f2dac766a693e11be673c2fcf20932779b71ed52853eb3ffe0762b9b4aa168d1",
+      "text": "Treat a DevTools configuration object as enabled by default unless enabled: false is explicitly set.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:79d81ca9fb66226cad0026a6c40d682cc040d947705ae2710adc5548c011e52b",
+      "text": "Reuse Vite's existing sortUserPlugins() helper to preserve plugin enforcement order (pre, normal, post).",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:217910855a7139678df8731ef8b95f177118cf2c6a86db5b838731a31e32477f",
+      "text": "Support devtools.apply option with values 'serve', 'build', and 'all' to control when DevTools runs.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:3a9f7fca6e0098ee2c999a11e55ecec39d93169f5e810c77eedbc73bc9817ccd",
+      "text": "Build analysis and dev-server inspection remain opt-in integrations requiring separate package installation.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:a1801cd0b4a4093e35d9e646cb2e0b3210d08a84e6149cebb09f2cb01764bea7",
+      "text": "Update documentation to clarify package requirements and default DevTools behavior.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:2015ec6c6e0b18653058bdcafd9a425e5912a0b4e3f0da8b92c7c8b3918fe813",
+      "text": "Suppress the \"failed to resolve @vitejs/devtools\" error until it is confirmed that devtools is enabled.",
+      "timestamp": "2026-08-27T08:45:32Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:af5fb5807bdfbe2a86e8ba6141ad4a6ab73227333ccb7840f339a6821d036cda",
+      "text": "The devtools option is frozen at config hook time, so any changes to it later are no-ops.",
+      "timestamp": "2026-09-03T09:32:26Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:7460168dd5bf828cabb509f08bbc655207a9f497a8770e9721ffbf957947efe5",
+      "text": "Warn users if they attempt to change the devtools option after initial config resolution.",
+      "timestamp": "2026-09-03T09:32:26Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:ff944035dd9095caf952af8c1aa1c1dc51422fc6e0ce37efb21c94f0ae6de2b2",
+      "text": "Do not reuse the same regex variable name for different purposes; keep regex variable names semantically specific to their usage.",
+      "timestamp": "2026-07-24T03:18:51Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:09552e506fea24a0e012d68ad6e31e7e160ccdc2f3e8a0a9807687ec3411a09c",
+      "text": "Keep the file name for the temporary directory in VS Code settings to guide users where to add it.",
+      "timestamp": "2026-07-23T03:48:21Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:339fdc83a28dff95aa4e543f5ac31af96ceb7310ee142e6093f52b6c43da4220",
+      "text": "Shorten the explanation about the bundle loader and inline source map to reduce wordiness.",
+      "timestamp": "2026-07-23T03:48:21Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:dc7a164957aa2271561e991da00c55d5cbacb251a51d9d97f2ebe879b038a85e",
+      "text": "Use `npm` as the runtime executable in VS Code debugging configuration.",
+      "timestamp": "2026-07-23T03:57:15Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:52e3419b4225e041853e8643b6f4cdec9a454575911418437b7efaa5518ebbe1",
+      "text": "Preserve a snapshot of environment instances at the start of the HMR update to avoid mixing old and new environments during server restarts.",
+      "timestamp": "2026-07-24T03:13:28Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:58413f3ffcf61421761bc98b1ee09bb6e6681614b95371bc7a2d4dfa2f624f8b",
+      "text": "Record client hook errors against the captured client environment snapshot rather than the current environment instance.",
+      "timestamp": "2026-07-24T03:13:28Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:c01fb2e46726292637978874f2be1d635e4b6d2be79aacf32ee8481a6e5a1db7",
+      "text": "Dispatch the default HMR update using the captured environment list snapshot.",
+      "timestamp": "2026-07-24T03:13:28Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:4cb1127fbe9d49d7e992a878be232013029af161624a3ca7c232b16d97811988",
+      "text": "Skip interop rewrite only for relative imports in optimized dep files, not for bare specifiers injected by plugins.",
+      "timestamp": "2026-07-24T07:56:43Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:d75e7217df7f04964de4a9b3bbb129d85a4f2bf0b4184c4c7283938cac1ca828",
+      "text": "Consider removing the check for optimized dep files in import analysis and instead refine the regex matching optimized dep chunks to only match rolldown-runtime files.",
+      "timestamp": "2026-07-24T07:56:43Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:faa0ddbe2aa581c0b0cb2e8423c84f6824973c506907e88667c6c208e653cedd",
+      "text": "Replace fixed 15s page poll with a three-step bounded wait process under bundled dev.",
+      "timestamp": "2026-07-28T06:20:41Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:8e6fb73667328ac60b405bfd01480fb7f95169b28448d770fe4a438de86802d8",
+      "text": "Use vi.waitUntil without .catch for waits to fail loudly on timeout.",
+      "timestamp": "2026-07-28T06:20:41Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:de5fbc310b6237c079b5a5daec4fb0c9526c2f6dfabe53c756332dfcfae3f589",
+      "text": "Treat fully loaded pages with no client runtime as settled in client wait step.",
+      "timestamp": "2026-07-28T06:20:41Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:125b08b0b1a26ba4cff80cee1d25e91891dc075fbc1f403873178aad1f8f58f1",
+      "text": "Replace fixed 15s wait with a three-step bounded wait process for bundled dev tests.",
+      "timestamp": "2026-07-28T07:22:55Z"
+    },
+    {
+      "kind": "decision",
+      "id": "decision:70f676b212932963dd29a5ea246eb314eea288bc042277952af2e910f23fafc3",
+      "text": "Mark waiting for the page's client registration as a temporary workaround.",
+      "timestamp": "2026-07-28T07:22:55Z"
+    },
+    {
+      "kind": "incident",
+      "id": "incident:regression:issue:23197",
+      "text": "Regression in 8.2: Vitest `setupFiles` fails with \"Cannot find module\" across Windows drive symlinks",
+      "timestamp": "2026-08-07T19:43:06Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:21802",
+      "text": "docs: fix grammer in environment API page",
+      "timestamp": "2026-03-10T03:48:28Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:22832",
+      "text": "fix: resolve root to real path",
+      "timestamp": "2026-07-01T03:18:34Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:22964",
+      "text": "refactor: use named regex constants over inline literals",
+      "timestamp": "2026-07-17T07:45:15Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:22974",
+      "text": "docs(config): rewrite VS Code debugging section",
+      "timestamp": "2026-07-18T08:14:57Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:22992",
+      "text": "fix(hmr): preserve environment snapshot during server restart",
+      "timestamp": "2026-07-21T04:40:32Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23029",
+      "text": "fix(importAnalysis): interop imports injected into optimized dep files by plugins",
+      "timestamp": "2026-07-23T16:38:37Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23042",
+      "text": "feat(cli): support naming the CPU profile via --profile [name]",
+      "timestamp": "2026-07-24T08:12:33Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23077",
+      "text": "test(bundled-dev): wait for first bundle and client before assertions",
+      "timestamp": "2026-07-28T05:20:37Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23078",
+      "text": "test(bundled-dev): enable assets playgrounds",
+      "timestamp": "2026-07-28T05:21:04Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23079",
+      "text": "test(bundled-dev): enable css playgrounds",
+      "timestamp": "2026-07-28T05:21:28Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23080",
+      "text": "test(bundled-dev): enable sourcemap playgrounds",
+      "timestamp": "2026-07-28T05:21:53Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23116",
+      "text": "ci: setup PR-driven release",
+      "timestamp": "2026-07-31T08:11:46Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23158",
+      "text": "fix(server): use a random port when port is 0",
+      "timestamp": "2026-08-04T10:29:54Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23172",
+      "text": "refactor: remove HmrUrl concept",
+      "timestamp": "2026-08-05T06:58:46Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23185",
+      "text": "feat: support subpath imports in dynamic import statements",
+      "timestamp": "2026-08-06T12:18:51Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23198",
+      "text": "fix: respect `resolve.preserveSymlinks` when resolving root (fix #23197)",
+      "timestamp": "2026-08-08T00:07:09Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23222",
+      "text": "docs: correct the type of `server.middlewareMode`",
+      "timestamp": "2026-08-10T06:56:32Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23246",
+      "text": "test(bundled-dev): enable fs-serve, resolve, dynamic-import and assets-sanitize cases",
+      "timestamp": "2026-08-12T08:48:52Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23254",
+      "text": "test(bundled-dev): enable hmr playground",
+      "timestamp": "2026-08-13T06:50:53Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23256",
+      "text": "fix(config): close bundles when generation fails",
+      "timestamp": "2026-08-13T18:57:32Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23265",
+      "text": "fix(css): keep newline-separated srcset candidates intact",
+      "timestamp": "2026-08-15T02:10:54Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23285",
+      "text": "fix(vite): update outdated upstream file links in license comments",
+      "timestamp": "2026-08-17T10:06:10Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23311",
+      "text": "ci: set up bot workflow and ai policy",
+      "timestamp": "2026-08-20T07:01:39Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23333",
+      "text": "feat(devtools): enable dev server integration",
+      "timestamp": "2026-08-23T12:42:06Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23373",
+      "text": "fix(bundled-dev): mark payload delivered on client report",
+      "timestamp": "2026-08-26T08:06:41Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23387",
+      "text": "fix(html): don't inline preload link targets (fix #13355)",
+      "timestamp": "2026-08-27T15:30:44Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23463",
+      "text": "feat(bundled-dev): support `import.meta.hot.acceptExports`",
+      "timestamp": "2026-09-10T09:18:59Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23566",
+      "text": "chore(optimizer): add debug log when waiting for dep before init",
+      "timestamp": "2026-09-24T08:01:23Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23568",
+      "text": "fix(bundled-dev): serve the rolldown runtime from the installed rolldown",
+      "timestamp": "2026-09-24T09:24:13Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23646",
+      "text": "perf(module-runner): skip cloning call sites that have no source map",
+      "timestamp": "2026-10-04T17:33:31Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23707",
+      "text": "test: tag bundled-dev skips in the css playground",
+      "timestamp": "2026-10-08T16:26:33Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23741",
+      "text": "fix(bundled-dev): map forwarded error stacks through the bundle source maps",
+      "timestamp": "2026-10-13T05:45:18Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23742",
+      "text": "test: tag bundled-dev skips in the fs-serve playground",
+      "timestamp": "2026-10-13T07:48:16Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23744",
+      "text": "refactor(deps): replace `@vercel/detect-agent` with `std-env`",
+      "timestamp": "2026-10-13T10:30:55Z"
+    },
+    {
+      "kind": "pr",
+      "id": "pr:23788",
+      "text": "test: tag bundled-dev skips in the hmr playground",
+      "timestamp": "2026-10-16T09:16:54Z"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "commit:9717d12995032c550003e19ecccf7d132d24b068",
+      "label": "Commit",
+      "text": "perf: short-circuit",
+      "timestamp": "2026-10-15T10:22:09Z"
+    },
+    {
+      "id": "comment:review:4281799080",
+      "label": "Comment",
+      "text": "packages/create-vite/src/index.ts",
+      "timestamp": "2026-10-15T10:21:57Z"
+    },
+    {
+      "id": "comment:review:4279458561",
+      "label": "Comment",
+      "text": "playground/fs-serve/__tests__/commonTests.ts",
+      "timestamp": "2026-10-15T05:39:11Z"
+    },
+    {
+      "id": "commit:6b277b243763674bf43fea75f79d3bed5d9180a6",
+      "label": "Commit",
+      "text": "refactor(bundled-dev): compute the out dir once and use `dev.sourcemapIgnoreList` for the code frame\n\nClaude-Session: https://claude.ai/code/session_01EiHPW8rsaDurDnTT3ihL3J",
+      "timestamp": "2026-10-15T03:33:27Z"
+    },
+    {
+      "id": "file:playground/backend-integration/__tests__/backend-integration.spec.ts",
+      "label": "File",
+      "text": "playground/backend-integration/__tests__/backend-integration.spec.ts",
+      "timestamp": "2026-10-15T03:28:52Z"
+    },
+    {
+      "id": "commit:670efc8c84ac992f3dadeedda3a377a116c3b37f",
+      "label": "Commit",
+      "text": "test: tag bundled-dev skips in the hmr playground\n\nClaude-Session: https://claude.ai/code/session_01EiHPW8rsaDurDnTT3ihL3J",
+      "timestamp": "2026-10-15T03:28:52Z"
+    },
+    {
+      "id": "comment:review:4278493004",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/forwardConsole.ts",
+      "timestamp": "2026-10-15T02:46:12Z"
+    },
+    {
+      "id": "comment:review:4269403491",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/forwardConsole.ts",
+      "timestamp": "2026-10-14T10:05:00Z"
+    },
+    {
+      "id": "comment:review:4268957662",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/forwardConsole.ts",
+      "timestamp": "2026-10-14T09:20:14Z"
+    },
+    {
+      "id": "comment:review:4268213955",
+      "label": "Comment",
+      "text": "packages/create-vite/src/index.ts",
+      "timestamp": "2026-10-14T08:00:01Z"
+    },
+    {
+      "id": "comment:review:4268202745",
+      "label": "Comment",
+      "text": "packages/create-vite/src/index.ts",
+      "timestamp": "2026-10-14T07:58:38Z"
+    },
+    {
+      "id": "comment:review:4258186573",
+      "label": "Comment",
+      "text": "packages/create-vite/src/index.ts",
+      "timestamp": "2026-10-13T11:44:44Z"
+    },
+    {
+      "id": "pr:23744",
+      "label": "PR",
+      "text": "refactor(deps): replace `@vercel/detect-agent` with `std-env`",
+      "timestamp": "2026-10-13T10:30:55Z"
+    },
+    {
+      "id": "commit:b6e19df3eb1efb52ff145369b0386993a36fd298",
+      "label": "Commit",
+      "text": "refactor(deps): replace `@vercel/detect-agent` with `std-env`",
+      "timestamp": "2026-10-13T10:01:16Z"
+    },
+    {
+      "id": "comment:review:4256964371",
+      "label": "Comment",
+      "text": "playground/fs-serve/__tests__/commonTests.ts",
+      "timestamp": "2026-10-13T09:30:35Z"
+    },
+    {
+      "id": "comment:review:4256932092",
+      "label": "Comment",
+      "text": "playground/fs-serve/__tests__/commonTests.ts",
+      "timestamp": "2026-10-13T09:27:11Z"
+    },
+    {
+      "id": "comment:review:4256847999",
+      "label": "Comment",
+      "text": "playground/fs-serve/__tests__/commonTests.ts",
+      "timestamp": "2026-10-13T09:18:22Z"
+    },
+    {
+      "id": "comment:review:4256790495",
+      "label": "Comment",
+      "text": "playground/fs-serve/__tests__/commonTests.ts",
+      "timestamp": "2026-10-13T09:12:24Z"
+    },
+    {
+      "id": "comment:review:4256782643",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/forwardConsole.ts",
+      "timestamp": "2026-10-13T09:11:35Z"
+    },
+    {
+      "id": "comment:review:4256777537",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/forwardConsole.ts",
+      "timestamp": "2026-10-13T09:11:03Z"
+    },
+    {
+      "id": "pr:23742",
+      "label": "PR",
+      "text": "test: tag bundled-dev skips in the fs-serve playground",
+      "timestamp": "2026-10-13T07:48:16Z"
+    },
+    {
+      "id": "commit:911445620c27d22a9fad5372d78717136fb8bf6e",
+      "label": "Commit",
+      "text": "test: tag bundled-dev skips in the fs-serve playground\n\nClaude-Session: https://claude.ai/code/session_01GskeipRQJUNMtrvvgDUuSx",
+      "timestamp": "2026-10-13T07:47:40Z"
+    },
+    {
+      "id": "pr:23741",
+      "label": "PR",
+      "text": "fix(bundled-dev): map forwarded error stacks through the bundle source maps",
+      "timestamp": "2026-10-13T05:45:18Z"
+    },
+    {
+      "id": "commit:86b31cb5cff451e89629c8f4e45af93d1b9be9d3",
+      "label": "Commit",
+      "text": "fix(bundled-dev): map forwarded error stacks through the bundle source maps\n\nClaude-Session: https://claude.ai/code/session_01GskeipRQJUNMtrvvgDUuSx",
+      "timestamp": "2026-10-13T05:44:52Z"
+    },
+    {
+      "id": "comment:review:4227938342",
+      "label": "Comment",
+      "text": "playground/css/__tests__/tests.ts",
+      "timestamp": "2026-10-09T07:57:18Z"
+    },
+    {
+      "id": "comment:review:4227811930",
+      "label": "Comment",
+      "text": "playground/css/__tests__/tests.ts",
+      "timestamp": "2026-10-09T07:39:55Z"
+    },
+    {
+      "id": "comment:review:4227796322",
+      "label": "Comment",
+      "text": "playground/css/__tests__/tests.ts",
+      "timestamp": "2026-10-09T07:37:48Z"
+    },
+    {
+      "id": "comment:review:4227786985",
+      "label": "Comment",
+      "text": "playground/css/__tests__/tests.ts",
+      "timestamp": "2026-10-09T07:36:30Z"
+    },
+    {
+      "id": "pr:23707",
+      "label": "PR",
+      "text": "test: tag bundled-dev skips in the css playground",
+      "timestamp": "2026-10-08T16:26:33Z"
+    },
+    {
+      "id": "commit:d86338594145f394512e2fce8ab6d3b9f31cb36d",
+      "label": "Commit",
+      "text": "test: tag bundled-dev skips in the css playground\n\nClaude-Session: https://claude.ai/code/session_01GskeipRQJUNMtrvvgDUuSx",
+      "timestamp": "2026-10-08T16:25:50Z"
+    },
+    {
+      "id": "commit:76dec212e54c69759e2c1b83cb7b5884e6f710d9",
+      "label": "Commit",
+      "text": "test(hmr): glob accept-exports pages and explain gotoLatestBuild\n\nClaude-Session: https://claude.ai/code/session_016fZ998M7oAxPBVALykmN5y",
+      "timestamp": "2026-10-08T10:00:30Z"
+    },
+    {
+      "id": "file:playground/hmr/package.json",
+      "label": "File",
+      "text": "playground/hmr/package.json",
+      "timestamp": "2026-10-08T10:00:30Z"
+    },
+    {
+      "id": "comment:review:4214380597",
+      "label": "Comment",
+      "text": "playground/test-utils.ts",
+      "timestamp": "2026-10-08T03:49:46Z"
+    },
+    {
+      "id": "comment:review:4214351159",
+      "label": "Comment",
+      "text": "playground/hmr/vite.config.ts",
+      "timestamp": "2026-10-08T03:43:31Z"
+    },
+    {
+      "id": "commit:fe8cba9b704e152af29a3a191798f669ea60a352",
+      "label": "Commit",
+      "text": "chore: use `return frame`",
+      "timestamp": "2026-10-08T02:41:17Z"
+    },
+    {
+      "id": "comment:review:4214057412",
+      "label": "Comment",
+      "text": "packages/vite/src/module-runner/sourcemap/interceptor.ts",
+      "timestamp": "2026-10-08T02:41:03Z"
+    },
+    {
+      "id": "comment:review:4207187665",
+      "label": "Comment",
+      "text": "packages/vite/src/module-runner/sourcemap/interceptor.ts",
+      "timestamp": "2026-10-07T13:01:40Z"
+    },
+    {
+      "id": "comment:review:4204684026",
+      "label": "Comment",
+      "text": "packages/vite/src/module-runner/sourcemap/interceptor.ts",
+      "timestamp": "2026-10-07T08:25:58Z"
+    },
+    {
+      "id": "pr:23646",
+      "label": "PR",
+      "text": "perf(module-runner): skip cloning call sites that have no source map",
+      "timestamp": "2026-10-04T17:33:31Z"
+    },
+    {
+      "id": "person:Cherry",
+      "label": "Person",
+      "text": "James Ross",
+      "timestamp": "2026-10-04T17:30:27Z"
+    },
+    {
+      "id": "commit:f1f1ba1786865b81d094d0ea94916a7a2565fdd9",
+      "label": "Commit",
+      "text": "perf(module-runner): skip cloning call sites that have no source map\n\nwrapCallSite cloned every frame it formatted. When a frame has no source\nmap and nothing renames it, the clone prints the same thing, so return\nthe original frame's formatting instead.",
+      "timestamp": "2026-10-04T17:30:27Z"
+    },
+    {
+      "id": "commit:92f1dedb1f24218c870eeae08476c7a80af88463",
+      "label": "Commit",
+      "text": "docs: avoid \"us\"\n\nCo-authored-by: Bjorn Lu <bjornlu.dev@gmail.com>",
+      "timestamp": "2026-10-01T01:52:37Z"
+    },
+    {
+      "id": "comment:review:4123762170",
+      "label": "Comment",
+      "text": "playground/fs-serve/__tests__/commonTests.ts",
+      "timestamp": "2026-09-28T15:06:36Z"
+    },
+    {
+      "id": "commit:5e206c5a8ca3c4cb7de58c78738d86df6b09383c",
+      "label": "Commit",
+      "text": "test(bundled-dev): address review on URL helpers and the CSS HEAD skip",
+      "timestamp": "2026-09-28T15:04:34Z"
+    },
+    {
+      "id": "comment:review:4123664885",
+      "label": "Comment",
+      "text": "playground/resolve/__tests__/resolve.spec.ts",
+      "timestamp": "2026-09-28T14:58:01Z"
+    },
+    {
+      "id": "comment:review:4121333875",
+      "label": "Comment",
+      "text": "playground/resolve/__tests__/resolve.spec.ts",
+      "timestamp": "2026-09-28T10:58:22Z"
+    },
+    {
+      "id": "comment:review:4120239199",
+      "label": "Comment",
+      "text": "playground/resolve/__tests__/resolve.spec.ts",
+      "timestamp": "2026-09-28T08:53:25Z"
+    },
+    {
+      "id": "comment:review:4120226357",
+      "label": "Comment",
+      "text": "playground/fs-serve/__tests__/commonTests.ts",
+      "timestamp": "2026-09-28T08:51:51Z"
+    },
+    {
+      "id": "comment:review:4120206627",
+      "label": "Comment",
+      "text": "playground/dynamic-import/vite.config.js",
+      "timestamp": "2026-09-28T08:49:31Z"
+    },
+    {
+      "id": "commit:011ac8335f3949c307feab5d4d6d963b6de37d52",
+      "label": "Commit",
+      "text": "test(bundled-dev): explain why fs-serve requests are 404 in bundled dev",
+      "timestamp": "2026-09-28T07:54:14Z"
+    },
+    {
+      "id": "commit:3a2190099961bd784ec0f107fd25acb2ceb2a6d3",
+      "label": "Commit",
+      "text": "test(hmr): cover acceptExports with hmrPartialAccept off",
+      "timestamp": "2026-09-25T11:01:41Z"
+    },
+    {
+      "id": "file:playground/hmr/vite.config-no-partial-accept.js",
+      "label": "File",
+      "text": "playground/hmr/vite.config-no-partial-accept.js",
+      "timestamp": "2026-09-25T11:01:41Z"
+    },
+    {
+      "id": "comment:review:4102537124",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/clientInjections.ts",
+      "timestamp": "2026-09-25T08:08:59Z"
+    },
+    {
+      "id": "commit:75cb6c3785802639ae410dda72833bf2b176fa45",
+      "label": "Commit",
+      "text": "refactor(bundled-dev): resolve the rolldown runtime with import.meta.resolve",
+      "timestamp": "2026-09-25T07:00:22Z"
+    },
+    {
+      "id": "comment:review:4102020871",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/clientInjections.ts",
+      "timestamp": "2026-09-25T06:59:01Z"
+    },
+    {
+      "id": "comment:review:4100379410",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/clientInjections.ts",
+      "timestamp": "2026-09-25T02:15:09Z"
+    },
+    {
+      "id": "comment:review:4100350349",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/clientInjections.ts",
+      "timestamp": "2026-09-25T02:08:36Z"
+    },
+    {
+      "id": "commit:e8829abbf3e02012e13b1e8e4f194318a21e2889",
+      "label": "Commit",
+      "text": "test(bundled-dev): cover the served rolldown runtime",
+      "timestamp": "2026-09-24T09:49:01Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/plugins/clientInjections.spec.ts",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/plugins/clientInjections.spec.ts",
+      "timestamp": "2026-09-24T09:49:01Z"
+    },
+    {
+      "id": "pr:23568",
+      "label": "PR",
+      "text": "fix(bundled-dev): serve the rolldown runtime from the installed rolldown",
+      "timestamp": "2026-09-24T09:24:13Z"
+    },
+    {
+      "id": "commit:c2173d404199da61dcaa66d9277f2ba9893d2c6c",
+      "label": "Commit",
+      "text": "fix(bundled-dev): serve the rolldown runtime from the installed rolldown",
+      "timestamp": "2026-09-24T09:24:05Z"
+    },
+    {
+      "id": "comment:review:4091386244",
+      "label": "Comment",
+      "text": "packages/vite/src/node/optimizer/optimizer.ts",
+      "timestamp": "2026-09-24T08:17:05Z"
+    },
+    {
+      "id": "comment:review:4091290366",
+      "label": "Comment",
+      "text": "packages/vite/src/node/optimizer/optimizer.ts",
+      "timestamp": "2026-09-24T08:04:40Z"
+    },
+    {
+      "id": "pr:23566",
+      "label": "PR",
+      "text": "chore(optimizer): add debug log when waiting for dep before init",
+      "timestamp": "2026-09-24T08:01:23Z"
+    },
+    {
+      "id": "commit:e0cc2455febb8db83de59e705429294e6ee2b44b",
+      "label": "Commit",
+      "text": "chore(optimizer): add debug log when waiting for dep before init",
+      "timestamp": "2026-09-24T07:04:48Z"
+    },
+    {
+      "id": "file:playground/fs-serve/__tests__/deny/fs-serve-deny.spec.ts",
+      "label": "File",
+      "text": "playground/fs-serve/__tests__/deny/fs-serve-deny.spec.ts",
+      "timestamp": "2026-09-22T08:10:47Z"
+    },
+    {
+      "id": "commit:82be213c13f3497a65918f4cd65c206689dd6e9c",
+      "label": "Commit",
+      "text": "test(bundled-dev): expect bundle-only serving in fs-serve, resolve, dynamic-import\n\nClaude-Session: https://claude.ai/code/session_01SyoHH1uZXfLcw2kGkr5yVK",
+      "timestamp": "2026-09-22T08:10:47Z"
+    },
+    {
+      "id": "pr:23463",
+      "label": "PR",
+      "text": "feat(bundled-dev): support `import.meta.hot.acceptExports`",
+      "timestamp": "2026-09-10T09:18:59Z"
+    },
+    {
+      "id": "commit:e6e9ac892f5d62c686db9417e6fac4d5c24aea9d",
+      "label": "Commit",
+      "text": "feat(bundled-dev): support `import.meta.hot.acceptExports`\n\nClaude-Session: https://claude.ai/code/session_01BeL44SLuF1syUeXWWYH2BN",
+      "timestamp": "2026-09-10T09:18:26Z"
+    },
+    {
+      "id": "file:playground/assets/asset/emitted-worker.js",
+      "label": "File",
+      "text": "playground/assets/asset/emitted-worker.js",
+      "timestamp": "2026-09-04T09:54:59Z"
+    },
+    {
+      "id": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "label": "Commit",
+      "text": "Merge branch 'main' into fix/html-no-inline-modulepreload",
+      "timestamp": "2026-09-04T09:54:59Z"
+    },
+    {
+      "id": "comment:review:3931996430",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/html.ts",
+      "timestamp": "2026-09-04T07:49:19Z"
+    },
+    {
+      "id": "commit:8f20f304a461e4e22b3f78083b85a34a8f5fd66a",
+      "label": "Commit",
+      "text": "refactor(html): compute the no-inline link decision only where needed\n\nExtract it into `getLinkShouldInline` and call it from the two branches\nthat consume it, instead of computing it once per attribute at the top\nof the loop where the `remove` and public-file branches never use it.",
+      "timestamp": "2026-09-04T07:48:46Z"
+    },
+    {
+      "id": "comment:review:3930394830",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/html.ts",
+      "timestamp": "2026-09-04T02:35:06Z"
+    },
+    {
+      "id": "commit:8d6ae3dc91d0a157db212be7d656e1d9802b3085",
+      "label": "Commit",
+      "text": "fix: optional type",
+      "timestamp": "2026-09-03T11:44:54Z"
+    },
+    {
+      "id": "comment:review:3924123313",
+      "label": "Comment",
+      "text": "packages/vite/types/internal/devtoolsOptions.d.ts",
+      "timestamp": "2026-09-03T11:40:38Z"
+    },
+    {
+      "id": "commit:ae8c0cbfddd71407b64fecef27eb634a8700e458",
+      "label": "Commit",
+      "text": "chore: remove unused external config",
+      "timestamp": "2026-09-03T11:38:51Z"
+    },
+    {
+      "id": "commit:b2c869faff3e8f2c91f46c30ec86f10aeb3dc755",
+      "label": "Commit",
+      "text": "chore: bump peerDep as well",
+      "timestamp": "2026-09-03T11:33:40Z"
+    },
+    {
+      "id": "commit:1e956c97804629a380ed8839062beb7f153847a3",
+      "label": "Commit",
+      "text": "chore: add devtools to minimumReleaseAgeExclude",
+      "timestamp": "2026-09-03T11:33:14Z"
+    },
+    {
+      "id": "comment:review:3924031447",
+      "label": "Comment",
+      "text": "packages/vite/types/internal/devtoolsOptions.d.ts",
+      "timestamp": "2026-09-03T11:28:18Z"
+    },
+    {
+      "id": "commit:37f8cedd139c13565f0159970240fa1d3fe0fdf5",
+      "label": "Commit",
+      "text": "chore: update",
+      "timestamp": "2026-09-03T10:42:22Z"
+    },
+    {
+      "id": "comment:review:3923113643",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-03T09:32:26Z"
+    },
+    {
+      "id": "decision:7460168dd5bf828cabb509f08bbc655207a9f497a8770e9721ffbf957947efe5",
+      "label": "Decision",
+      "text": "Warn users if they attempt to change the devtools option after initial config resolution.",
+      "timestamp": "2026-09-03T09:32:26Z"
+    },
+    {
+      "id": "decision:af5fb5807bdfbe2a86e8ba6141ad4a6ab73227333ccb7840f339a6821d036cda",
+      "label": "Decision",
+      "text": "The devtools option is frozen at config hook time, so any changes to it later are no-ops.",
+      "timestamp": "2026-09-03T09:32:26Z"
+    },
+    {
+      "id": "comment:review:3923073852",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-03T09:27:23Z"
+    },
+    {
+      "id": "comment:review:3923066175",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-03T09:26:24Z"
+    },
+    {
+      "id": "commit:6b3705f5e20a88892f33f8dc6940675f70037b5a",
+      "label": "Commit",
+      "text": "chore: update",
+      "timestamp": "2026-09-03T09:05:53Z"
+    },
+    {
+      "id": "commit:18fa5344891cae946cdf4f9c03be3db510b0989b",
+      "label": "Commit",
+      "text": "chore: type import",
+      "timestamp": "2026-09-03T08:37:33Z"
+    },
+    {
+      "id": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "label": "Commit",
+      "text": "chore: update",
+      "timestamp": "2026-09-03T07:51:40Z"
+    },
+    {
+      "id": "commit:1edf0bc193907c50820a5dbcfc7d7d48b40092b5",
+      "label": "Commit",
+      "text": "chore: address review comments\n\nClaude-Session: https://claude.ai/code/session_01KHc1S3i6y9HsJnBt4MU4Yq",
+      "timestamp": "2026-09-03T07:22:36Z"
+    },
+    {
+      "id": "commit:2eaff30e181ca37bebf117aec6daf631219e39d0",
+      "label": "Commit",
+      "text": "chore: update",
+      "timestamp": "2026-09-03T07:14:40Z"
+    },
+    {
+      "id": "comment:review:3921536611",
+      "label": "Comment",
+      "text": "packages/vite/src/node/server/bundledDev.ts",
+      "timestamp": "2026-09-03T05:59:44Z"
+    },
+    {
+      "id": "comment:review:3921531538",
+      "label": "Comment",
+      "text": "playground/lazy-compilation/__tests__/lazy-compilation.spec.ts",
+      "timestamp": "2026-09-03T05:58:48Z"
+    },
+    {
+      "id": "comment:review:3921510777",
+      "label": "Comment",
+      "text": "playground/lazy-compilation/__tests__/lazy-compilation.spec.ts",
+      "timestamp": "2026-09-03T05:55:22Z"
+    },
+    {
+      "id": "comment:review:3921501872",
+      "label": "Comment",
+      "text": "playground/lazy-compilation/__tests__/lazy-compilation.spec.ts",
+      "timestamp": "2026-09-03T05:53:53Z"
+    },
+    {
+      "id": "file:docs/.vitepress/theme/components/SponsorBanner.vue",
+      "label": "File",
+      "text": "docs/.vitepress/theme/components/SponsorBanner.vue",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/create-vite/CHANGELOG.md",
+      "label": "File",
+      "text": "packages/create-vite/CHANGELOG.md",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:docs/guide/api-hmr.md",
+      "label": "File",
+      "text": "docs/guide/api-hmr.md",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/vite.config.js",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/vite.config.js",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/scripts/shims.d.ts",
+      "label": "File",
+      "text": "packages/vite/scripts/shims.d.ts",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:docs/.vitepress/inlined-scripts/banner.d.ts",
+      "label": "File",
+      "text": "docs/.vitepress/inlined-scripts/banner.d.ts",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/data.json",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/data.json",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/vite.config.js",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/vite.config.js",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:docs/.vitepress/inlined-scripts/banner.js",
+      "label": "File",
+      "text": "docs/.vitepress/inlined-scripts/banner.js",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/vite.config.js",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/vite.config.js",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/node_modules/some-pkg/package.json",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/node_modules/some-pkg/package.json",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/node_modules/some-pkg/package.json",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/node_modules/some-pkg/package.json",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/data.json",
+      "label": "File",
+      "text": "packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/data.json",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "label": "Commit",
+      "text": "Merge branch 'main' into fix/bundled-dev-payload-delivered-ack",
+      "timestamp": "2026-09-03T05:43:00Z"
+    },
+    {
+      "id": "comment:review:3921050558",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-03T04:34:37Z"
+    },
+    {
+      "id": "comment:review:3921047661",
+      "label": "Comment",
+      "text": "playground/devtools/vite.config.ts",
+      "timestamp": "2026-09-03T04:33:57Z"
+    },
+    {
+      "id": "comment:review:3921040852",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-03T04:32:29Z"
+    },
+    {
+      "id": "comment:review:3921013227",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-03T04:26:40Z"
+    },
+    {
+      "id": "comment:review:3921007088",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/index.ts",
+      "timestamp": "2026-09-03T04:25:16Z"
+    },
+    {
+      "id": "comment:review:3921003742",
+      "label": "Comment",
+      "text": "packages/vite/src/node/__tests__/config.spec.ts",
+      "timestamp": "2026-09-03T04:24:30Z"
+    },
+    {
+      "id": "comment:review:3920996047",
+      "label": "Comment",
+      "text": "docs/config/shared-options.md",
+      "timestamp": "2026-09-03T04:22:49Z"
+    },
+    {
+      "id": "comment:review:3910761053",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/html.ts",
+      "timestamp": "2026-09-02T04:40:08Z"
+    },
+    {
+      "id": "file:playground/assets/nested/preload-asset.png",
+      "label": "File",
+      "text": "playground/assets/nested/preload-asset.png",
+      "timestamp": "2026-09-01T17:04:58Z"
+    },
+    {
+      "id": "commit:104f236f04f6281a98359d48ed5c09430c571eff",
+      "label": "Commit",
+      "text": "fix(html): don't inline preload and prefetch link targets\n\nExtend the previous commit to `rel=\"preload\"` and `rel=\"prefetch\"`,\nwhich are defeated by inlining for the same reason as `modulepreload`.\n\n`<link rel=\"preload\" as=\"image\" imagesrcset>` goes through the srcset\nbranch, which called `processAssetUrl` without a `shouldInline`\nargument and so ignored `noInlineLinkRels` entirely. Hoist the\nno-inline decision out of the `src` branch so both use it.\n\nAlso drop the comment above `noInlineLinkRels` per review.",
+      "timestamp": "2026-09-01T17:04:58Z"
+    },
+    {
+      "id": "commit:2d6ad2deec8b8fb13d39356821122e42c4508771",
+      "label": "Commit",
+      "text": "chore: update",
+      "timestamp": "2026-09-01T09:25:51Z"
+    },
+    {
+      "id": "commit:5802860af68204f4c2f98db4caba3207612ae6a1",
+      "label": "Commit",
+      "text": "Apply suggestion from @bluwy",
+      "timestamp": "2026-09-01T08:28:13Z"
+    },
+    {
+      "id": "comment:review:3902238322",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/html.ts",
+      "timestamp": "2026-09-01T08:28:07Z"
+    },
+    {
+      "id": "comment:review:3900840974",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-01T04:44:03Z"
+    },
+    {
+      "id": "comment:review:3900832294",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-01T04:42:04Z"
+    },
+    {
+      "id": "comment:review:3900828167",
+      "label": "Comment",
+      "text": "packages/vite/src/node/config.ts",
+      "timestamp": "2026-09-01T04:41:05Z"
+    },
+    {
+      "id": "pr:23387",
+      "label": "PR",
+      "text": "fix(html): don't inline preload link targets (fix #13355)",
+      "timestamp": "2026-08-27T15:30:44Z"
+    },
+    {
+      "id": "person:kakiuwang-ui",
+      "label": "Person",
+      "text": "kakiuwang-ui",
+      "timestamp": "2026-08-27T15:30:44Z"
+    },
+    {
+      "id": "commit:6e20c991ddb12e7f49cf0aedb3d37e8fcd40de37",
+      "label": "Commit",
+      "text": "fix(html): don't inline modulepreload link targets\n\nA `<link rel=\"modulepreload\">` whose target is smaller than\n`build.assetsInlineLimit` was rewritten to a `data:` URL. The browser\nfetches that data URL as a module distinct from the emitted chunk, so\nnothing referenced by the page is warmed and the preload is a no-op.\n\nAdd `modulepreload` to `noInlineLinkRels` so these targets are always\nemitted as files, matching the existing handling for `icon` and\n`manifest` links.\n\n`preload`/`prefetch` links have the same problem but are left alone\nhere; they interact with #16269 and need to be handled separately.",
+      "timestamp": "2026-08-27T15:28:04Z"
+    },
+    {
+      "id": "file:playground/assets/preload-module.js",
+      "label": "File",
+      "text": "playground/assets/preload-module.js",
+      "timestamp": "2026-08-27T15:28:04Z"
+    },
+    {
+      "id": "comment:review:3870716669",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/index.ts",
+      "timestamp": "2026-08-27T10:05:32Z"
+    },
+    {
+      "id": "commit:da44975109f5b1aed119520669973444cb9fcf68",
+      "label": "Commit",
+      "text": "chore: update",
+      "timestamp": "2026-08-27T10:03:52Z"
+    },
+    {
+      "id": "decision:2015ec6c6e0b18653058bdcafd9a425e5912a0b4e3f0da8b92c7c8b3918fe813",
+      "label": "Decision",
+      "text": "Suppress the \"failed to resolve @vitejs/devtools\" error until it is confirmed that devtools is enabled.",
+      "timestamp": "2026-08-27T08:45:32Z"
+    },
+    {
+      "id": "comment:review:3870133885",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/index.ts",
+      "timestamp": "2026-08-27T08:45:32Z"
+    },
+    {
+      "id": "comment:review:3869156086",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/index.ts",
+      "timestamp": "2026-08-27T06:07:48Z"
+    },
+    {
+      "id": "person:antfu",
+      "label": "Person",
+      "text": "antfu",
+      "timestamp": "2026-08-27T06:04:25Z"
+    },
+    {
+      "id": "comment:review:3869139892",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/index.ts",
+      "timestamp": "2026-08-27T06:04:25Z"
+    },
+    {
+      "id": "pr:23373",
+      "label": "PR",
+      "text": "fix(bundled-dev): mark payload delivered on client report",
+      "timestamp": "2026-08-26T08:06:41Z"
+    },
+    {
+      "id": "file:playground/lazy-compilation/page-b.js",
+      "label": "File",
+      "text": "playground/lazy-compilation/page-b.js",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "file:playground/lazy-compilation/page-a.js",
+      "label": "File",
+      "text": "playground/lazy-compilation/page-a.js",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "file:playground/lazy-compilation/package.json",
+      "label": "File",
+      "text": "playground/lazy-compilation/package.json",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "file:playground/lazy-compilation/shared.js",
+      "label": "File",
+      "text": "playground/lazy-compilation/shared.js",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "file:playground/lazy-compilation/index.html",
+      "label": "File",
+      "text": "playground/lazy-compilation/index.html",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "file:playground/lazy-compilation/vite.config.ts",
+      "label": "File",
+      "text": "playground/lazy-compilation/vite.config.ts",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "file:playground/lazy-compilation/page-c.js",
+      "label": "File",
+      "text": "playground/lazy-compilation/page-c.js",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "label": "Commit",
+      "text": "fix(bundled-dev): mark payload delivered on client report\n\nClaude-Session: https://claude.ai/code/session_01XbpHn3CJVhLzV1iRk8TARS",
+      "timestamp": "2026-08-26T08:05:57Z"
+    },
+    {
+      "id": "commit:03eb82d67fd5640a9b8126f759d92d10161eaa0a",
+      "label": "Commit",
+      "text": "chore: update",
+      "timestamp": "2026-08-25T05:48:10Z"
+    },
+    {
+      "id": "file:packages/vite/types/internal/devtoolsOptions.d.ts",
+      "label": "File",
+      "text": "packages/vite/types/internal/devtoolsOptions.d.ts",
+      "timestamp": "2026-08-25T05:48:10Z"
+    },
+    {
+      "id": "comment:review:3841044911",
+      "label": "Comment",
+      "text": "packages/vite/src/node/plugins/index.ts",
+      "timestamp": "2026-08-24T06:08:00Z"
+    },
+    {
+      "id": "decision:626617d31cf745da8f9e6cf0a67ec5e001c017ec28d88e76d7f1c9cd024f5fc2",
+      "label": "Decision",
+      "text": "Enable the devtools integration for both serve and build modes by default.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    },
+    {
+      "id": "decision:7fcc1857e673128040c46190b9f74452dd6aae69fcc241c6feaef964f9fd0e4a",
+      "label": "Decision",
+      "text": "Require @vitejs/devtools version 0.6.0 or higher.",
+      "timestamp": "2026-08-24T05:52:23Z"
+    }
+  ],
+  "edges": [
+    {
+      "from": "person:antfu",
+      "to": "comment:review:3924031447",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:antfu",
+      "to": "comment:review:3869156086",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:antfu",
+      "to": "comment:review:3869139892",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:kakiuwang-ui",
+      "to": "pr:23387",
+      "type": "REVIEWED"
+    },
+    {
+      "from": "person:kakiuwang-ui",
+      "to": "pr:23387",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:kakiuwang-ui",
+      "to": "comment:review:3931996430",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:kakiuwang-ui",
+      "to": "comment:review:3930394830",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:Cherry",
+      "to": "commit:f1f1ba1786865b81d094d0ea94916a7a2565fdd9",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:Cherry",
+      "to": "pr:23646",
+      "type": "REVIEWED"
+    },
+    {
+      "from": "person:Cherry",
+      "to": "pr:23646",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "person:Cherry",
+      "to": "comment:review:4207187665",
+      "type": "AUTHORED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/data.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/node_modules/some-pkg/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/data.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/node_modules/some-pkg/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/vite/scripts/shims.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:packages/create-vite/CHANGELOG.md",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:docs/guide/api-hmr.md",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:docs/.vitepress/theme/components/SponsorBanner.vue",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:docs/.vitepress/inlined-scripts/banner.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "to": "file:docs/.vitepress/inlined-scripts/banner.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "to": "file:playground/lazy-compilation/vite.config.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "to": "file:playground/lazy-compilation/shared.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "to": "file:playground/lazy-compilation/page-c.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "to": "file:playground/lazy-compilation/page-b.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "to": "file:playground/lazy-compilation/page-a.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "to": "file:playground/lazy-compilation/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "to": "file:playground/lazy-compilation/index.html",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/lazy-compilation/vite.config.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/lazy-compilation/shared.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/lazy-compilation/page-c.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/lazy-compilation/page-b.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/lazy-compilation/page-a.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/lazy-compilation/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/lazy-compilation/index.html",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:playground/assets/asset/emitted-worker.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/data.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/node_modules/some-pkg/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/data.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/node_modules/some-pkg/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "to": "file:packages/vite/scripts/shims.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:104f236f04f6281a98359d48ed5c09430c571eff",
+      "to": "file:playground/assets/nested/preload-asset.png",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:6e20c991ddb12e7f49cf0aedb3d37e8fcd40de37",
+      "to": "file:playground/assets/preload-module.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:8d6ae3dc91d0a157db212be7d656e1d9802b3085",
+      "to": "file:packages/vite/types/internal/devtoolsOptions.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import/data.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/node_modules/some-pkg/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-ok/data.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/vite.config.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/src/node/__tests__/fixtures/config/native-compat/json-named-import-bare/node_modules/some-pkg/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/vite/scripts/shims.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:packages/create-vite/CHANGELOG.md",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:docs/guide/api-hmr.md",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:docs/.vitepress/theme/components/SponsorBanner.vue",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:docs/.vitepress/inlined-scripts/banner.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:9de7e1c2134b38f4112d4a83517b920837b993ed",
+      "to": "file:docs/.vitepress/inlined-scripts/banner.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:2d6ad2deec8b8fb13d39356821122e42c4508771",
+      "to": "file:packages/vite/types/internal/devtoolsOptions.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:03eb82d67fd5640a9b8126f759d92d10161eaa0a",
+      "to": "file:packages/vite/types/internal/devtoolsOptions.d.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:e8829abbf3e02012e13b1e8e4f194318a21e2889",
+      "to": "file:packages/vite/src/node/__tests__/plugins/clientInjections.spec.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:011ac8335f3949c307feab5d4d6d963b6de37d52",
+      "to": "file:playground/fs-serve/__tests__/deny/fs-serve-deny.spec.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:82be213c13f3497a65918f4cd65c206689dd6e9c",
+      "to": "file:playground/fs-serve/__tests__/deny/fs-serve-deny.spec.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:76dec212e54c69759e2c1b83cb7b5884e6f710d9",
+      "to": "file:playground/hmr/package.json",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:3a2190099961bd784ec0f107fd25acb2ceb2a6d3",
+      "to": "file:playground/hmr/vite.config-no-partial-accept.js",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "commit:670efc8c84ac992f3dadeedda3a377a116c3b37f",
+      "to": "file:playground/backend-integration/__tests__/backend-integration.spec.ts",
+      "type": "MODIFIED"
+    },
+    {
+      "from": "pr:23373",
+      "to": "commit:1edf0bc193907c50820a5dbcfc7d7d48b40092b5",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23373",
+      "to": "commit:b0091718d08b8bfc663e91514df1cdec0dad58bc",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23373",
+      "to": "commit:a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23387",
+      "to": "commit:118288bf0d27b23a71662417b59f086ff62be008",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23387",
+      "to": "commit:8f20f304a461e4e22b3f78083b85a34a8f5fd66a",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23387",
+      "to": "commit:104f236f04f6281a98359d48ed5c09430c571eff",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23387",
+      "to": "commit:5802860af68204f4c2f98db4caba3207612ae6a1",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23387",
+      "to": "commit:6e20c991ddb12e7f49cf0aedb3d37e8fcd40de37",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23566",
+      "to": "commit:e0cc2455febb8db83de59e705429294e6ee2b44b",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23568",
+      "to": "commit:75cb6c3785802639ae410dda72833bf2b176fa45",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23568",
+      "to": "commit:e8829abbf3e02012e13b1e8e4f194318a21e2889",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23568",
+      "to": "commit:c2173d404199da61dcaa66d9277f2ba9893d2c6c",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23646",
+      "to": "commit:fe8cba9b704e152af29a3a191798f669ea60a352",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23646",
+      "to": "commit:f1f1ba1786865b81d094d0ea94916a7a2565fdd9",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23463",
+      "to": "commit:76dec212e54c69759e2c1b83cb7b5884e6f710d9",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23463",
+      "to": "commit:3a2190099961bd784ec0f107fd25acb2ceb2a6d3",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23463",
+      "to": "commit:e6e9ac892f5d62c686db9417e6fac4d5c24aea9d",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23707",
+      "to": "commit:d86338594145f394512e2fce8ab6d3b9f31cb36d",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23741",
+      "to": "commit:6b277b243763674bf43fea75f79d3bed5d9180a6",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23741",
+      "to": "commit:86b31cb5cff451e89629c8f4e45af93d1b9be9d3",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "pr:23742",
+      "to": "commit:911445620c27d22a9fad5372d78717136fb8bf6e",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "comment:review:3921536611",
+      "to": "pr:23373",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:3921531538",
+      "to": "pr:23373",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:3921510777",
+      "to": "pr:23373",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:3921501872",
+      "to": "pr:23373",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:3931996430",
+      "to": "pr:23387",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:3930394830",
+      "to": "pr:23387",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:3910761053",
+      "to": "pr:23387",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:3902238322",
+      "to": "pr:23387",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4091386244",
+      "to": "pr:23566",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4091290366",
+      "to": "pr:23566",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4102537124",
+      "to": "pr:23568",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4102020871",
+      "to": "pr:23568",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4100379410",
+      "to": "pr:23568",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4100350349",
+      "to": "pr:23568",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4214057412",
+      "to": "pr:23646",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4207187665",
+      "to": "pr:23646",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4204684026",
+      "to": "pr:23646",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4214380597",
+      "to": "pr:23463",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4214351159",
+      "to": "pr:23463",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4227938342",
+      "to": "pr:23707",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4227811930",
+      "to": "pr:23707",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4227796322",
+      "to": "pr:23707",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4227786985",
+      "to": "pr:23707",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4278493004",
+      "to": "pr:23741",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4269403491",
+      "to": "pr:23741",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4268957662",
+      "to": "pr:23741",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4256782643",
+      "to": "pr:23741",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4256777537",
+      "to": "pr:23741",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4279458561",
+      "to": "pr:23742",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4256964371",
+      "to": "pr:23742",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4256932092",
+      "to": "pr:23742",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4256847999",
+      "to": "pr:23742",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4256790495",
+      "to": "pr:23742",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4281799080",
+      "to": "pr:23744",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4268213955",
+      "to": "pr:23744",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4268202745",
+      "to": "pr:23744",
+      "type": "ON"
+    },
+    {
+      "from": "comment:review:4258186573",
+      "to": "pr:23744",
+      "type": "ON"
+    },
+    {
+      "from": "decision:2015ec6c6e0b18653058bdcafd9a425e5912a0b4e3f0da8b92c7c8b3918fe813",
+      "to": "comment:review:3870133885",
+      "type": "DERIVED_FROM"
+    },
+    {
+      "from": "decision:af5fb5807bdfbe2a86e8ba6141ad4a6ab73227333ccb7840f339a6821d036cda",
+      "to": "comment:review:3923113643",
+      "type": "DERIVED_FROM"
+    },
+    {
+      "from": "decision:7460168dd5bf828cabb509f08bbc655207a9f497a8770e9721ffbf957947efe5",
+      "to": "comment:review:3923113643",
+      "type": "DERIVED_FROM"
+    }
+  ]
+}

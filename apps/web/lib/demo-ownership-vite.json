@@ -1,0 +1,3428 @@
+{
+  "repository": "vitejs/vite",
+  "analyzedSince": "2025-10-19T11:21:43.486Z",
+  "analyzedSinceMs": 1760872903486,
+  "totalCommits": 1915,
+  "totalModules": 98,
+  "highRiskModulesCount": 73,
+  "overallBusFactor": 1.26,
+  "methodology": "Ownership calculated from distinct commit modifications per module; bus factor reflects minimum authors covering 50% cumulative ownership.",
+  "modules": [
+    {
+      "module": "packages/vite/src",
+      "totalCommits": 681,
+      "contributorsCount": 15,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 355,
+        "percentage": 52.1,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 355,
+          "percentage": 52.1,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 180,
+          "percentage": 26.4,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 34,
+          "percentage": 5,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 25,
+          "percentage": 3.7,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 24,
+          "percentage": 3.5,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 19,
+          "percentage": 2.8,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 18,
+          "percentage": 2.6,
+          "isBot": false
+        },
+        {
+          "login": "BlankParticle",
+          "commits": 8,
+          "percentage": 1.2,
+          "isBot": false
+        },
+        {
+          "login": "JiuYue0820",
+          "commits": 4,
+          "percentage": 0.6,
+          "isBot": false
+        },
+        {
+          "login": "vijay-loopr",
+          "commits": 3,
+          "percentage": 0.4,
+          "isBot": false
+        },
+        {
+          "login": "shulaoda",
+          "commits": 3,
+          "percentage": 0.4,
+          "isBot": false
+        },
+        {
+          "login": "Nic-Polumeyv",
+          "commits": 3,
+          "percentage": 0.4,
+          "isBot": false
+        },
+        {
+          "login": "Cherry",
+          "commits": 2,
+          "percentage": 0.3,
+          "isBot": false
+        },
+        {
+          "login": "lazerg",
+          "commits": 2,
+          "percentage": 0.3,
+          "isBot": false
+        },
+        {
+          "login": "NgoQuocViet2001",
+          "commits": 1,
+          "percentage": 0.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "docs/guide",
+      "totalCommits": 75,
+      "contributorsCount": 8,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 41,
+        "percentage": 54.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 41,
+          "percentage": 54.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 11,
+          "percentage": 14.7,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 7,
+          "percentage": 9.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 6,
+          "percentage": 8,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 4,
+          "percentage": 5.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 3,
+          "percentage": 4,
+          "isBot": false
+        },
+        {
+          "login": "shulaoda",
+          "commits": 2,
+          "percentage": 2.7,
+          "isBot": false
+        },
+        {
+          "login": "rohan436",
+          "commits": 1,
+          "percentage": 1.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/vite",
+      "totalCommits": 52,
+      "contributorsCount": 7,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 26,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 26,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 15,
+          "percentage": 28.8,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 4,
+          "percentage": 7.7,
+          "isBot": false
+        },
+        {
+          "login": "JiuYue0820",
+          "commits": 3,
+          "percentage": 5.8,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 2,
+          "percentage": 3.8,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 1.9,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 1,
+          "percentage": 1.9,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/external",
+      "totalCommits": 22,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 11,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 11,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 5,
+          "percentage": 22.7,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 3,
+          "percentage": 13.6,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 3,
+          "percentage": 13.6,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/devtools",
+      "totalCommits": 19,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 12,
+        "percentage": 63.2,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 12,
+          "percentage": 63.2,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 26.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 5.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 5.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/lazy-compilation",
+      "totalCommits": 19,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 10,
+        "percentage": 52.6,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 10,
+          "percentage": 52.6,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 9,
+          "percentage": 47.4,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "scripts",
+      "totalCommits": 19,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 13,
+        "percentage": 68.4,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 13,
+          "percentage": 68.4,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 6,
+          "percentage": 31.6,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/legacy",
+      "totalCommits": 16,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 10,
+        "percentage": 62.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 10,
+          "percentage": 62.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 5,
+          "percentage": 31.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 6.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/plugin-legacy",
+      "totalCommits": 14,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 9,
+        "percentage": 64.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 9,
+          "percentage": 64.3,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 2,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 7.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-react-ts",
+      "totalCommits": 13,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 7,
+        "percentage": 53.8,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 7,
+          "percentage": 53.8,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 4,
+          "percentage": 30.8,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 7.7,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 7.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-react",
+      "totalCommits": 13,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 7,
+        "percentage": 53.8,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 7,
+          "percentage": 53.8,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 4,
+          "percentage": 30.8,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 7.7,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 7.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-vue-ts",
+      "totalCommits": 13,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 7,
+        "percentage": 53.8,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 7,
+          "percentage": 53.8,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 4,
+          "percentage": 30.8,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 7.7,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 7.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/chunk-importmap",
+      "totalCommits": 13,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 8,
+        "percentage": 61.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 8,
+          "percentage": 61.5,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 4,
+          "percentage": 30.8,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 7.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/src",
+      "totalCommits": 12,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 7,
+        "percentage": 58.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 7,
+          "percentage": 58.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 8.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 8.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-vue",
+      "totalCommits": 12,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 4,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 8.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 8.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "docs",
+      "totalCommits": 11,
+      "contributorsCount": 5,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 54.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 54.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 18.2,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 9.1,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 9.1,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 1,
+          "percentage": 9.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite",
+      "totalCommits": 11,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 9,
+        "percentage": 81.8,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 9,
+          "percentage": 81.8,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 18.2,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-preact-ts",
+      "totalCommits": 11,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 7,
+        "percentage": 63.6,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 7,
+          "percentage": 63.6,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 27.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 9.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-preact",
+      "totalCommits": 11,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 7,
+        "percentage": 63.6,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 7,
+          "percentage": 63.6,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 27.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 9.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-svelte-ts",
+      "totalCommits": 11,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 54.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 54.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 27.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 9.1,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 9.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-qwik-ts",
+      "totalCommits": 10,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 60,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 60,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 30,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 10,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-qwik",
+      "totalCommits": 10,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 60,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 60,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 30,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 10,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-svelte",
+      "totalCommits": 10,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 5,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 30,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 10,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 10,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-solid-ts",
+      "totalCommits": 9,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 66.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 66.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 22.2,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 11.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-solid",
+      "totalCommits": 9,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 66.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 66.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 22.2,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 11.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-lit-ts",
+      "totalCommits": 8,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 5,
+        "percentage": 62.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 62.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-lit",
+      "totalCommits": 8,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 5,
+        "percentage": 62.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 62.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-vanilla-ts",
+      "totalCommits": 8,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 5,
+        "percentage": 62.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 62.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/create-vite/template-vanilla",
+      "totalCommits": 8,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 5,
+        "percentage": 62.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 62.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/plugin-legacy/src",
+      "totalCommits": 8,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 5,
+        "percentage": 62.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 62.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/alias",
+      "totalCommits": 8,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 4,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 4,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/assets-sanitize",
+      "totalCommits": 8,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 7,
+        "percentage": 87.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 7,
+          "percentage": 87.5,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 12.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/environment-react-ssr",
+      "totalCommits": 7,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 4,
+        "percentage": 57.1,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 4,
+          "percentage": 57.1,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 28.6,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 14.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/hmr-ssr",
+      "totalCommits": 7,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 5,
+        "percentage": 71.4,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 5,
+          "percentage": 71.4,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 2,
+          "percentage": 28.6,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "docs/blog",
+      "totalCommits": 6,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 4,
+        "percentage": 66.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 4,
+          "percentage": 66.7,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 2,
+          "percentage": 33.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/extensions",
+      "totalCommits": 6,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 3,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 3,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/hmr-full-bundle-mode",
+      "totalCommits": 6,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 5,
+        "percentage": 83.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 5,
+          "percentage": 83.3,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/resolve-tsconfig-paths",
+      "totalCommits": 6,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 4,
+        "percentage": 66.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 4,
+          "percentage": 66.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/tailwind-v3",
+      "totalCommits": 6,
+      "contributorsCount": 4,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 3,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 3,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 16.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/wasm",
+      "totalCommits": 6,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/preload",
+      "totalCommits": 5,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 3,
+        "percentage": 60,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 3,
+          "percentage": 60,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/css-lightningcss-root",
+      "totalCommits": 4,
+      "contributorsCount": 3,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 2,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 2,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 25,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 25,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/minify",
+      "totalCommits": 4,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "vjymisal0",
+        "commits": 2,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "vjymisal0",
+          "commits": 2,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-deps",
+      "totalCommits": 4,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 2,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 2,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "docs/_data",
+      "totalCommits": 3,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 2,
+        "percentage": 66.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 2,
+          "percentage": 66.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/lib",
+      "totalCommits": 3,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 2,
+        "percentage": 66.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 2,
+          "percentage": 66.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/cli-module",
+      "totalCommits": 2,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/cli",
+      "totalCommits": 2,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/csp",
+      "totalCommits": 2,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/data-uri",
+      "totalCommits": 2,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/define",
+      "totalCommits": 2,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/html",
+      "totalCommits": 2,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 2,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 2,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-conditions",
+      "totalCommits": 2,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 2,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-html",
+      "totalCommits": 2,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 2,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-pug",
+      "totalCommits": 2,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 2,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-wasm",
+      "totalCommits": 2,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 2,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr",
+      "totalCommits": 2,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 2,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/tailwind-sourcemap",
+      "totalCommits": 2,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/tsconfig-json-load-error",
+      "totalCommits": 2,
+      "contributorsCount": 2,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 50,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 50,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "docs/changes",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "patches",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/client-reload",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/css-codesplit",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/env",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/forward-console",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/glob-import",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/module-graph",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/multiple-entrypoints",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/optimize-missing-deps",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-alias",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-noexternal",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-resolve",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/transform-plugin",
+      "totalCommits": 1,
+      "contributorsCount": 1,
+      "busFactor": 1,
+      "riskLevel": "high",
+      "riskRationale": "Single contributor accounts for over 50% (or top exceeds 80%) of modifications; high maintainer concentration.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 100,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 100,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": ".github",
+      "totalCommits": 94,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 45,
+        "percentage": 47.9,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 45,
+          "percentage": 47.9,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 20,
+          "percentage": 21.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 12,
+          "percentage": 12.8,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 11,
+          "percentage": 11.7,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 6,
+          "percentage": 6.4,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": ".",
+      "totalCommits": 81,
+      "contributorsCount": 8,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 37,
+        "percentage": 45.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 37,
+          "percentage": 45.7,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 21,
+          "percentage": 25.9,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 7,
+          "percentage": 8.6,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 6,
+          "percentage": 7.4,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 5,
+          "percentage": 6.2,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 2,
+          "percentage": 2.5,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 2,
+          "percentage": 2.5,
+          "isBot": false
+        },
+        {
+          "login": "Nic-Polumeyv",
+          "commits": 1,
+          "percentage": 1.2,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/assets",
+      "totalCommits": 58,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 20,
+        "percentage": 34.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 20,
+          "percentage": 34.5,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 14,
+          "percentage": 24.1,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 10,
+          "percentage": 17.2,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 7,
+          "percentage": 12.1,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 7,
+          "percentage": 12.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/css",
+      "totalCommits": 43,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 16,
+        "percentage": 37.2,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 16,
+          "percentage": 37.2,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 12,
+          "percentage": 27.9,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 8,
+          "percentage": 18.6,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 6,
+          "percentage": 14,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 1,
+          "percentage": 2.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "docs/config",
+      "totalCommits": 40,
+      "contributorsCount": 6,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 15,
+        "percentage": 37.5,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 15,
+          "percentage": 37.5,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 11,
+          "percentage": 27.5,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 8,
+          "percentage": 20,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 3,
+          "percentage": 7.5,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 2,
+          "percentage": 5,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 1,
+          "percentage": 2.5,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/js-sourcemap",
+      "totalCommits": 38,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 16,
+        "percentage": 42.1,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 16,
+          "percentage": 42.1,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 13,
+          "percentage": 34.2,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 5,
+          "percentage": 13.2,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 7.9,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 2.6,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "docs/.vitepress",
+      "totalCommits": 35,
+      "contributorsCount": 3,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 17,
+        "percentage": 48.6,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 17,
+          "percentage": 48.6,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 17,
+          "percentage": 48.6,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 2.9,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/hmr",
+      "totalCommits": 35,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 12,
+        "percentage": 34.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 12,
+          "percentage": 34.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 9,
+          "percentage": 25.7,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 8,
+          "percentage": 22.9,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 5,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 1,
+          "percentage": 2.9,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/css-sourcemap",
+      "totalCommits": 30,
+      "contributorsCount": 6,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 14,
+        "percentage": 46.7,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 14,
+          "percentage": 46.7,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 9,
+          "percentage": 30,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 10,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 2,
+          "percentage": 6.7,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 3.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 3.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/dynamic-import",
+      "totalCommits": 28,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 13,
+        "percentage": 46.4,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 13,
+          "percentage": 46.4,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 4,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 4,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 4,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 3,
+          "percentage": 10.7,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/optimize-deps",
+      "totalCommits": 23,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 9,
+        "percentage": 39.1,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 9,
+          "percentage": 39.1,
+          "isBot": false
+        },
+        {
+          "login": "Nic-Polumeyv",
+          "commits": 9,
+          "percentage": 39.1,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 13,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 4.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 4.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/css-lightningcss",
+      "totalCommits": 21,
+      "contributorsCount": 6,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 9,
+        "percentage": 42.9,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 9,
+          "percentage": 42.9,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 4,
+          "percentage": 19,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 3,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 9.5,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 2,
+          "percentage": 9.5,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 4.8,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/fs-serve",
+      "totalCommits": 21,
+      "contributorsCount": 4,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 9,
+        "percentage": 42.9,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 9,
+          "percentage": 42.9,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 7,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 4,
+          "percentage": 19,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 4.8,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/worker",
+      "totalCommits": 19,
+      "contributorsCount": 4,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "vjymisal0",
+        "commits": 9,
+        "percentage": 47.4,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "vjymisal0",
+          "commits": 9,
+          "percentage": 47.4,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 8,
+          "percentage": 42.1,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 1,
+          "percentage": 5.3,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 1,
+          "percentage": 5.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground",
+      "totalCommits": 18,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 7,
+        "percentage": 38.9,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 7,
+          "percentage": 38.9,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 16.7,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 5.6,
+          "isBot": false
+        },
+        {
+          "login": "Rich-Harris",
+          "commits": 1,
+          "percentage": 5.6,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/vite/types",
+      "totalCommits": 13,
+      "contributorsCount": 3,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 6,
+        "percentage": 46.2,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 6,
+          "percentage": 46.2,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 5,
+          "percentage": 38.5,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 2,
+          "percentage": 15.4,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/json",
+      "totalCommits": 9,
+      "contributorsCount": 5,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 3,
+        "percentage": 33.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 3,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 2,
+          "percentage": 22.2,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 22.2,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 11.1,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 11.1,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/resolve",
+      "totalCommits": 9,
+      "contributorsCount": 3,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "h-a-n-a",
+        "commits": 3,
+        "percentage": 33.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "h-a-n-a",
+          "commits": 3,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 3,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 3,
+          "percentage": 33.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/backend-integration",
+      "totalCommits": 7,
+      "contributorsCount": 4,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 3,
+        "percentage": 42.9,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 3,
+          "percentage": 42.9,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 28.6,
+          "isBot": false
+        },
+        {
+          "login": "h-a-n-a",
+          "commits": 1,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 14.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/tailwind",
+      "totalCommits": 7,
+      "contributorsCount": 4,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 3,
+        "percentage": 42.9,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 3,
+          "percentage": 42.9,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 28.6,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 14.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 14.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/vite/bin",
+      "totalCommits": 5,
+      "contributorsCount": 4,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "shulaoda",
+        "commits": 2,
+        "percentage": 40,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "shulaoda",
+          "commits": 2,
+          "percentage": 40,
+          "isBot": false
+        },
+        {
+          "login": "vjymisal0",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/optimize-deps-no-discovery",
+      "totalCommits": 5,
+      "contributorsCount": 4,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 2,
+        "percentage": 40,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 2,
+          "percentage": 40,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/ssr-webworker",
+      "totalCommits": 5,
+      "contributorsCount": 3,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 2,
+        "percentage": 40,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 2,
+          "percentage": 40,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 2,
+          "percentage": 40,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 20,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "packages/vite/scripts",
+      "totalCommits": 3,
+      "contributorsCount": 3,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "webfansplz",
+        "commits": 1,
+        "percentage": 33.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "bluwy",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        }
+      ]
+    },
+    {
+      "module": "playground/css-lightningcss-proxy",
+      "totalCommits": 3,
+      "contributorsCount": 3,
+      "busFactor": 2,
+      "riskLevel": "medium",
+      "riskRationale": "Two contributors account for majority ownership or secondary contributor share is below 10%.",
+      "topContributor": {
+        "login": "sapphi-red",
+        "commits": 1,
+        "percentage": 33.3,
+        "isBot": false
+      },
+      "contributors": [
+        {
+          "login": "sapphi-red",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "webfansplz",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        },
+        {
+          "login": "btea",
+          "commits": 1,
+          "percentage": 33.3,
+          "isBot": false
+        }
+      ]
+    }
+  ]
+}

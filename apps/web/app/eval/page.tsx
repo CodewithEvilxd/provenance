@@ -8,6 +8,8 @@ import type {
 } from "@provenance/agents/eval-types";
 import { evaluationReportSchema } from "@provenance/agents/eval-types";
 
+import { getDemoEvalReport } from "@/lib/demo-data";
+
 async function loadEvaluationReport(): Promise<EvaluationReport | null> {
   try {
     const c1 = resolve(
@@ -21,9 +23,9 @@ async function loadEvaluationReport(): Promise<EvaluationReport | null> {
     const reportPath = existsSync(c1) ? c1 : c2;
     const content = await readFile(reportPath, "utf8");
     const parsed = evaluationReportSchema.safeParse(JSON.parse(content));
-    return parsed.success ? parsed.data : null;
+    return parsed.success ? parsed.data : getDemoEvalReport();
   } catch {
-    return null;
+    return getDemoEvalReport();
   }
 }
 

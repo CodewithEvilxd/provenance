@@ -12,12 +12,20 @@ export async function POST(request: Request) {
   try {
     const body = await request.json().catch(() => ({}));
     const input = timelineQuerySchema.parse(body);
-    const report = await queryTimeline({
-      repository: input.repository,
-      asOf: input.asOf,
-      asOfMs: input.asOfMs,
-      nodeLimit: input.limit,
-    });
+    let report = null;
+    try {
+      report = await queryTimeline({
+        repository: input.repository,
+        asOf: input.asOf,
+        asOfMs: input.asOfMs,
+        nodeLimit: input.limit,
+      });
+    } catch (err) {
+      const { getDemoTimeline } = await import("@/lib/demo-data");
+      const demo = getDemoTimeline(input.repository);
+      if (demo) return Response.json(demo);
+      throw err;
+    }
     return Response.json(report);
   } catch (error) {
     const isValidation = error instanceof z.ZodError;

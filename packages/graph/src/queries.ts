@@ -1,33 +1,8 @@
-import { readFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
 import { graphStep, query } from "./client.js";
+import { cypherStatements } from "./cypher-statements.js";
 
-const directory = join(dirname(fileURLToPath(import.meta.url)), "../cypher");
-const statements = Object.fromEntries(
-  [
-    "blast-radius",
-    "incident-history",
-    "active-decisions",
-    "why-trace",
-    "who-knows",
-    "reviewer-rank",
-    "path-for-evidence",
-    "as-of-subgraph",
-    "ownership-concentration",
-    "search-decisions",
-    "resolve-targets",
-    "decision-evidence",
-    "decision-source-target",
-    "graph-counts",
-    "verify-path-edges",
-    "supersession-links",
-    "verify-path-nodes",
-  ].map((name) => [
-    name,
-    readFileSync(join(directory, `${name}.cypher`), "utf8"),
-  ]),
-);
+export { cypherStatements };
+const statements = cypherStatements;
 
 export type BlastRadiusRow = {
   id: string;

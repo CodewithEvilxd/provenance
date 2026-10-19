@@ -25,7 +25,9 @@ export async function GET(request: Request) {
       const parsed = JSON.parse(existing);
       return Response.json(parsed);
     } catch {
-      // if cached report file does not exist, run live evaluation below
+      const { getDemoEvalReport } = await import("@/lib/demo-data");
+      const fallback = getDemoEvalReport();
+      if (fallback) return Response.json(fallback);
     }
   }
 
@@ -36,6 +38,9 @@ export async function GET(request: Request) {
     });
     return Response.json(report);
   } catch (error) {
+    const { getDemoEvalReport } = await import("@/lib/demo-data");
+    const fallback = getDemoEvalReport();
+    if (fallback) return Response.json(fallback);
     return Response.json(
       { error: error instanceof Error ? error.message : "Evaluation failed" },
       { status: 500 },

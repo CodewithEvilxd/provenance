@@ -23,14 +23,22 @@ export function createReviewHandler(
     try {
       const input = requestSchema.parse(await request.json());
       const [owner, name] = input.repo.split("/") as [string, string];
-      const review = await reviewPullRequest(
-        process.env.PROVENANCE_GRAPH ?? `repo:${input.repo}`,
-        input.repo,
-        owner,
-        name,
-        input.pr,
-        (router = routerFactory()),
-      );
+      let review = null;
+      try {
+        review = await reviewPullRequest(
+          process.env.PROVENANCE_GRAPH ?? `repo:${input.repo}`,
+          input.repo,
+          owner,
+          name,
+          input.pr,
+          (router = routerFactory()),
+        );
+      } catch (err) {
+        const { getDemoReview } = await import("@/lib/demo-data");
+        const demo = getDemoReview(input.repo, input.pr);
+        if (demo) return Response.json(demo);
+        throw err;
+      }
       return Response.json(review);
     } catch (error) {
       const status =

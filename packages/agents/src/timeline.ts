@@ -1,22 +1,11 @@
-import { readFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
 import { query } from "@provenance/graph/client";
+import { cypherStatements } from "@provenance/graph/queries";
 import { z } from "zod";
 
-const cypherDir = join(
-  dirname(fileURLToPath(import.meta.url)),
-  "../../graph/cypher",
-);
-
-function readCypher(name: string): string {
-  return readFileSync(join(cypherDir, `${name}.cypher`), "utf8");
-}
-
-const boundsStatement = readCypher("timeline-bounds");
-const milestonesStatement = readCypher("timeline-milestones");
-const nodesStatement = readCypher("as-of-nodes");
-const edgesStatement = readCypher("as-of-edges");
+const boundsStatement = cypherStatements["timeline-bounds"] ?? "";
+const milestonesStatement = cypherStatements["timeline-milestones"] ?? "";
+const nodesStatement = cypherStatements["as-of-nodes"] ?? "";
+const edgesStatement = cypherStatements["as-of-edges"] ?? "";
 
 export const timelineMilestoneSchema = z.object({
   kind: z.enum(["decision", "incident", "pr", "commit"]),
