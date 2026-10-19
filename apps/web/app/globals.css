@@ -2443,6 +2443,29 @@ select:focus-visible {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+.marquee-strip {
+  width: 100%;
+  background: var(--ink);
+  color: var(--lime);
+  border-top: var(--bw) solid var(--ink);
+  border-bottom: var(--bw) solid var(--ink);
+  padding: 8px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font: 800 11px var(--mono);
+  letter-spacing: 0.1em;
+  box-shadow: none;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 28px;
+  animation: marqueeLoop 28s linear infinite;
+  white-space: nowrap;
+}
+@keyframes marqueeLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 .tab-nav {
   display: flex;
   gap: 10px;
